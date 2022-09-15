@@ -1,0 +1,34 @@
+title: Yo
+author: Corbs
+email: corbs@retro.io
+url: https://corbtastik.github.io/yo
+description: Yo is a parent site for many Yolo pages
+
+# Site customizations
+style: solo
+logo: assets/images/site/logo.png
+images: assets/images
+favicon: "logo.png"
+
+theme_config:
+  appearance: "auto" # can be "light", "dark" or "auto"
+  back_home_text: ".." # customize text for homepage link in post layout
+  date_format: "%Y-%m-%d" # customize how date is formatted
+  show_description: false # show blog description in home page
+
+# Build settings
+version: v1.0
+markdown: kramdown
+permalink: /:slug.html
+exclude:
+  - "README.md"
+  - "Makefile"
+  - "Containerfile"
+  - ".yo-build"
+  - "src/"
+  - "docs/"
+sass:
+  style: uncompressed
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

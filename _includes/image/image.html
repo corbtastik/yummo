@@ -1,0 +1,12 @@
+{% if include.description %}
+<!--<div class="container">-->
+<!--  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ site.images }}/{{ include.src }}">-->
+<!--  <p class="caption">{{ include.description }}</p>-->
+<!--</div>-->
+<figure>
+  <img class="image {{ include.classes }}" alt="{{ include.description }}"  src="{{ site.images }}/{{ include.src }}">
+  <figcaption>{{ include.description }}</figcaption>
+</figure>
+{% else %}
+<img class="image {{ include.classes }}" alt="{{ include.src }}" src="{{ site.images }}/{{ include.src }}">
+{% endif %}
