@@ -1,7 +1,15 @@
 ---
 layout: post
-category: Yolo
+title: "Styled Images"
+description: "Yummo css styled images"
+date: 2022-09-01
+author: Corbs
 slug: styled-images
+category: samples
+tags:
+- css
+- images
+- sample
 ---
 
 > __Tip:__ Click to enlarge.
