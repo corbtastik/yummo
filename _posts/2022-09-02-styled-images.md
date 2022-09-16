@@ -2,7 +2,7 @@
 layout: post
 title: "Styled Images"
 description: "Yummo css styled images"
-date: 2022-09-01
+date: 2022-09-02
 author: Corbs
 slug: styled-images
 category: samples

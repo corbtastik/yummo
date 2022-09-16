@@ -1,0 +1,28 @@
+<div class="yolo-header">
+    {% if site.logo %}
+    <a href="./">
+        <div class="logo"></div>
+    </a>
+    {% endif %}
+    <div id="theme-dot" class="theme-dot">&#9681;</div>
+    <h1 class="tag"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <h4 class="description">{{ page.description }}</h4>
+    <p>
+        <span>
+          {% for tag in page.tags %}
+            {% capture tag_name %}{{ tag }}{% endcapture %}
+            <code class="pill">{{ tag_name }}</code>
+          {% endfor %}
+        </span>
+    </p>
+    <p>
+        <span>
+            <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+            {% if page.author %} {{ page.author | prepend: "by " }} {% endif %}
+        </span>
+    </p>
+    <p>
+        <a href="{{ '/' | relative_url }}"> {{ site.theme_config.back_home_text }} </a>
+    </p>
+</div>
+

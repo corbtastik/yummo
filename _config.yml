@@ -1,17 +1,30 @@
-title: Yo like a pro
-tag_text: Yo
-description: Yo like a pro
+# -----------------------------------------------------------------------------
+# Yummo site base properties
+# -----------------------------------------------------------------------------
+# A snazzy title for your site
+title: Yummo, a tasty wittle theme
+# The site tag
+tag_text: Yummo
+# The overall description of your Yummo site
+description: A tasty wittle theme
+# Yummo site author
 author: Corbs
+# Yummo site author's email
 email: corbs@retro.io
-url: https://corbtastik.github.io/yo
-
-# Site customizations
-#style: solo
-#logo: assets/images/site/logo.png
-#images: assets/images
-style: solo
-#logo: assets/images/site/logo.png
+# The sub-path to hang your Yummo site from, e.g. /blog
+baseurl: ""
+# The base hostname (w/ protocol) of your Yummo site, e.g. http://corbs.io
+url: ""
+# -----------------------------------------------------------------------------
+# Yummo site feature properties
+# -----------------------------------------------------------------------------
+# The style to apply (see _sass/yummo/themes)
+style: corbs
+# The site wide logo
+logo: assets/images/site/logo.svg
+# Where the site should grab images from (can be local, e.g. assets/images)
 images: https://storage.googleapis.com/corbs-foto/yolo
+# The site favicon to use
 favicon: "logo.png"
 
 theme_config:
