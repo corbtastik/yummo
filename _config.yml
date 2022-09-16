@@ -1,13 +1,17 @@
-title: Yo
+title: Yo like a pro
+tag_text: Yo
+description: Yo like a pro
 author: Corbs
 email: corbs@retro.io
 url: https://corbtastik.github.io/yo
-description: Yo is a parent site for many Yolo pages
 
 # Site customizations
+#style: solo
+#logo: assets/images/site/logo.png
+#images: assets/images
 style: solo
-logo: assets/images/site/logo.png
-images: assets/images
+#logo: assets/images/site/logo.png
+images: https://storage.googleapis.com/corbs-foto/yolo
 favicon: "logo.png"
 
 theme_config:
