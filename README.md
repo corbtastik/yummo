@@ -1,3 +1,3 @@
 # Yummo, a tasty wittle theme
 
-> More to come...
+> Yummo is in the oven.

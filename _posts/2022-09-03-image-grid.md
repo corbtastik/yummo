@@ -11,6 +11,7 @@ tags:
 - images
 - image-grid
 - sample
+- yummo
 ---
 
 Show your awesome pics in a Yummo Image Grid, ooh-la-la.

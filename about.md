@@ -1,16 +1,18 @@
 ---
 layout: page
-title: about
+title: Howdy
+description: "A little ditty about yours truly"
+tags:
+- about
+- corbs
 ---
 
-Howdy amigo! Welcome to my abode where I occasionally blog about tech and post pics.
+Welcome to my abode where I occasionally write and post pics.
 
-{%
-  include image/image.html
-  classes="is-circle-128"
-  src="site/me.png"
-  description="Sunlight on my cranium makes me happy."
-%}
+<figure class="align-center">
+  <img class="image is-circle-256" alt="Sunlight on my cranium makes me happy."  src="assets/images/site/me.png">
+  <figcaption>Sunlight on my cranium makes me happy.</figcaption>
+</figure>
 
 ## work
 
