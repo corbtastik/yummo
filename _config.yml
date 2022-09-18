@@ -37,6 +37,7 @@ theme_config:
 version: v1.0
 markdown: kramdown
 permalink: /:slug.html
+include: ['_pages']
 exclude:
   - "README.md"
   - "Makefile"

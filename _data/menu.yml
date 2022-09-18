@@ -1,8 +1,8 @@
 entries:
-  - title: about
-    url: /about
-  - title: archive
-    url: /archive
+  - title: yummo/about
+    url: /yummo/about
+  - title: yummo/archive
+    url: /yummo/archive
   - title: posts
     post_list:
       limit: 10

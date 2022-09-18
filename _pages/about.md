@@ -1,15 +1,26 @@
 ---
 layout: page
-title: about/yummo
+title: yummo/about
 description: "What is this yummo you speak of?"
+permalink: /yummo/about/
+category: yummo
 tags:
 - about
 - yummo
 ---
 
-[Yummo](https://github.com/corbtastik/yummo) is a tasty little theme for static built sites, this one is for [Jekyll](https://jekyllrb.com) but in the not-too-distant future it will be available for [Eleventy](https://www.11ty.dev/).
+[Yummo](https://github.com/corbtastik/yummo) is a tasty little theme for static sites, this one is for [Jekyll](https://jekyllrb.com) but in the not-too-distant future it will be available for [Eleventy](https://www.11ty.dev/).
 
-For many years now I've used Jekyll for various technical ramblings, photo galleries and my out of date site [corbs.io](https://corbs.io). I've never been really happy with the sites I've curated 
+> [Yummo](https://corbtastik.github.io/yummo) is essentially what I want in a static multi-page site.
+> * Simple to use, low-to-no dependencies other than Jekyll.
+> * Sass based theming with dark and light modes.
+> * Snazzy photo and code-snippet support.
+
+## History
+
+I've used Jekyll for various technical ramblings, photo galleries and my personal site [corbs.io](https://corbs.io) for quite some time. I've never been really happy with the sites, mostly because I couldn't find a single theme that met all my needs. That said, [Jekyll](https://jekyllrb.com) is a solid static site generator (_despite being implemented in ruby_). This led to developing [Yummo](https://corbtastik.github.io/yummo).
+
+Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize (_not to mention there's a quirky beauty in its look_). My fascination with [Solo](http://chibicode.github.io/solo/) led to developing [Yolo](https://corbtastik.github.io/yolo/) - "_A loveable single page theme_" with some nice accoutrements. Yolo helped build a foundation for "_what_" content I want to focus on (_code_, _photos_) and "_how_" I want it to look. The next step was bringing that together with a multi-page theme focused on site organization. That's [Yummo](https://corbtastik.github.io/yummo).
 
 ## Thanks
 
