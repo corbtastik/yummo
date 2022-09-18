@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Styled Images"
+title: "samples/styled-images"
 description: "Yummo css styled images"
 date: 2022-09-02
 author: Corbs
-slug: styled-images
+permalink: /samples/styled-images
 category: samples
 tags:
 - css

@@ -1,12 +1,19 @@
 <div class="yolo-header">
+{% if page.layout == 'home' %}
     {% if site.logo %}
     <a href="./">
         <div class="logo"></div>
     </a>
     {% endif %}
+{% endif %}
     <div id="theme-dot" class="theme-dot">&#9681;</div>
+{% if page.layout == 'home' %}
     <h1 class="tag"><a href="./">{{ site.tag_text }}</a></h1>
     <h4 class="description">{{ site.description }}</h4>
+{% else %}
+    <h1 class="tag"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <h4 class="description">{{ page.description }}</h4>
+{% endif %}
     <p>
         <span>
           {% for tag in page.tags %}
@@ -15,4 +22,15 @@
           {% endfor %}
         </span>
     </p>
+{% if page.layout != 'home' %}
+    <p>
+        <span>
+            <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+            {% if page.author %} {{ page.author | prepend: "by " }} {% endif %}
+        </span>
+    </p>
+    <p>
+        <a href="{{ '/' | relative_url }}"> {{ site.theme_config.back_home_text }} </a>
+    </p>
+{% endif %}
 </div>

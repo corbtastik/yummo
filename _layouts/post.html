@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-{%- include head.html -%}
-<body id="yolo-site">
-<div class="container center">
-  <header>
-    {% include components/post-header.html %}
-  </header>
-  <main>{{ content }}</main>
-  <footer>
-    {% include components/footer.html %}
-  </footer>
-</div>
-{% include scripts.html %}
-</body>
-</html>
+---
+layout: default
+---
+{{ content }}

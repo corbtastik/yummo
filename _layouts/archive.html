@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-{%- include head.html -%}
-<body id="yolo-site">
-<div class="container center">
-    <header>
-        {% include components/archive-header.html %}
-    </header>
-    <main>
-        {%-include post_list.html category=page.which_category-%}
-    </main>
-    <footer>
-        {% include components/footer.html %}
-    </footer>
-</div>
-{% include scripts.html %}
-</body>
-</html>
+---
+layout: default
+---
+{%-include post_list.html category=page.which_category-%}
+{{ content }}

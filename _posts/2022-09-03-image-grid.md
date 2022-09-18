@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Image Grid"
+title: "samples/image-grid"
 description: "Showcase pics like a boss"
 date: 2022-09-03
 author: Corbs
-slug: image-grid
+permalink: /samples/image-grid
 category: samples
 tags:
 - css
@@ -50,3 +50,5 @@ A custom data file can be added to create an Image Grid.
 {% endraw %}
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
+
+[↑↑↑](#){: .back-to-top}

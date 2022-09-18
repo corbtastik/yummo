@@ -5,19 +5,25 @@ entries:
     url: /archive
   - title: posts
     post_list:
-      limit: 5
+      limit: 10
       show_more: true
       show_more_text: See archive...
       show_more_url: archive
+  - title: yummo
+    entries:
+      - title: "Github: Yummo, A tasty wittle theme"
+        url: https://github.com/corbtastik/yummo
   - title: yolo
     entries:
-      - title: Yolo, Loveable single page sites
+      - title: "Github: Yolo, Loveable single page sites"
         url: https://github.com/corbtastik/yolo
-      - title: Yolo demo
+      - title: "Yolo demo"
         url: https://corbtastik.github.io/yolo
-      - title: Cornucopia of Corbs
+  - title: corbs
+    entries:
+      - title: "Github: Cornucopia of Corbs"
+        url: https://github.com/corbtastik/corbs
+      - title: "Cornucopia of Corbs"
         url: https://corbs.io
-      - title: Local Yolo
-        url: http://localhost:4000/
   - title: rss
     url: feed.xml
