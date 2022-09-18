@@ -21,7 +21,7 @@ url: ""
 # The style to apply (see _sass/yummo/themes)
 style: corbs
 # The site wide logo
-logo: assets/images/site/logo.svg
+#logo: assets/images/site/logo.svg
 # Where the site should grab images from (can be local, e.g. assets/images)
 images: https://storage.googleapis.com/corbs-foto/yolo
 # The site favicon to use
@@ -29,7 +29,7 @@ favicon: "logo.png"
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
+  back_home_text: "../" # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: false # show blog description in home page
 
