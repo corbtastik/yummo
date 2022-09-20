@@ -14,14 +14,16 @@ tags:
 - openshift
 ---
 
-A lab for working with MySQL in podman and openshift.
+A lab for working with MySQL in Podman and Openshift.
 
-## Setup
+## MySQL on Podman
+
+### Setup for Podman
 
 * [Podman](https://github.com/containers/podman)
 * ([cURL](https://curl.se/) & [jq](https://stedolan.github.io/jq/download/)) or [HTTPie](https://httpie.io/)
 
-## Grab container images
+### Grab container images
 
 {% include code.html info="Get container images" %}
 ```bash
@@ -34,9 +36,9 @@ podman login quay.io
 podman pull quay.io/corbsmartin/todos-mysql
 ```
 
-## Run with port-forwarding
+### Run with port-forwarding
 
-### 1. Start the database container
+#### 1. Start the database container
 
 Start a MySQL container, mapping hostPort `3306` to containerPort `3306`.
 
@@ -52,7 +54,7 @@ podman run --name todos-db -d \
 podman logs todos-db
 ```
 
-### 2. Start the client app container
+#### 2. Start the client app container
 
 * First, set your `HOST_IP`
 
@@ -88,7 +90,7 @@ podman run --name todos-mysql -d -p 8081:8081 \
   quay.io/corbsmartin/todos-mysql
 ```
 
-### 3. Grok
+#### 3. Grok
 
 Get all, create, get, update, get completed, delete, chill.
 
@@ -134,7 +136,7 @@ http DELETE :8081/todos/1004
 http :8081/todos/
 ```
 
-### 4. Sanity check
+#### 4. Sanity check
 
 Do a quick check to verify clean startups.
 
@@ -149,3 +151,133 @@ podman logs todos-mysql
 Tomcat started on port(s): 8081 (http)
 ```
 
+## MySQL on Openshift
+
+### 0. Setup for Openshift
+
+You'll need the following tools, in addition to the ones mentioned in [Setup for Podman](#setup-for-podman).
+
+* An Openshift environment
+  * Openshift Local (aka Code Ready Containers) is a great local development options.
+  * Openshift Online is a good option for using Openshift as a service.
+  * A real deployment of OpenShift
+
+### 1. Set vars
+
+{% include code.html info="Set vars used by later commands" %}
+```bash
+APP_NAMESPACE="mysql-dev"
+APP_NAME="mysql"
+MYSQL_USER="user1"
+MYSQL_PASS="mysql123"
+MYSQL_POD=`oc get pods --template "{{range .items}}{{.metadata.name}}{{end}}" \
+  --selector=app=${APP_NAME} \
+  -n ${APP_NAMESPACE}`
+```
+
+### 2. Create table
+
+{% include code.html info="Create todos table" %}
+```bash
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -u${MYSQL_USER} -p${MYSQL_PASS} -e \
+  "DROP TABLE IF EXISTS todos.todos;
+   CREATE TABLE todos.todos (
+    id VARCHAR(64) NOT NULL,
+    title VARCHAR(255) DEFAULT NULL,
+    complete BOOL DEFAULT FALSE,
+    PRIMARY KEY (id),
+    INDEX (title));"'
+```
+
+### 3. Describe the table
+
+{% include code.html info="Describe the table" %}
+```bash
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "DESCRIBE todos.todos;"'
+```
+
+```text
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| id       | varchar(64)  | NO   | PRI | NULL    |       |
+| title    | varchar(255) | YES  | MUL | NULL    |       |
+| complete | tinyint(1)   | YES  |     | 0       |       |
++----------+--------------+------+-----+---------+-------+
+```
+
+### 4. Insert test data
+
+{% include code.html info="Insert test data" %}
+```bash
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "INSERT INTO todos.todos(id, title, complete) VALUE (1000, \"Demo create with manifest.\", FALSE);
+   INSERT INTO todos.todos(id, title, complete) VALUE (1001, \"Demo create with Helm.\", FALSE);
+   INSERT INTO todos.todos(id, title, complete) VALUE (1002, \"Review MySQL deployment options.\", FALSE);"'
+```
+
+```bash
+# Set vars used by later commands
+APP_NAMESPACE="mysql-lab"
+APP_NAME="mysql"
+MYSQL_POD=`oc get pods --template "{{range .items}}{{.metadata.name}}{{end}}" \
+  --selector=app=${APP_NAME} \
+  -n ${APP_NAMESPACE}`
+
+# Create table  
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "DROP TABLE IF EXISTS todos.todos;
+   CREATE TABLE todos.todos (
+    id VARCHAR(64) NOT NULL,
+    title VARCHAR(255) DEFAULT NULL,
+    complete BOOL DEFAULT FALSE,
+    PRIMARY KEY (id),
+    INDEX (title));"'
+
+# Describe table
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "DESCRIBE todos.todos;"'
+    
+# Insert 1 record
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "INSERT INTO todos.todos(id, title, complete) VALUE (1000, \"Demo create with manifest.\", FALSE);"'
+
+# Show 1 record
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "SELECT * FROM todos.todos;"'
+
+# Delete 1 record
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "DELETE FROM todos.todos WHERE id=1000;"'
+
+# Insert test data
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "INSERT INTO todos.todos(id, title, complete) VALUE (1000, \"Demo create with manifest.\", FALSE);
+   INSERT INTO todos.todos(id, title, complete) VALUE (1001, \"Demo create with Helm.\", FALSE);
+   INSERT INTO todos.todos(id, title, complete) VALUE (1002, \"Review MySQL deployment options.\", FALSE);"'
+   
+# Show all records
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "SELECT * FROM todos.todos;"'
+
+# Update first record
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "UPDATE todos.todos SET complete=TRUE WHERE id=1000;"'
+  
+# Show only completed todos
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "SELECT * FROM todos.todos WHERE complete=TRUE;"'
+  
+# We're done here, drop table
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "DROP TABLE todos.todos;"'
+  
+# Show tables, verify drop
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "SHOW TABLES FROM todos;"'
+
+# Show databases, verify todos database is present
+oc exec -it -n ${APP_NAMESPACE} ${MYSQL_POD} -- /bin/bash -c 'mysql -uuser1 -pmysql123 -e \
+  "SHOW DATABASES;"'
+```
