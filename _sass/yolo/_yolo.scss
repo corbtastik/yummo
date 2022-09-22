@@ -232,6 +232,10 @@
     border-bottom: 1px dashed $light-accent-color;
   }
 
+  b, em, abbr, cite, del, ins, sub, sup, strong {
+    color: $light-code-color;
+  }
+
   pre, code {
     color: $light-code-color;
   }
@@ -477,6 +481,10 @@
 
   hr {
     border-bottom: 1px dashed $dark-accent-color;
+  }
+
+  b, em, abbr, cite, del, ins, sub, sup, strong {
+    color: $dark-code-color;
   }
 
   pre, code {
