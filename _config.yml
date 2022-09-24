@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# Yummo site base properties
+# Yummo base properties
 # -----------------------------------------------------------------------------
 # A snazzy title for your site
 title: Yummo, a tasty wittle theme
@@ -16,7 +16,7 @@ baseurl: ""
 # The base hostname (w/ protocol) of your Yummo site, e.g. http://corbs.io
 url: ""
 # -----------------------------------------------------------------------------
-# Yummo site feature properties
+# Yummo site properties
 # -----------------------------------------------------------------------------
 # The style to apply (see _sass/yummo/themes)
 style: corbs
