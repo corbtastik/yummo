@@ -16,38 +16,40 @@ tags:
 > * Sass based theming with dark and light modes.
 > * Snazzy photo and code-snippet support.
 
-## History
+### History
 
-I've used Jekyll for various technical ramblings, photo galleries and my personal site [corbs.io](https://corbs.io) for quite some time. I've never been really happy with the sites, mostly because I couldn't find a single theme that met all my needs. That said, [Jekyll](https://jekyllrb.com) is a solid static site generator (_despite being implemented in ruby_). This led to developing [Yummo](https://corbtastik.github.io/yummo).
+I've used Jekyll for various technical ramblings, photo galleries and my personal site [corbs.io](https://corbs.io) for quite some time. I've never been really satisfied with the sites, mostly because I couldn't find a single theme that met all my needs.
 
-Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize (_not to mention there's a quirky beauty in its look_). My fascination with [Solo](http://chibicode.github.io/solo/) led to developing [Yolo](https://corbtastik.github.io/yolo/) - "_A loveable single page theme_" with some nice accoutrements. Yolo helped build a foundation for "_what_" content I want to focus on (_code_, _photos_) and "_how_" I want it to look. The next step was bringing that together with a multi-page theme focused on site organization. That's [Yummo](https://corbtastik.github.io/yummo).
+So I first crafted [Yolo](https://corbtastik.github.io/yolo/), _a loveable theme_ laser focused on single-page sites. [Yolo](https://corbtastik.github.io/yolo/) helped build a foundation for page content, but it's not a multi-page theme. The next step was bringing [Yolo](https://corbtastik.github.io/yolo/) together with a multi-page theme and that's [Yummo](https://corbtastik.github.io/yummo).
 
-## Thanks
+[Yolo](https://corbtastik.github.io/yolo/) and [Yummo](https://corbtastik.github.io/yummo) are individual themes, [Yolo](https://corbtastik.github.io/yolo/) for single-page sites and [Yummo](https://corbtastik.github.io/yummo) for multi-page. However, they're built to _play nice_ with each other.
+
+* [Yummo](https://corbtastik.github.io/yummo) uses the same scss styling as [Yolo](https://corbtastik.github.io/yolo/).
+* You can "drop" [Yolo](https://corbtastik.github.io/yolo/) pages into [Yummo](https://corbtastik.github.io/yummo), just add front-matter.
+* Think of [Yummo](https://corbtastik.github.io/yummo) as "additive" to what [Yolo](https://corbtastik.github.io/yolo/) provides.
+
+### Thanks
 
 I'm a developer by trade with roots in C and Java. I once read something like - _"write code every day"_ and although I haven't, I like to try. I enjoy frontend development but consider myself a hack. I get by, but get by with a little help from my friends.
 
 > Many thanks for these resources and the folks behind them.
 
-### [w3schools](https://www.w3schools.com/)
+#### [w3schools](https://www.w3schools.com/)
 
 When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
 
 > Sanks [w3schools](https://www.w3schools.com/) people.
 
-### [Solo](http://chibicode.github.io/solo/)
+#### [Solo](http://chibicode.github.io/solo/)
 
-Years ago I googled _"minimal jekyll theme"_, which led me to [Solo](http://chibicode.github.io/solo/). It was exactly what I was looking for, simple to get started and customize. Not to mention there's a quirky beauty in its look. Over the years I've used Solo for single page "technical" docs.
-
-Yolo is cut from the cloth of "[Solo](http://chibicode.github.io/solo)" which was previously developed by [Shu Uesugi](https://github.com/chibicode).
+Over the years I've used [Solo](http://chibicode.github.io/solo/) for single page "technical" docs. Wonderful little theme that's easy to work with and the inspiration for [Yolo](https://corbtastik.github.io/yolo/).
 
 > Well done [Shu Uesugi](https://github.com/chibicode), sanks amigo.
 
-### [Bulma](https://bulma.io/)
+#### [No Style Please](https://github.com/riggraz/no-style-please)
 
-_"The modern CSS framework that just works"_, true dat. Bulma is not included as a library, but Yolo contains slightly modified scss from select areas, namely flexbox, typography and image styling. For my tastes Bulma is the best css framework, they be awesome yo.
+Before starting work on [Yummo](https://corbtastik.github.io/yummo) I looked for something close to what I wanted in a multi-page theme. [No Style Please](https://github.com/riggraz/no-style-please), by [Riccardo Graziosi](https://github.com/riggraz) checked some boxes, namely minimal dependencies and straight forward site organization. [Yummo](https://corbtastik.github.io/yummo) borrows site organization from [No Style Please](https://github.com/riggraz/no-style-please) but adds different layouts and a whole different style.
 
-> Sanks [Bulma](https://bulma.io/) people.
+> Kudos [Riccardo Graziosi](https://github.com/riggraz)!
 
 [↑↑↑](#){: .back-to-top}
-
-
