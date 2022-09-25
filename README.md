@@ -4,7 +4,7 @@
 
 ## Backlog
 
-1. Create github pages site
+1. Create Github pages site
 1. 404 page
 1. Table of Contents plugin
 1. Search function
