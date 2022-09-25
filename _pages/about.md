@@ -34,11 +34,11 @@ I'm a developer by trade with roots in C and Java. I once read something like - 
 
 > Many thanks for these resources and the folks behind them.
 
-#### [w3schools](https://www.w3schools.com/)
+#### [W3 Schools](https://www.w3schools.com/)
 
-When I want an unvarnished take on HTML, CSS, and Javascript I go to [w3schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [w3schools](https://www.w3schools.com/) comes up. Great reference material, some of which guided the [Yolo Lightbox](#image-lightbox) implementation.
+When I want an unvarnished take on HTML, CSS, and Javascript I go to [W3 Schools](https://www.w3schools.com/). That and every time I google for frontend related stuff [W3 Schools](https://www.w3schools.com/) comes up. Great reference material, some of which jumpstarted the [Yolo Lightbox](/samples/lightbox) implementation.
 
-> Sanks [w3schools](https://www.w3schools.com/) people.
+> Sanks [W3 Schools](https://www.w3schools.com/) people.
 
 #### [Solo](http://chibicode.github.io/solo/)
 
