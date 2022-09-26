@@ -33,5 +33,11 @@
         <a href="{{ '/' | relative_url }}"> {{ site.theme_config.back_home_text }} </a>
     </p>
 {% endif %}
+{% if site.searchable %}
+    <form action="/search">
+        <input type="search" id="yummo-search" name="yummo-search">
+        <input type="submit" value="Search">
+    </form>
+{% endif %}
     <hr/>
 </div>

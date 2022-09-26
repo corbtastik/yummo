@@ -26,6 +26,8 @@ logo: assets/images/site/logo.svg
 images: https://storage.googleapis.com/corbs-foto/yolo
 # The site favicon to use
 favicon: "logo.png"
+# Is site searchable?
+searchable: false
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
