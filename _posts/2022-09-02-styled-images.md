@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/styled-images"
-description: "Yummo css styled images"
+description: "Yummo styled images"
 date: 2022-09-02
 author: Corbs
 permalink: /samples/styled-images
@@ -11,6 +11,18 @@ tags:
 - images
 - sample
 - yummo
+---
+
+### Table of Contents
+
+- [Thumbnail Images](#thumbnail-images)
+- [Square Images](#square-images)
+- [Circle Images](#circle-images)
+- [4-by-3 Images](#4-by-3-images)
+- [3-by-4 Images](#3-by-4-images)
+- [16-by-9 Images](#16-by-9-images)
+- [9-by-16 Images](#9-by-16-images)
+
 ---
 
 > __Tip:__ Click to enlarge.
@@ -34,6 +46,8 @@ tags:
   src="yolo/big-face-bucky.png"
 %}
 
+[↑↑↑](#){: .back-to-top}
+
 ---
 
 ### Square Images
@@ -54,6 +68,8 @@ tags:
   classes="image is-256"
   src="yolo/big-face-bucky.png"
 %}
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -76,6 +92,8 @@ tags:
   src="yolo/big-face-bucky.png"
 %}
 
+[↑↑↑](#){: .back-to-top}
+
 ---
 
 ### 4-by-3 Images
@@ -96,6 +114,8 @@ tags:
   classes="image is-256-by-192"
   src="yolo/big-face-bucky.png"
 %}
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 
@@ -118,6 +138,8 @@ tags:
   src="yolo/big-face-bucky.png"
 %}
 
+[↑↑↑](#){: .back-to-top}
+
 ---
 
 ### 16-by-9 Images
@@ -138,6 +160,8 @@ tags:
   classes="image is-256-by-144"
   src="yolo/big-face-bucky.png"
 %}
+
+[↑↑↑](#){: .back-to-top}
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/image-grid"
-description: "Showcase pics like a boss"
+description: "Yummo Image Grid like a boss"
 date: 2022-09-03
 author: Corbs
 permalink: /samples/image-grid
@@ -13,6 +13,16 @@ tags:
 - sample
 - yummo
 ---
+
+### Table of Contents
+
+- [Image Grid](#image-grid)
+  - [Default data file](#default-data-file)
+  - [Custom data file](#custom-data-file)
+
+---
+
+### Image Grid
 
 Show your awesome pics in a Yummo Image Grid, ooh-la-la.
 

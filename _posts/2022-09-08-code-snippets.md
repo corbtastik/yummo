@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/code-snippets"
-description: "Syntax highlighting and code copy"
+description: "Yummo syntax highlighting and code copy"
 date: 2022-09-08
 author: Corbs
 permalink: /samples/code-snippets
@@ -14,9 +14,160 @@ tags:
 - yummo
 ---
 
+### Table of Content
+
+- [Bash](#bash)
+- [C](#c)
+- [C++](#c++)
+- [Dart](#dart)
+- [Go](#go)
+- [HTML](#html)
+- [JSON Array](#json-array)
+- [JSON Object](#json-object)
+- [Java](#java)
+- [JavaScript](#javascript)
+- [Kotlin](#kotlin)
+- [Markdown](#markdown)
+- [Python](#python)
+- [SCSS](#scss)
+- [SQL](#sql)
+- [YAML](#yaml)
+
 > __Tip:__ Click header to copy a snippet.
 
-{% include code.html info="JSON array" %}
+### Bash
+
+{% include code.html info="Bash snippet" %}
+```bash
+#!/bin/bash
+function say_howdy() {
+  echo "Howdy $1!"
+}
+
+if [ $# -ne 1 ]; then
+    echo "Usage: Howdy <NAME>"
+    exit 1
+fi
+
+# Say Howdy
+say_howdy $1
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### C
+
+{% include code.html info="C snippet" %}
+```c
+#include <stdio.h>
+// Say Howdy
+int main(int argc, char **argv) {
+    if(argc != 2) {
+        printf("Usage: Howdy <NAME>");
+        return 1;
+    }
+    printf("Howdy %s!\n", argv[1]);
+    return 0;
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### C++
+
+{% include code.html info="C++ snippet" %}
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+    if(argc != 2) {
+        cout << "Usage: Howdy <NAME>";
+        return 1;
+    }
+    cout << "Howdy " << argv[1];
+    return 0;
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Dart
+
+{% include code.html info="Dart snippet" %}
+```dart
+import 'dart:io';
+// Say Howdy
+void main(List<String> args) {
+    exitCode = 0;
+    if(args.length != 1) {
+        stdout.writeln("Usage: Howdy <NAME>");
+        exitCode = 1;
+        return;
+    }
+    stdout.writeln("Howdy ${args[0]}!");
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### Go
+
+{% include code.html info="Go snippet" %}
+```go
+package main
+
+import (
+    "os"
+    "fmt"
+)
+
+// Say Howdy
+func main () {
+    if len(os.Args) != 2 {
+        fmt.Println("Usage: Howdy <NAME>")
+        os.Exit(1)
+    }
+    fmt.Println("Howdy " + os.Args[1] + "!")
+    os.Exit(0)
+}
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### HTML
+
+{% include code.html info="HTML snippet" %}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Howdy!</title>
+</head>
+<body>
+    <h1>Howdy from an HTML page!</h1>
+</body>
+</html>
+```
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+### JSON Array
+
+{% include code.html info="JSON Array snippet" %}
 ```json
 [{
   "id": 1000,
@@ -49,114 +200,13 @@ tags:
 }]
 ```
 
-
-{% include code.html info="Bash snippet" %}
-```bash
-#!/bin/bash
-function say_howdy() {
-  echo "Howdy $1!"
-}
-
-if [ $# -ne 1 ]; then
-    echo "Usage: Howdy <NAME>"
-    exit 1
-fi
-
-# Say Howdy
-say_howdy $1
-```
-
 [↑↑↑](#){: .back-to-top}
 
-{% include code.html info="C snippet" %}
-```c
-#include <stdio.h>
-// Say Howdy
-int main(int argc, char **argv) {
-    if(argc != 2) {
-        printf("Usage: Howdy <NAME>");
-        return 1;
-    }
-    printf("Howdy %s!\n", argv[1]);
-    return 0;
-}
-```
+---
 
-[↑↑↑](#){: .back-to-top}
+### JSON Object
 
-{% include code.html info="C++ snippet" %}
-```c++
-#include <iostream>
-using namespace std;
-
-int main(int argc, char** argv) {
-    if(argc != 2) {
-        cout << "Usage: Howdy <NAME>";
-        return 1;
-    }
-    cout << "Howdy " << argv[1];
-    return 0;
-}
-```
-
-[↑↑↑](#){: .back-to-top}
-
-{% include code.html info="Dart snippet" %}
-```dart
-import 'dart:io';
-// Say Howdy
-void main(List<String> args) {
-    exitCode = 0;
-    if(args.length != 1) {
-        stdout.writeln("Usage: Howdy <NAME>");
-        exitCode = 1;
-        return;
-    }
-    stdout.writeln("Howdy ${args[0]}!");
-}
-```
-
-[↑↑↑](#){: .back-to-top}
-
-{% include code.html info="Go snippet" %}
-```go
-package main
-
-import (
-    "os"
-    "fmt"
-)
-
-// Say Howdy
-func main () {
-    if len(os.Args) != 2 {
-        fmt.Println("Usage: Howdy <NAME>")
-        os.Exit(1)
-    }
-    fmt.Println("Howdy " + os.Args[1] + "!")
-    os.Exit(0)
-}
-```
-
-[↑↑↑](#){: .back-to-top}
-
-{% include code.html info="HTML snippet" %}
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Howdy!</title>
-</head>
-<body>
-    <h1>Howdy from an HTML page!</h1>
-</body>
-</html>
-```
-
-[↑↑↑](#){: .back-to-top}
-
-{% include code.html info="JSON snippet" %}
+{% include code.html info="JSON Object snippet" %}
 ```json
 {
   "apiVersion": "v1",
@@ -185,6 +235,10 @@ func main () {
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
+### Java
+
 {% include code.html info="Java snippet" %}
 ```java
 // Say Howdy
@@ -200,6 +254,10 @@ public class Howdy {
 ```
 
 [↑↑↑](#){: .back-to-top}
+
+---
+
+### JavaScript
 
 {% include code.html info="JavaScript snippet" %}
 ```javascript
@@ -218,6 +276,10 @@ sayHowdy(process.argv[2]);
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
+### Kotlin
+
 {% include code.html info="Kotlin snippet" %}
 ```kotlin
 // Say Howdy
@@ -233,6 +295,10 @@ fun main(args: Array<String>): Int {
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
+### Markdown
+
 {% include code.html info="Markdown snippet" %}
 ```markdown
 # Markdown
@@ -245,6 +311,10 @@ fun main(args: Array<String>): Int {
 ```
 
 [↑↑↑](#){: .back-to-top}
+
+---
+
+### Python
 
 {% include code.html info="Python snippet" %}
 ```python
@@ -262,6 +332,10 @@ sayHowdy(sys.argv[1])
 ```
 
 [↑↑↑](#){: .back-to-top}
+
+---
+
+### SCSS
 
 {% include code.html info="SCSS snippet" %}
 ```scss
@@ -283,6 +357,10 @@ sayHowdy(sys.argv[1])
 
 [↑↑↑](#){: .back-to-top}
 
+---
+
+### SQL
+
 {% include code.html info="SQL snippet" %}
 ```sql
 -- Select orders for micky
@@ -294,6 +372,10 @@ AND   price <= 10000
 ```
 
 [↑↑↑](#){: .back-to-top}
+
+---
+
+### YAML
 
 {% include code.html info="YAML snippet" %}
 ```yaml
