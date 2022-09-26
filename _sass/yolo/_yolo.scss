@@ -34,8 +34,8 @@
     float: left;
     display: inline-block;
     background: $dark-secondary-color;;
-    -webkit-mask: url("/assets/images/site/logo.png");
-    mask: url("/assets/images/site/logo.png");
+    //-webkit-mask: url("/assets/images/site/logo.png");
+    //mask: url("/assets/images/site/logo.png");
   }
   .theme-dot {
     font-size: $size-3;
@@ -287,6 +287,12 @@
     font-family: $family-secondary;
   }
 
+  figure {
+    figcaption {
+      color: $light-accent-color;
+    }
+  }
+
   .yolo-header {
     .logo {
       background-color: $light-secondary-color;
@@ -536,6 +542,12 @@
     background-color: $dark-secondary-color;
     color: $dark-primary-color;
     font-family: $family-secondary;
+  }
+
+  figure {
+    figcaption {
+      color: $dark-accent-color;
+    }
   }
 
   .yolo-header {
