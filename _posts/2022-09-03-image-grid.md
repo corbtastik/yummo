@@ -14,14 +14,6 @@ tags:
 - yummo
 ---
 
-### Table of Contents
-
-- [Image Grid](#image-grid)
-  - [Default data file](#default-data-file)
-  - [Custom data file](#custom-data-file)
-
----
-
 ### Image Grid
 
 Show your awesome pics in a Yummo Image Grid, ooh-la-la.

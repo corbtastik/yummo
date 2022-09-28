@@ -14,7 +14,7 @@ tags:
 - yummo
 ---
 
-### Table of Content
+### Snippet samples
 
 - [Bash](#bash)
 - [C](#c)

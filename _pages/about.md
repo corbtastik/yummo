@@ -9,7 +9,7 @@ tags:
 - yummo
 ---
 
-[Yummo](https://github.com/corbtastik/yummo) is a tasty little theme for static sites, this one is for [Jekyll](https://jekyllrb.com) but in the not-too-distant future it will be available for [Eleventy](https://www.11ty.dev/).
+[Yummo](https://github.com/corbtastik/yummo) is a tasty little theme for multi-page sites, this one is for [Jekyll](https://jekyllrb.com) but in the not-too-distant future it will be available for [Eleventy](https://www.11ty.dev/).
 
 > [Yummo](https://corbtastik.github.io/yummo) is essentially what I want in a static multi-page site.
 > * Simple to use, low-to-no dependencies other than Jekyll.

@@ -13,18 +13,6 @@ tags:
 - yummo
 ---
 
-### Table of Contents
-
-- [Thumbnail Images](#thumbnail-images)
-- [Square Images](#square-images)
-- [Circle Images](#circle-images)
-- [4-by-3 Images](#4-by-3-images)
-- [3-by-4 Images](#3-by-4-images)
-- [16-by-9 Images](#16-by-9-images)
-- [9-by-16 Images](#9-by-16-images)
-
----
-
 > __Tip:__ Click to enlarge.
 
 ### Thumbnail Images
