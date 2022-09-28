@@ -134,7 +134,7 @@
     color: $dark-secondary-color;
   }
   .tag-description {
-    color: $dark-tertiary-color;
+    color: $dark-alternative-color;
   }
 }
 
@@ -243,7 +243,7 @@
   }
 
   blockquote {
-    border-left: .25rem solid $light-tertiary-color;
+    border-left: .25rem solid $light-alternative-color;
   }
 
   hr {
@@ -318,7 +318,7 @@
       background-color: $light-secondary-color;
     }
     .theme-dot {
-      color: $light-tertiary-color;
+      color: $light-alternative-color;
     }
     .tag {
       color: $light-secondary-color;
@@ -333,10 +333,10 @@
       color: $light-secondary-color;
     }
     .yolo-version {
-      color: $light-tertiary-color;
+      color: $light-alternative-color;
     }
     .yolo-build-date {
-      color: $light-tertiary-color;
+      color: $light-alternative-color;
     }
   }
 
@@ -345,7 +345,7 @@
       color: $light-secondary-color;
     }
     .tag-description {
-      color: $light-tertiary-color;
+      color: $light-alternative-color;
     }
   }
 
@@ -521,7 +521,7 @@
   }
 
   blockquote {
-    border-left: .25rem solid $dark-tertiary-color;
+    border-left: .25rem solid $dark-alternative-color;
   }
 
   hr {
@@ -596,7 +596,7 @@
       background-color: $dark-secondary-color;
     }
     .theme-dot {
-      color: $dark-tertiary-color;
+      color: $dark-alternative-color;
     }
     .tag {
       color: $dark-secondary-color;
@@ -611,10 +611,10 @@
       color: $dark-secondary-color;
     }
     .yolo-version {
-      color: $dark-tertiary-color;
+      color: $dark-alternative-color;
     }
     .yolo-build-date {
-      color: $dark-tertiary-color;
+      color: $dark-alternative-color;
     }
   }
 
@@ -623,7 +623,7 @@
       color: $dark-secondary-color;
     }
     .tag-description {
-      color: $dark-tertiary-color;
+      color: $dark-alternative-color;
     }
   }
 

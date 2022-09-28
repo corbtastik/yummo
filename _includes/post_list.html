@@ -15,11 +15,11 @@
   <ul>
     {% for post in posts limit: include.limit %}
     <li>
-              <span>
-                  <span class="tag-date">{{ post.date | date: site.theme_config.date_format }}</span>
-                  <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
-                  <span class="tag-description">{{ post.description }}</span>
-              </span>
+      <span>
+          <span class="tag-date">{{ post.date | date: site.theme_config.date_format }}</span>
+          <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+          <span class="tag-description">{{ post.description }}</span>
+      </span>
     </li>
     {% endfor %}
     {% if include.show_more and limit_exceeded %}
