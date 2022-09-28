@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{{ content }}
-
 <ol class="pill-group">
     {% assign tags_max = 0 %}
     {% for tag in site.tags %}
@@ -15,9 +13,7 @@ layout: default
     {% for tag in site.tags %}
     {% if tag[1].size == i %}
     <li>
-        <a href="/tags/#{{ tag[0] | slugify }}" class="pill">
-            {{ tag[0] }}&nbsp;<span class="pill-count" aria-label="{{ i }} posts">{{ i }}</span>
-        </a>
+        <a href="/yummo/tags/#{{ tag[0] | slugify }}" class="pill">#{{ tag[0] }}&nbsp;<span>{{ i }}</span></a>
     </li>
     {% endif %}
     {% endfor %}
@@ -34,14 +30,21 @@ layout: default
 {% for i in (1..tags_max) reversed %}
 {% for tag in site.tags %}
 {% if tag[1].size == i %}
-<section id="{{ tag[0] | slugify | downcase }}" class="taxonomy-section">
-    <h2 class="taxonomy-title">{{ tag[0] }}</h2>
-    <div class="entries-{{ page.entries_layout | default: 'list' }}">
+<hr/>
+<section id="{{ tag[0] | slugify | downcase }}" class="tag-section">
+    <h4 class="tag-title">#{{ tag[0] }}</h4>
+    <ul class="no-bullets">
         {% for post in tag.last %}
-        {% include entry.html %}
+        <li>
+            <span>
+                <span class="tag-date">{{ post.date | date: site.theme_config.date_format }}</span>
+                <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+                <span class="tag-description">{{ post.description }}</span>
+            </span>
+        </li>
         {% endfor %}
-    </div>
-    <a href="#" class="back-to-top">{{ site.data.text[site.locale].back_to_top | default: 'Top' }} &uarr;</a>
+    </ul>
+    <a href="#" class="back-to-top">↑↑↑</a>
 </section>
 {% endif %}
 {% endfor %}

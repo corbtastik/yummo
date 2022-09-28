@@ -1,4 +1,9 @@
-<div class="footer">
+<div class="yolo-footer">
     <hr/>
-    <p>{{ site.tag_text }} {{ site.version }} built {{ "now" | date: "%Y-%m-%d %H:%M" }}</p>
+    <p>
+        <span class="yolo-tag">{{ site.tag_text }}</span>
+        <span class="yolo-version">{{ site.version }}</span>
+        built
+        <span class="yolo-build-date">{{ "now" | date: "%Y-%m-%d %H:%M" }}</span>
+    </p>
 </div>

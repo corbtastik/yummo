@@ -3,6 +3,8 @@ entries:
     url: /yummo/about
   - title: yummo/archive
     url: /yummo/archive
+  - title: yummo/tags
+    url: /yummo/tags
   - title: posts
     post_list:
       limit: 10

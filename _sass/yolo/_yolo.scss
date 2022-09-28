@@ -33,9 +33,7 @@
     object-fit: cover;
     float: left;
     display: inline-block;
-    background: $dark-secondary-color;;
-    //-webkit-mask: url("/assets/images/site/logo.png");
-    //mask: url("/assets/images/site/logo.png");
+    background: $dark-secondary-color;
   }
   .theme-dot {
     font-size: $size-3;
@@ -128,6 +126,16 @@
   font-size: $size-6;
   font-weight: bold;
   border-radius: 3rem;
+}
+
+// tag content styling
+.tag-section {
+  .tag-date {
+    color: $dark-secondary-color;
+  }
+  .tag-description {
+    color: $dark-tertiary-color;
+  }
 }
 
 // prezo styling
@@ -310,13 +318,34 @@
       background-color: $light-secondary-color;
     }
     .theme-dot {
-      color: $light-secondary-color;
+      color: $light-tertiary-color;
     }
     .tag {
       color: $light-secondary-color;
     }
     .description {
       color: $light-accent-color;
+    }
+  }
+
+  .yolo-footer {
+    .yolo-tag {
+      color: $light-secondary-color;
+    }
+    .yolo-version {
+      color: $light-tertiary-color;
+    }
+    .yolo-build-date {
+      color: $light-tertiary-color;
+    }
+  }
+
+  .tag-section {
+    .tag-date {
+      color: $light-secondary-color;
+    }
+    .tag-description {
+      color: $light-tertiary-color;
     }
   }
 
@@ -567,13 +596,34 @@
       background-color: $dark-secondary-color;
     }
     .theme-dot {
-      color: $dark-secondary-color;
+      color: $dark-tertiary-color;
     }
     .tag {
       color: $dark-secondary-color;
     }
     .description {
       color: $dark-accent-color;
+    }
+  }
+
+  .yolo-footer {
+    .yolo-tag {
+      color: $dark-secondary-color;
+    }
+    .yolo-version {
+      color: $dark-tertiary-color;
+    }
+    .yolo-build-date {
+      color: $dark-tertiary-color;
+    }
+  }
+
+  .tag-section {
+    .tag-date {
+      color: $dark-secondary-color;
+    }
+    .tag-description {
+      color: $dark-tertiary-color;
     }
   }
 
