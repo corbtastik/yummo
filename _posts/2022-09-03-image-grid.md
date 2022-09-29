@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/image-grid"
-description: "Image Grid like a boss"
+description: "Image Grid, ooh-la-la"
 date: 2022-09-03
 author: Corbs
 permalink: /samples/image-grid

@@ -1,5 +1,5 @@
 ---
 layout: archive
-title: yummo/archive
-permalink: /yummo/archive/
+title: archive
+permalink: /archive/
 ---

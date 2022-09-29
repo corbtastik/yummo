@@ -16,10 +16,9 @@
 {% endif %}
     <p>
         <span>
-          {% for tag in page.tags %}
-            {% capture tag_name %}{{ tag }}{% endcapture %}
-            <code class="pill">#{{ tag_name }}</code>
-          {% endfor %}
+            {% for tag in page.tags %}
+            <a href="/yummo/tags/#{{ tag | slugify }}" class="pill">#{{ tag }}</a>
+            {% endfor %}
         </span>
     </p>
 {% if page.layout != 'home' %}

@@ -2,29 +2,22 @@
 // sandbox theme
 // ----------------------------------------------------------------------------
 // light mode colors
-$light-primary-color: #f8f5f9;
-$light-secondary-color: #ff1166;
-$light-accent-color: #4900ca;
-$light-link-color: #17c1d6;
-$light-code-background-color: #fff;
-$light-code-color: #b80944;
+$light-primary-color: #92b7f1;
+$light-secondary-color: #190841;
+$light-accent-color: #4113a6;
+$light-link-color: #2ba0b1;
+$light-code-background-color: #aec7f0;
+$light-code-color: #251a54;
 
 // dark mode colors
-//$dark-primary-color: #23004a;
-//$dark-secondary-color: #ff1166;
-//$dark-accent-color: #b388ff;
-//$dark-link-color: #65e9fc;
-//$dark-code-background-color: #110023;
-//$dark-code-color: #ff4081;
-
-$dark-primary-color: #00c853;
-$dark-secondary-color: #fff;
-$dark-accent-color: #fff;
+$dark-primary-color: #190841;
+$dark-secondary-color: #92b7f1;
+$dark-accent-color: #598ffe;
 $dark-link-color: #65e9fc;
-$dark-code-background-color: #fff;
-$dark-code-color: #000;
+$dark-code-background-color: #251a54;
+$dark-code-color: #947acd;
 
 // fonts
 $family-primary: "Source Code Pro", monospace;
-$family-secondary: "Poppins", sans-serif;
+$family-secondary: "Raleway", sans-serif;
 $family-monospace: "Red Hat Mono", monospace;

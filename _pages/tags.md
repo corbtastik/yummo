@@ -1,5 +1,5 @@
 ---
 layout: tags
-title: yummo/tags
-permalink: /yummo/tags/
+title: tags
+permalink: /tags/
 ---

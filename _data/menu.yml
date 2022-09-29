@@ -1,16 +1,16 @@
 entries:
-  - title: yummo/about
-    url: /yummo/about
-  - title: yummo/archive
-    url: /yummo/archive
-  - title: yummo/tags
-    url: /yummo/tags
+  - title: about
+    url: /about
+  - title: archive
+    url: /archive
+  - title: tags
+    url: /tags
   - title: posts
     post_list:
       limit: 10
       show_more: true
       show_more_text: See archive...
-      show_more_url: /yummo/archive
+      show_more_url: /archive
   - title: yummo
     entries:
       - title: "Github: Yummo, A tasty wittle theme"
