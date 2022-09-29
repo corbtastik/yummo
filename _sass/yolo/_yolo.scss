@@ -18,6 +18,7 @@
   color: text-color($bg, $syntax);
 }
 
+// only id selector, used for top-level site reference
 #yolo-site {
   opacity: 0;
   transition: opacity 2s;
@@ -85,7 +86,6 @@
   text-decoration: none;
 }
 
-// copy code header
 .code-header {
   font-weight: bold;
   padding: 0.3em 0.3em 0.3em 0.4em;
@@ -94,7 +94,6 @@
   border-top-right-radius: 0.3em;
 }
 
-// embedded video styling
 .video {
   width: 100%;
   iframe {
@@ -105,7 +104,6 @@
   }
 }
 
-// pill styling
 .pill-group {
   display: flex;
   flex-wrap: wrap;
@@ -128,17 +126,6 @@
   border-radius: 3rem;
 }
 
-// tag content styling
-.tag-section {
-  .tag-date {
-    color: $dark-secondary-color;
-  }
-  .tag-description {
-    color: $dark-alternative-color;
-  }
-}
-
-// prezo styling
 .prezo-iframe-container {
   position: relative;
   overflow: hidden;
@@ -243,7 +230,7 @@
   }
 
   blockquote {
-    border-left: .25rem solid $light-alternative-color;
+    border-left: .25rem solid $light-accent-color;
   }
 
   hr {
@@ -318,7 +305,7 @@
       background-color: $light-secondary-color;
     }
     .theme-dot {
-      color: $light-alternative-color;
+      color: $light-secondary-color;
     }
     .tag {
       color: $light-secondary-color;
@@ -333,20 +320,19 @@
       color: $light-secondary-color;
     }
     .yolo-version {
-      color: $light-alternative-color;
+      color: $light-accent-color;
     }
     .yolo-build-date {
-      color: $light-alternative-color;
+      color: $light-accent-color;
     }
   }
 
-  .tag-section {
-    .tag-date {
-      color: $light-secondary-color;
-    }
-    .tag-description {
-      color: $light-alternative-color;
-    }
+  .entry-date {
+    color: $light-secondary-color;
+  }
+
+  .entry-description {
+    color: $light-accent-color;
   }
 
   .lb-modal {
@@ -521,7 +507,7 @@
   }
 
   blockquote {
-    border-left: .25rem solid $dark-alternative-color;
+    border-left: .25rem solid $dark-accent-color;
   }
 
   hr {
@@ -596,7 +582,7 @@
       background-color: $dark-secondary-color;
     }
     .theme-dot {
-      color: $dark-alternative-color;
+      color: $dark-secondary-color;
     }
     .tag {
       color: $dark-secondary-color;
@@ -611,20 +597,19 @@
       color: $dark-secondary-color;
     }
     .yolo-version {
-      color: $dark-alternative-color;
+      color: $dark-accent-color;
     }
     .yolo-build-date {
-      color: $dark-alternative-color;
+      color: $dark-accent-color;
     }
   }
 
-  .tag-section {
-    .tag-date {
-      color: $dark-secondary-color;
-    }
-    .tag-description {
-      color: $dark-alternative-color;
-    }
+  .entry-date {
+    color: $dark-secondary-color;
+  }
+
+  .entry-description {
+    color: $dark-accent-color;
   }
 
   .lb-modal {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/styled-images"
-description: "Yummo styled images"
+description: "Styled images"
 date: 2022-09-02
 author: Corbs
 permalink: /samples/styled-images
