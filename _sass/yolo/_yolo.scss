@@ -34,7 +34,6 @@
     object-fit: cover;
     float: left;
     display: inline-block;
-    background: $dark-secondary-color;
   }
   .theme-dot {
     font-size: $size-3;
@@ -301,9 +300,6 @@
   }
 
   .yolo-header {
-    .logo {
-      background-color: $light-secondary-color;
-    }
     .theme-dot {
       color: $light-secondary-color;
     }
@@ -578,9 +574,6 @@
   }
 
   .yolo-header {
-    .logo {
-      background-color: $dark-secondary-color;
-    }
     .theme-dot {
       color: $dark-secondary-color;
     }
