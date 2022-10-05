@@ -87,7 +87,8 @@
 
 .code-header {
   font-weight: bold;
-  padding: 0.3em 0.3em 0.3em 0.4em;
+  margin-top: 1em;
+  padding: 0.25em 0.25em 0.25em .5em;
   vertical-align: middle;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
@@ -105,6 +106,7 @@
 
 .pill-group {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
@@ -369,7 +371,7 @@
   .code-header {
     background-color: $light-secondary-color;
     color: $light-primary-color;
-    font-family: $family-secondary;
+    font-family: $family-monospace;
     &:is(.copied, :hover) {
       background-color: $light-accent-color;
     }
@@ -643,7 +645,7 @@
   .code-header {
     background-color: $dark-secondary-color;
     color: $dark-primary-color;
-    font-family: $family-secondary;
+    font-family: $family-monospace;
     &:is(.copied, :hover) {
       background-color: $dark-accent-color;
     }

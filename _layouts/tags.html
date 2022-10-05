@@ -13,7 +13,7 @@ layout: default
     {% for tag in site.tags %}
     {% if tag[1].size == i %}
     <li>
-        <a href="/yummo/tags/#{{ tag[0] | slugify }}" class="pill">#{{ tag[0] }}&nbsp;<span>{{ i }}</span></a>
+        <a href="/tags/#{{ tag[0] | slugify }}" class="pill">#{{ tag[0] }}&nbsp;<span>{{ i }}</span></a>
     </li>
     {% endif %}
     {% endfor %}
