@@ -37,7 +37,7 @@ tags:
 
 ### Bash
 
-{% include code.html info="Bash snippet" %}
+{% include code.html label="Bash snippet" %}
 ```bash
 #!/bin/bash
 function say_howdy() {
@@ -59,7 +59,7 @@ say_howdy $1
 
 ### C
 
-{% include code.html info="C snippet" %}
+{% include code.html label="C snippet" %}
 ```c
 #include <stdio.h>
 // Say Howdy
@@ -79,7 +79,7 @@ int main(int argc, char **argv) {
 
 ### C++
 
-{% include code.html info="C++ snippet" %}
+{% include code.html label="C++ snippet" %}
 ```c++
 #include <iostream>
 using namespace std;
@@ -100,7 +100,7 @@ int main(int argc, char** argv) {
 
 ### Dart
 
-{% include code.html info="Dart snippet" %}
+{% include code.html label="Dart snippet" %}
 ```dart
 import 'dart:io';
 // Say Howdy
@@ -121,7 +121,7 @@ void main(List<String> args) {
 
 ### Go
 
-{% include code.html info="Go snippet" %}
+{% include code.html label="Go snippet" %}
 ```go
 package main
 
@@ -147,7 +147,7 @@ func main () {
 
 ### HTML
 
-{% include code.html info="HTML snippet" %}
+{% include code.html label="HTML snippet" %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -167,7 +167,7 @@ func main () {
 
 ### JSON Array
 
-{% include code.html info="JSON Array snippet" %}
+{% include code.html label="JSON Array snippet" %}
 ```json
 [{
   "id": 1000,
@@ -206,7 +206,7 @@ func main () {
 
 ### JSON Object
 
-{% include code.html info="JSON Object snippet" %}
+{% include code.html label="JSON Object snippet" %}
 ```json
 {
   "apiVersion": "v1",
@@ -239,7 +239,7 @@ func main () {
 
 ### Java
 
-{% include code.html info="Java snippet" %}
+{% include code.html label="Java snippet" %}
 ```java
 // Say Howdy
 public class Howdy {
@@ -259,7 +259,7 @@ public class Howdy {
 
 ### JavaScript
 
-{% include code.html info="JavaScript snippet" %}
+{% include code.html label="JavaScript snippet" %}
 ```javascript
 function sayHowdy(name) {
     console.log("Howdy " + name + "!");
@@ -280,7 +280,7 @@ sayHowdy(process.argv[2]);
 
 ### Kotlin
 
-{% include code.html info="Kotlin snippet" %}
+{% include code.html label="Kotlin snippet" %}
 ```kotlin
 // Say Howdy
 fun main(args: Array<String>): Int {
@@ -299,7 +299,7 @@ fun main(args: Array<String>): Int {
 
 ### Markdown
 
-{% include code.html info="Markdown snippet" %}
+{% include code.html label="Markdown snippet" %}
 ```markdown
 # Markdown
 
@@ -316,7 +316,7 @@ fun main(args: Array<String>): Int {
 
 ### Python
 
-{% include code.html info="Python snippet" %}
+{% include code.html label="Python snippet" %}
 ```python
 import sys
 
@@ -337,7 +337,7 @@ sayHowdy(sys.argv[1])
 
 ### SCSS
 
-{% include code.html info="SCSS snippet" %}
+{% include code.html label="SCSS snippet" %}
 ```scss
 .light-theme {
   color: $light-secondary-color;
@@ -361,7 +361,7 @@ sayHowdy(sys.argv[1])
 
 ### SQL
 
-{% include code.html info="SQL snippet" %}
+{% include code.html label="SQL snippet" %}
 ```sql
 -- Select orders for micky
 SELECT *
@@ -377,7 +377,7 @@ AND   price <= 10000
 
 ### YAML
 
-{% include code.html info="YAML snippet" %}
+{% include code.html label="YAML snippet" %}
 ```yaml
 apiVersion: v1
 kind: Service

@@ -17,7 +17,7 @@ tags:
 
 ### Thumbnail Images
 
-{% include code.html info="Thumbnail images" %}
+{% include code.html label="Thumbnail images" %}
 {% raw %}
 ```html
 {%
@@ -40,7 +40,7 @@ tags:
 
 ### Square Images
 
-{% include code.html info="Square images" %}
+{% include code.html label="Square images" %}
 {% raw %}
 ```html
 {%
@@ -63,7 +63,7 @@ tags:
 
 ### Circle Images
 
-{% include code.html info="Circle images" %}
+{% include code.html label="Circle images" %}
 {% raw %}
 ```html
 {%
@@ -86,7 +86,7 @@ tags:
 
 ### 4-by-3 Images
 
-{% include code.html info="4-by-3 images" %}
+{% include code.html label="4-by-3 images" %}
 {% raw %}
 ```html
 {%
@@ -109,7 +109,7 @@ tags:
 
 ### 3-by-4 Images
 
-{% include code.html info="3-by-4 images" %}
+{% include code.html label="3-by-4 images" %}
 {% raw %}
 ```html
 {%
@@ -132,7 +132,7 @@ tags:
 
 ### 16-by-9 Images
 
-{% include code.html info="16-by-9 images" %}
+{% include code.html label="16-by-9 images" %}
 {% raw %}
 ```html
 {%
@@ -155,7 +155,7 @@ tags:
 
 ### 9-by-16 Images
 
-{% include code.html info="9-by-16 images" %}
+{% include code.html label="9-by-16 images" %}
 {% raw %}
 ```html
 {%

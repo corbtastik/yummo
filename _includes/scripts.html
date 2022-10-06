@@ -1,1 +1,4 @@
-<script src="{{ "/assets/js/yolo.js" | relative_url }}"></script>
+{% if page.ext_js %}
+<script src="{{ site.baseurl }}/assets/ext/js/{{ page.ext_js }}.js"></script>
+{% endif %}
+<script src="{{ site.baseurl }}{{ '/assets/js/yolo.js' | relative_url }}"></script>

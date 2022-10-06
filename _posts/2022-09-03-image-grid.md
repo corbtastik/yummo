@@ -27,7 +27,7 @@ Show your awesome pics in a Yummo Image Grid, ooh-la-la.
 
 The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
-{% include code.html info="Images from: _data/ig-images.yml" %}
+{% include code.html label="Images from: _data/ig-images.yml" %}
 {% raw %}
 ```html
 {% include "image/grid.html" %}
@@ -44,7 +44,7 @@ A custom data file can be added to create an Image Grid.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
 * Customize the number of columns by setting `ig-columns`.
 
-{% include code.html info="Images from: _data/ig-pets.yml" %}
+{% include code.html label="Images from: _data/ig-pets.yml" %}
 {% raw %}
 ```html
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}

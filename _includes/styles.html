@@ -4,9 +4,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={% for font in site.data.fonts %}{{ font.name | replace: ' ', '+' }}{% if font.weights %}:{% endif %}{{ font.weights | remove: ' ' }}{% if forloop.last != true %}|{% endif %}{% endfor %}">
 {% endif %}
 <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
-{% if page.custom_css %}
-{% for css_file in page.custom_css %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ css_file }}.css" />
-{% endfor %}
+{% if page.ext_css %}
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/ext/css/{{ page.ext_css }}.css" />
 {% endif %}
-<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
