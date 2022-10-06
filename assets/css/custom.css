@@ -1,6 +1,25 @@
-.flexbox101 {
-    color: #190841;
-    font-weight: bold;
+.flex-item.color-rubik-red {
+    background-color: #C12123;
+}
+
+.flex-item.color-rubik-blue {
+    background-color: #254AB9;
+}
+
+.flex-item.color-rubik-yellow {
+    background-color: #FEFF20;
+}
+
+.flex-item.color-rubik-green {
+    background-color: #23C649;
+}
+
+.flex-item.color-rubik-white {
+    background-color: #CDCDCD;
+}
+
+.flex-item.color-rubik-orange {
+    background-color: #CE4B23;
 }
 
 .flex-row {
@@ -12,10 +31,21 @@
     color: black;
 }
 
+.flex-row-auto {
+    display: flex;
+    flex-direction: row;
+    /*margin-top: 1em;*/
+    /*margin-bottom: 1em;*/
+    background-color: black;
+    color: black;
+}
+
 .flex-row-wrap {
     display: flex;
     flex-direction: row;
-    flex-flow: wrap;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
     background-color: black;
     color: black;
 }
@@ -29,11 +59,31 @@
     color: black;
 }
 
+.flex-column-auto {
+    display: inline-flex;
+    flex-direction: column;
+    /*margin-top: 1em;*/
+    /*margin-bottom: 1em;*/
+    background-color: black;
+    color: black;
+}
+
+.flex-column-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: black;
+    color: black;
+}
+
 .flex-item {
     background-color: #00b3ff;
-    width: 64px;
-    height: 64px;
-    margin: 4px;
+    width: 3em;
+    height: 3em;
+    margin: 0.2em;
+    border-radius: 0.2em;
 }
 
 .align-start {
@@ -62,29 +112,4 @@
 
 .justify-end {
     justify-content: flex-end;
-}
-
-.flex-container-7 {
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: black;
-}
-
-.flex-container-8 {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: black;
-}
-
-.flex-container-9 {
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: black;
-}
-
-.flex-container-10 {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
 }

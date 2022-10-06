@@ -184,6 +184,151 @@ The styles in `custom.css` are applied to the flexbox examples below.
 
 ---
 
+<div class="flex-column-wrap">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+</div>
+
+<div class="flex-column-wrap">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+    <div class="flex-item">6</div>
+    <div class="flex-item">7</div>
+    <div class="flex-item">8</div>
+    <div class="flex-item">9</div>
+    <div class="flex-item">10</div>
+    <div class="flex-item">11</div>
+    <div class="flex-item">12</div>
+    <div class="flex-item">13</div>
+    <div class="flex-item">14</div>
+    <div class="flex-item">15</div>
+    <div class="flex-item">16</div>
+    <div class="flex-item">17</div>
+    <div class="flex-item">18</div>
+    <div class="flex-item">19</div>
+    <div class="flex-item">20</div>
+</div>
+
+---
+
+<div class="flex-row">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+<div class="flex-row">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+<div class="flex-row">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+---
+
+<div class="flex-column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+<div class="flex-column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+<div class="flex-column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+</div>
+
+---
+
+#### How to create a rubik's cube
+
+##### Multiple flexboxes
+
+Remember that each "flex-row" is a "flexbox" unto itself (i.e. `display: flex`). So if we use multiple flexboxes we need to manage the margins to make things tidy.
+
+<div class="flex-row">
+    <div class="flex-item color-rubik-green"></div>
+    <div class="flex-item color-rubik-blue"></div>
+    <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-row">
+    <div class="flex-item color-rubik-blue"></div>
+    <div class="flex-item color-rubik-orange"></div>
+    <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-row">
+    <div class="flex-item color-rubik-yellow"></div>
+    <div class="flex-item color-rubik-red"></div>
+    <div class="flex-item color-rubik-blue"></div>
+</div>
+
+---
+
+<div class="flex-row-auto align-center justify-center">
+    <div class="flex-item color-rubik-green"></div>
+    <div class="flex-item color-rubik-blue"></div>
+    <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-row-auto align-center justify-center">
+    <div class="flex-item color-rubik-blue"></div>
+    <div class="flex-item color-rubik-orange"></div>
+    <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-row-auto align-center justify-center">
+    <div class="flex-item color-rubik-yellow"></div>
+    <div class="flex-item color-rubik-red"></div>
+    <div class="flex-item color-rubik-blue"></div>
+</div>
+
+---
+
+<div class="flex-column">
+    <div class="flex-item color-rubik-green"></div>
+    <div class="flex-item color-rubik-blue"></div>
+    <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-column">
+    <div class="flex-item color-rubik-blue"></div>
+    <div class="flex-item color-rubik-orange"></div>
+    <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-column">
+    <div class="flex-item color-rubik-yellow"></div>
+    <div class="flex-item color-rubik-red"></div>
+    <div class="flex-item color-rubik-blue"></div>
+</div>
+
+<div class="flex-column-auto">
+  <div class="flex-item color-rubik-green"></div>
+  <div class="flex-item color-rubik-blue"></div>
+  <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-column-auto">
+  <div class="flex-item color-rubik-blue"></div>
+  <div class="flex-item color-rubik-orange"></div>
+  <div class="flex-item color-rubik-white"></div>
+</div>
+<div class="flex-column-auto">
+  <div class="flex-item color-rubik-yellow"></div>
+  <div class="flex-item color-rubik-red"></div>
+  <div class="flex-item color-rubik-blue"></div>
+</div>
+
+---
+
 {% include code.html label="flex-row" %}
 ```css
 .flex-row {
@@ -621,3 +766,9 @@ A flexbox with no wrapping, align-items=center, justify-content=center and 1 col
     <div class="flex-item">9</div>
     <div class="flex-item">10</div>
 </div>
+
+---
+
+### Flexbox References
+
+1. [Stackoverflow > Make flex container take width of content, not width 100%](https://stackoverflow.com/questions/42686681/make-flex-container-take-width-of-content-not-width-100)
