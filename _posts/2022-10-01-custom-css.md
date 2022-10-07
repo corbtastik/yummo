@@ -35,15 +35,31 @@ The styles in `custom.css` are applied to the flexbox examples below.
 
 ---
 
-{% include code.html label="flex-row" %}
-```css
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-```
+#### Rubik's cube flexbox
 
-A flexbox with no wrapping and 1 row with 5 items.
+<div class="rubik-cube-row">
+    <div class="flex-item red"></div>
+    <div class="flex-item yellow"></div>
+    <div class="flex-item green"></div>
+</div>
+<div class="rubik-cube-row">
+    <div class="flex-item blue"></div>
+    <div class="flex-item orange"></div>
+    <div class="flex-item white"></div>
+</div>
+<div class="rubik-cube-row">
+    <div class="flex-item yellow"></div>
+    <div class="flex-item red"></div>
+    <div class="flex-item blue"></div>
+</div>
+
+[↑↑↑](#){: .back-to-top}
+
+---
+
+#### Flexbox samples
+
+* A flexbox with no wrapping and 5 items.
 
 <div class="flex-row">
     <div class="flex-item">1</div>
@@ -53,7 +69,7 @@ A flexbox with no wrapping and 1 row with 5 items.
     <div class="flex-item">5</div>
 </div>
 
-A flexbox with no wrapping and 1 row with 20 items.
+* Items are squished when we add lots of them to a flexbox with no wrapping.
 
 <div class="flex-row">
     <div class="flex-item">1</div>
@@ -78,7 +94,7 @@ A flexbox with no wrapping and 1 row with 20 items.
     <div class="flex-item">20</div>
 </div>
 
-A flexbox with wrapping and 1 row with 20 items.
+* A flexbox with wrapping and lots of items.
 
 <div class="flex-row-wrap">
     <div class="flex-item">1</div>
@@ -107,19 +123,7 @@ A flexbox with wrapping and 1 row with 20 items.
 
 ---
 
-{% include code.html label="flex-row align-start" %}
-```css
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-```
-
-A flexbox with no wrapping, align-items=flex-start and 1 row with 5 items.
+* A flexbox with no wrapping and align-items=flex-start.
 
 <div class="flex-row align-start">
     <div class="flex-item">1</div>
@@ -129,7 +133,7 @@ A flexbox with no wrapping, align-items=flex-start and 1 row with 5 items.
     <div class="flex-item">5</div>
 </div>
 
-A flexbox with no wrapping, align-items=flex-start and 1 row with 20 items.
+* A flexbox with no wrapping, align-items=flex-start and lots of items (which are squished because of space).
 
 <div class="flex-row align-start">
     <div class="flex-item">1</div>
@@ -154,7 +158,7 @@ A flexbox with no wrapping, align-items=flex-start and 1 row with 20 items.
     <div class="flex-item">20</div>
 </div>
 
-A flexbox with wrapping, align-items=flex-start and 1 row with 20 items.
+* A flexbox with wrapping, align-items=flex-start and lots of items.
 
 <div class="flex-row-wrap align-start">
     <div class="flex-item">1</div>
@@ -183,19 +187,7 @@ A flexbox with wrapping, align-items=flex-start and 1 row with 20 items.
 
 ---
 
-{% include code.html label="flex-row justify-start" %}
-```css
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.justify-start {
-    justify-content: flex-start;
-}
-```
-
-A flexbox with no wrapping, justify-content=flex-start and 1 row with 5 items.
+* A flexbox with no wrapping, justify-content=flex-start and a few items.
 
 <div class="flex-row justify-start">
     <div class="flex-item">1</div>
@@ -205,7 +197,7 @@ A flexbox with no wrapping, justify-content=flex-start and 1 row with 5 items.
     <div class="flex-item">5</div>
 </div>
 
-A flexbox with no wrapping, justify-content=flex-start and 1 row with 20 items.
+* A flexbox with no wrapping, justify-content=flex-start and lots of squished items.
 
 <div class="flex-row justify-start">
     <div class="flex-item">1</div>
@@ -230,7 +222,7 @@ A flexbox with no wrapping, justify-content=flex-start and 1 row with 20 items.
     <div class="flex-item">20</div>
 </div>
 
-A flexbox with wrapping, justify-content=flex-start and 1 row with 20 items.
+* A flexbox with wrapping, justify-content=flex-start and lots of orderly items.
 
 <div class="flex-row-wrap justify-start">
     <div class="flex-item">1</div>
@@ -259,19 +251,7 @@ A flexbox with wrapping, justify-content=flex-start and 1 row with 20 items.
 
 ---
 
-{% include code.html label="flex-row justify-end" %}
-```css
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.justify-end {
-    justify-content: flex-end;
-}
-```
-
-A flexbox with no wrapping, justify-content=flex-end and 1 row with 5 items.
+* A flexbox with no wrapping, justify-content=flex-end and a few items.
 
 <div class="flex-row justify-end">
     <div class="flex-item">1</div>
@@ -281,7 +261,7 @@ A flexbox with no wrapping, justify-content=flex-end and 1 row with 5 items.
     <div class="flex-item">5</div>
 </div>
 
-A flexbox with no wrapping, justify-content=flex-end and 1 row with 20 items.
+* A flexbox with no wrapping, justify-content=flex-end and lots of smashed items.
 
 <div class="flex-row justify-end">
     <div class="flex-item">1</div>
@@ -306,7 +286,7 @@ A flexbox with no wrapping, justify-content=flex-end and 1 row with 20 items.
     <div class="flex-item">20</div>
 </div>
 
-A flexbox with wrapping, justify-content=flex-end and 1 row with 20 items.
+* A flexbox with wrapping, justify-content=flex-end and lots of happy items.
 
 <div class="flex-row-wrap justify-end">
     <div class="flex-item">1</div>
@@ -335,23 +315,7 @@ A flexbox with wrapping, justify-content=flex-end and 1 row with 20 items.
 
 ---
 
-{% include code.html label="flex-row align-center justify-center" %}
-```css
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-```
-
-A flexbox with no wrapping, align-items=center, justify-content=center and 1 row with 5 items.
+* A flexbox with no wrapping, align-items=center, justify-content=center and a few centered items.
 
 <div class="flex-row align-center justify-center">
     <div class="flex-item">1</div>
@@ -361,7 +325,7 @@ A flexbox with no wrapping, align-items=center, justify-content=center and 1 row
     <div class="flex-item">5</div>
 </div>
 
-A flexbox with no wrapping, align-items=center, justify-content=center and 1 row with 20 items.
+* A flexbox with no wrapping, align-items=center, justify-content=center and lots of crowded items.
 
 <div class="flex-row align-center justify-center">
     <div class="flex-item">1</div>
@@ -386,7 +350,7 @@ A flexbox with no wrapping, align-items=center, justify-content=center and 1 row
     <div class="flex-item">20</div>
 </div>
 
-A flexbox with wrapping, align-items=center, justify-content=center and 1 row with 20 items.
+* A flexbox with wrapping, align-items=center, justify-content=center and lots of centered items.
 
 <div class="flex-row-wrap align-center justify-center">
     <div class="flex-item">1</div>
@@ -415,15 +379,7 @@ A flexbox with wrapping, align-items=center, justify-content=center and 1 row wi
 
 ---
 
-{% include code.html label="flex-column" %}
-```css
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-```
-
-A flexbox with no wrapping and 1 column with 5 items.
+* A flexbox with 1 column.
 
 <div class="flex-column">
     <div class="flex-item">1</div>
@@ -437,71 +393,7 @@ A flexbox with no wrapping and 1 column with 5 items.
 
 ---
 
-{% include code.html label="flex-column justify-start" %}
-```css
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.justify-start {
-    justify-content: flex-start;
-}
-```
-
-A flexbox with no wrapping, justify-content=flex-start and 1 column with 5 items.
-
-<div class="flex-column justify-start">
-    <div class="flex-item">1</div>
-    <div class="flex-item">2</div>
-    <div class="flex-item">3</div>
-    <div class="flex-item">4</div>
-    <div class="flex-item">5</div>
-</div>
-
-[↑↑↑](#){: .back-to-top}
-
----
-
-{% include code.html label="flex-column align-start" %}
-```css
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-```
-
-A flexbox with no wrapping, align-items=flex-start and 1 column with 5 items.
-
-<div class="flex-column align-start">
-    <div class="flex-item">1</div>
-    <div class="flex-item">2</div>
-    <div class="flex-item">3</div>
-    <div class="flex-item">4</div>
-    <div class="flex-item">5</div>
-</div>
-
-[↑↑↑](#){: .back-to-top}
-
----
-
-{% include code.html label="flex-column align-end" %}
-```css
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.align-end {
-    align-items: flex-end;
-}
-```
-
-A flexbox with no wrapping, align-items=flex-end and 1 column with 5 items.
+* A flexbox column with items aligned to the end.
 
 <div class="flex-column align-end">
     <div class="flex-item">1</div>
@@ -515,23 +407,7 @@ A flexbox with no wrapping, align-items=flex-end and 1 column with 5 items.
 
 ---
 
-{% include code.html label="flex-column align-center justify-center" %}
-```css
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.justify-content {
-    justify-content: center;
-}
-```
-
-A flexbox with no wrapping, align-items=center, justify-content=center and 1 column with 5 items.
+* A flexbox column with items centered.
 
 <div class="flex-column align-center justify-center">
     <div class="flex-item">1</div>
@@ -540,37 +416,5 @@ A flexbox with no wrapping, align-items=center, justify-content=center and 1 col
     <div class="flex-item">4</div>
     <div class="flex-item">5</div>
 </div>
-
-[↑↑↑](#){: .back-to-top}
-
----
-
-#### A rubik's cube
-
-Remember that each "flex-row" is a "flexbox" unto itself (i.e. `display: flex`). So if we use multiple flexboxes we need to manage the margins to make things tidy.
-
-<div class="flex-row-auto align-center justify-center">
-    <div class="flex-item color-rubik-green"></div>
-    <div class="flex-item color-rubik-blue"></div>
-    <div class="flex-item color-rubik-white"></div>
-</div>
-<div class="flex-row-auto align-center justify-center">
-    <div class="flex-item color-rubik-blue"></div>
-    <div class="flex-item color-rubik-orange"></div>
-    <div class="flex-item color-rubik-white"></div>
-</div>
-<div class="flex-row-auto align-center justify-center">
-    <div class="flex-item color-rubik-yellow"></div>
-    <div class="flex-item color-rubik-red"></div>
-    <div class="flex-item color-rubik-blue"></div>
-</div>
-
-[↑↑↑](#){: .back-to-top}
-
----
-
-#### Flexbox References
-
-1. [Stackoverflow > Make flex container take width of content, not width 100%](https://stackoverflow.com/questions/42686681/make-flex-container-take-width-of-content-not-width-100)
 
 [↑↑↑](#){: .back-to-top}

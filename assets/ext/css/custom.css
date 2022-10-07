@@ -1,41 +1,60 @@
-.flex-item.color-rubik-red {
+/*
+ * Yummo custom css sample
+ */
+
+/*
+ * Styles for the "content" of flexbox samples.
+ */
+.flex-item {
+    background-color: #00b3ff;
+    width: 3em;
+    height: 3em;
+    margin: 0.2em;
+    border-radius: 0.2em;
+}
+
+.flex-item.red {
     background-color: #C12123;
 }
 
-.flex-item.color-rubik-blue {
+.flex-item.blue {
     background-color: #254AB9;
 }
 
-.flex-item.color-rubik-yellow {
+.flex-item.yellow {
     background-color: #FEFF20;
 }
 
-.flex-item.color-rubik-green {
+.flex-item.green {
     background-color: #23C649;
 }
 
-.flex-item.color-rubik-white {
+.flex-item.white {
     background-color: #CDCDCD;
 }
 
-.flex-item.color-rubik-orange {
+.flex-item.orange {
     background-color: #CE4B23;
 }
 
+/*
+ * Flexbox row for a rubik's cube like thing on the custom css sample post.
+ */
+.rubik-cube-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+ * Flexbox samples
+ */
 .flex-row {
     display: flex;
     flex-direction: row;
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color: black;
-    color: black;
-}
-
-.flex-row-auto {
-    display: flex;
-    flex-direction: row;
-    /*margin-top: 1em;*/
-    /*margin-bottom: 1em;*/
     background-color: black;
     color: black;
 }
@@ -62,43 +81,15 @@
     color: black;
 }
 
-.flex-column-auto {
-    display: inline-flex;
-    flex-direction: column;
-    /*margin-top: 1em;*/
-    /*margin-bottom: 1em;*/
-    background-color: black;
-    color: black;
-}
-
-.flex-column-wrap {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    background-color: black;
-    color: black;
-}
-
-.flex-item {
-    background-color: #00b3ff;
-    width: 3em;
-    height: 3em;
-    margin: 0.2em;
-    border-radius: 0.2em;
-}
-
+/*
+ * Flexbox align-items and justify-content options.
+ */
 .align-start {
     align-items: flex-start;
 }
 
 .align-center {
     align-items: center;
-}
-
-.align-baseline {
-    align-items: baseline;
 }
 
 .align-end {

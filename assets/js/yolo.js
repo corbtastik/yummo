@@ -20,7 +20,7 @@
             Console.println("YOLO ERR " + new Date().toUTCString() + ": " + text);
         }
         static enabled() {
-            return true;
+            return false;
         }
     }
 
