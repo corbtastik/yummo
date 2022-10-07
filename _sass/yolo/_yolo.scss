@@ -762,3 +762,13 @@
     .il {  /* Literal.Number.Integer.Long */ @include dynamic-color($dark-code-background-color, "syntax05"); }
   }
 }
+
+/*For javascript sample*/
+
+.word, .char {
+  display: inline-block;
+}
+
+.char {
+  position: relative;
+}
