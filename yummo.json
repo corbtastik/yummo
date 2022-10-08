@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: yummo.json
+---
+{
+  "title": "{{ site.title }}",
+  "tag_text": "{{ site.tag_text }}",
+  "description": "{{ site.description }}",
+  "version": "{{ site.version }}",
+  "build_date": "{{ "now" | date: "%Y-%m-%d %H:%M" }}"
+}
