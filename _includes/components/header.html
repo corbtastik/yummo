@@ -1,8 +1,8 @@
 <div class="yolo-header">
 {% if page.layout == 'home' %}
-    {% if site.logo %}
+    {% if site.yummo.logo %}
     <a href="./">
-        <img class="logo" alt="site-logo" src="{{ site.logo }}" title="Site Logo"/>
+        <img class="logo" alt="site-logo" src="{{ site.yummo.logo }}" title="Site Logo"/>
     </a>
     {% endif %}
 {% endif %}
@@ -24,15 +24,15 @@
 {% if page.layout != 'home' %}
     <p>
         <span>
-            <span class="tag-date">{{ page.date | date: site.theme_config.date_format }}</span>
+            <span class="tag-date">{{ page.date | date: site.yummo.date_format }}</span>
             {% if page.author %} {{ page.author | prepend: "by " }} {% endif %}
         </span>
     </p>
     <p>
-        <a href="{{ '/' | relative_url }}"> {{ site.theme_config.back_home_text }} </a>
+        <a href="{{ '/' | relative_url }}"> {{ site.yummo.home_link }} </a>
     </p>
 {% endif %}
-{% if site.searchable %}
+{% if site.yummo.searchable %}
     <form action="/search">
         <input type="search" id="yummo-search" name="yummo-search"/>
         <input type="submit" value="Search"/>

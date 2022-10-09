@@ -8,7 +8,7 @@
 @import "yolo/base";
 @import "yolo/responsiveness";
 @import "yolo/layout";
-@import "yolo/themes/{{ site.style | default: 'corbs' }}";
+@import "yolo/themes/{{ site.yummo.style | default: 'corbs' }}";
 @import "yolo/typography";
 @import "yolo/syntax";
 @import "yolo/images";

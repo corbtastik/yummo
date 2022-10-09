@@ -15,25 +15,24 @@ email: corbs@retro.io
 baseurl: ""
 # The base hostname (w/ protocol) of your Yummo site, e.g. http://corbs.io
 url: ""
+# The site favicon to use
+favicon: "logo.png"
 # -----------------------------------------------------------------------------
 # Yummo site properties
 # -----------------------------------------------------------------------------
-# The style to apply (see _sass/yummo/themes)
-style: corbs
-# The site wide logo
-#logo: assets/images/site/logo.svg
-# Where the site should grab images from (can be local, e.g. assets/images)
-images: https://storage.googleapis.com/corbs-foto/yolo
-# The site favicon to use
-favicon: "logo.png"
-# Is site searchable?
-searchable: false
-
-theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: "../" # customize text for homepage link in post layout
-  date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description in home page
+yummo:
+  # The style to apply (see _sass/yummo/themes)
+  style: corbs
+  # The site wide logo
+  # logo: assets/images/site/logo.svg
+  # Where the site should grab images from (can be local, e.g. assets/images)
+  images: https://storage.googleapis.com/corbs-foto/yolo
+  # customize text for homepage link in post layout
+  home_link: "../"
+  # customize how date is formatted
+  date_format: "%Y-%m-%d"
+  # Is site searchable?
+  searchable: false
 
 # Build settings
 version: v1.1

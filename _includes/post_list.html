@@ -16,7 +16,7 @@
     {% for post in posts limit: include.limit %}
     <li>
       <span>
-          <span class="entry-date">{{ post.date | date: site.theme_config.date_format }}</span>
+          <span class="entry-date">{{ post.date | date: site.yummo.date_format }}</span>
           <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
           <span class="entry-description">{{ post.description }}</span>
       </span>
