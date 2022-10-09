@@ -5,12 +5,12 @@
     // execute javascript in strict mode
     'use strict';
 
-    function YummoRequest(resourceURL) {
+    function YummoAjaxRequest(resourceURL) {
         this.resourceURL = resourceURL;
         this.httpRequest = new XMLHttpRequest();
     }
 
-    YummoRequest.prototype.get = function() {
+    YummoAjaxRequest.prototype.get = function() {
         if(!this.httpRequest) {
             console.log("Giving up, cannot create XMLHttpRequest instance.");
             return false;
@@ -20,27 +20,59 @@
         this.httpRequest.send();
     }
 
-    YummoRequest.prototype.handleRequest = function() {
+    YummoAjaxRequest.prototype.handleRequest = function() {
         if(this.readyState === XMLHttpRequest.DONE) {
             if(this.status === 200) {
-                createView(JSON.parse(this.responseText));
+                createView(JSON.parse(this.responseText), "yummo-info-ajax", "yummo-button-ajax");
             } else {
                 console.log("Oh no that's a YummoRequest error!");
             }
         }
     }
 
-    function createView(yummoInfo) {
+    /**
+     * Handle ajax button click
+     */
+    function onAjaxClick() {
+        new YummoAjaxRequest("/yummo.json").get();
+    }
+
+    function YummoFetchRequest(resourceURL) {
+        this.resourceURL = resourceURL;
+    }
+
+    YummoFetchRequest.prototype.get = function() {
+        fetch(this.resourceURL)
+            .then((response) => response.json())
+            .then((data) => {
+                createView(data, "yummo-info-fetch", "yummo-button-fetch");
+            });
+    }
+
+    /**
+     * Handle fetch button click
+     */
+    function onFetchClick() {
+        new YummoFetchRequest("/yummo.json").get();
+    }
+
+    /**
+     *
+     * @param yummoInfo: Yummo info JSON object
+     * @param targetId: Element id to create for result (yummo-info-ajax or yummo-info-fetch)
+     * @param buttonId: Button id that triggered request (yummo-button-ajax or yummo-button-fetch)
+     */
+    function createView(yummoInfo, targetId, buttonId) {
         // Remove yummo-info element if it exists and create a new one below
-        if(document.getElementById("yummo-info")) {
-            document.getElementById("yummo-info").remove();
+        if(document.getElementById(targetId)) {
+            document.getElementById(targetId).remove();
         }
 
         // Create an unordered list to render yummo-info into
         const element = document.createElement("ul");
-        element.setAttribute("id", "yummo-info");
+        element.setAttribute("id", targetId);
         // Get the parent element
-        const parent = document.getElementById("yummo-button").parentElement;
+        const parent = document.getElementById(buttonId).parentElement;
         // Append dynamic data to parent element
         parent.append(element);
 
@@ -55,41 +87,34 @@
         // Add retrieve time first
         let listItem = document.createElement("li");
         listItem.appendChild(retrievedAtNode);
-        document.getElementById("yummo-info").appendChild(listItem);
+        document.getElementById(targetId).appendChild(listItem);
 
         // Append each list item as a child of the unordered list
         listItem = document.createElement("li");
         listItem.appendChild(titleNode);
-        document.getElementById("yummo-info").appendChild(listItem);
+        document.getElementById(targetId).appendChild(listItem);
 
         listItem = document.createElement("li");
         listItem.appendChild(tagNode);
-        document.getElementById("yummo-info").appendChild(listItem);
+        document.getElementById(targetId).appendChild(listItem);
 
         listItem = document.createElement("li");
         listItem.appendChild(descriptionNode);
-        document.getElementById("yummo-info").appendChild(listItem);
+        document.getElementById(targetId).appendChild(listItem);
 
         listItem = document.createElement("li");
         listItem.appendChild(versionNode);
-        document.getElementById("yummo-info").appendChild(listItem);
+        document.getElementById(targetId).appendChild(listItem);
 
         listItem = document.createElement("li");
         listItem.appendChild(buildDateNode);
-        document.getElementById("yummo-info").appendChild(listItem);
-    }
-
-    /**
-     * Handle button click event
-     */
-    function onClick() {
-        new YummoRequest("/yummo.json")
-            .get();
+        document.getElementById(targetId).appendChild(listItem);
     }
 
     /*
      * Run on module load
      */
-    document.getElementById("yummo-button").addEventListener("click", onClick);
+    document.getElementById("yummo-button-ajax").addEventListener("click", onAjaxClick);
+    document.getElementById("yummo-button-fetch").addEventListener("click", onFetchClick);
 
 })(window, document);

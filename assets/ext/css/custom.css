@@ -108,7 +108,7 @@
     justify-content: flex-end;
 }
 
-#yummo-button {
+#yummo-button-ajax {
     background-color: #00b0ff;
     color: black;
     margin-top: 1em;
@@ -116,9 +116,26 @@
     border: none;
     padding: 0.5em;
     border-radius: 0.25em;
+    width: 8em;
 }
 
-#yummo-button:hover {
+#yummo-button-ajax:hover {
     background-color: #f7346d;
+    color: black;
+}
+
+#yummo-button-fetch {
+    background-color: #f7346d;
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    width: 8em;
+}
+
+#yummo-button-fetch:hover {
+    background-color: #00b0ff;
     color: black;
 }
