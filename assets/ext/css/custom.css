@@ -107,3 +107,18 @@
 .justify-end {
     justify-content: flex-end;
 }
+
+#yummo-button {
+    background-color: #00b0ff;
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
+#yummo-button:hover {
+    background-color: #f7346d;
+    color: black;
+}

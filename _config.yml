@@ -36,7 +36,7 @@ theme_config:
   show_description: false # show blog description in home page
 
 # Build settings
-version: v1.0
+version: v1.1
 markdown: kramdown
 permalink: /:slug.html
 include: ['_pages']
