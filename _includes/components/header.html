@@ -33,10 +33,7 @@
     </p>
 {% endif %}
 {% if site.yummo.searchable %}
-    <form action="/search">
-        <input type="search" id="yummo-search" name="yummo-search"/>
-        <input type="submit" value="Search"/>
-    </form>
+    {% include components/search.html %}
 {% endif %}
     <hr/>
 </div>

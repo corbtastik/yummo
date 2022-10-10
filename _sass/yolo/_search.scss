@@ -1,0 +1,60 @@
+input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+}
+
+input[type="text"]:focus {
+  //background-color: darken($dark-secondary-color, 20%);
+  outline: none;
+}
+
+input[type="text"]:hover {
+  //background-color: darken($dark-secondary-color, 30%);
+  outline: none;
+}
+
+.yummo-input {
+  padding: 0.4em 0.5em;
+  display: block;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.light-theme {
+  .yummo-input {
+    background-color: $light-secondary-color;
+    color: $light-primary-color;
+  }
+  ::-webkit-input-placeholder { /* Edge */
+    color: $light-primary-color;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $light-primary-color;
+  }
+
+  ::placeholder {
+    color: $light-primary-color;
+  }
+}
+
+.dark-theme {
+  .yummo-input {
+    background-color: $dark-secondary-color;
+    color: $dark-primary-color;
+  }
+  ::-webkit-input-placeholder { /* Edge */
+    color: $dark-primary-color;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $dark-primary-color;
+  }
+
+  ::placeholder {
+    color: $dark-primary-color;
+  }
+}
