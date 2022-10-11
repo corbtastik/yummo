@@ -10,6 +10,7 @@
 @import "yolo/layout";
 @import "yolo/themes/{{ site.yummo.style | default: 'corbs' }}";
 @import "yolo/typography";
+@import "yolo/collapsibles";
 @import "yolo/syntax";
 @import "yolo/images";
 @import "yolo/lightbox";
