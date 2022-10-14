@@ -15,6 +15,37 @@ tags:
 
 > __Tip:__ Click to enlarge.
 
+### Styled Images
+
+Images are either, styled by __default css__ or styled by __yummo css__. This example highlights __yummo css__ for images.
+
+The source of images is customizable and multiple sources can be configured. For example, you can save some images in Google Cloud Storage (GCS) and others locally, or some in AWS S3 and others in GCS.
+
+> __Note:__ By default the local directory is always checked last.
+
+### Images data file
+
+You can source images from `_data/images.yml` by setting the `name` property as shown below. If `name` isn't given then you must use `src` as the remaining examples show.
+
+{% include code.html label="Source image from images.yml" %}
+{% raw %}
+```html
+{%
+  include image/image.html
+  classes="center is-256"
+  name="the-get-go"
+  description="The Get Go, Marfa TX."
+%}
+```
+{% endraw %}
+
+{%
+  include image/image.html
+  classes="center is-256"
+  name="the-get-go"
+  description="The Get Go, Marfa TX."
+%}
+
 ### Thumbnail Images
 
 {% include code.html label="Thumbnail images" %}
