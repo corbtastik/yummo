@@ -41,9 +41,16 @@ You can source images from `_data/images.yml` by setting the `name` property as 
 
 {%
   include image/image.html
-  classes="center is-256"
+  classes="center is-384"
   name="the-get-go"
   description="The Get Go, Marfa TX."
+%}
+
+{%
+  include image/image.html
+  classes="center is-384"
+  name="bucky-and-nacho"
+  description="Bucky and Nacho"
 %}
 
 ### Thumbnail Images
