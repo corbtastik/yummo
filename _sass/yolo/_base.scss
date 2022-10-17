@@ -115,7 +115,9 @@ ol {
 }
 
 table {
+  max-width: 100%;
   width: 100%;
+  table-layout: fixed;
   border-spacing: 0;
 }
 
@@ -146,6 +148,10 @@ td {
   vertical-align: middle;
   text-align: left;
   padding: 0.3em 0.4em 0.3em 0.4em;
+}
+
+td {
+  word-wrap: break-word;
 }
 
 figure {
