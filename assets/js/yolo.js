@@ -180,9 +180,6 @@
             yolo.initSidebar();
             return yolo;
         }
-        static themes() {
-            return ["corbs", "cloudy"];
-        }
     }
 
     Yolo.prototype.initSidebar = function() {
