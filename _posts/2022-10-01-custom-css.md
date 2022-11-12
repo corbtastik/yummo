@@ -5,7 +5,7 @@ description: "Add custom css to a post"
 date: 2022-10-01
 ext_css: custom
 author: Corbs
-permalink: /samples/custom-css
+permalink: /samples/custom-css/
 slug: ext-css
 category: samples
 tags:

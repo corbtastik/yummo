@@ -4,7 +4,7 @@ title: "samples/styled-images"
 description: "Styled images"
 date: 2022-09-02
 author: Corbs
-permalink: /samples/styled-images
+permalink: /samples/styled-images/
 category: samples
 tags:
 - css

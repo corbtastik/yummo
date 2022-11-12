@@ -27,5 +27,3 @@ entries:
         url: https://github.com/corbtastik/corbs
       - title: "Cornucopia of Corbs"
         url: https://corbs.io
-  - title: rss
-    url: feed.xml

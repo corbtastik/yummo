@@ -48,6 +48,6 @@ exclude:
   - "docs/"
 sass:
   style: uncompressed
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+#plugins:
+#  - jekyll-feed
+#  - jekyll-seo-tag
