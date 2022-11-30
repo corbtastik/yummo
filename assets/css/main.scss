@@ -6,6 +6,7 @@
 @import "yolo/normalize";
 @import "yolo/variables";
 @import "yolo/base";
+@import "yolo/tables";
 @import "yolo/responsiveness";
 @import "yolo/layout";
 @import "yolo/themes/{{ site.yummo.style | default: 'corbs' }}";

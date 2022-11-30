@@ -20,3 +20,8 @@ yummo: yummoc
 pod: yummo
 	@podman rm -f yummo
 	@podman run --name yummo -d -p 9866:9866 $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
+# -----------------------------------------------------------------------------
+# Targets for working with yummo
+# -----------------------------------------------------------------------------
+weekly:
+	@./src/templates/weekly.sh --dir ./_posts/weeklies

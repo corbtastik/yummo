@@ -22,13 +22,13 @@ favicon: "logo.png"
 # -----------------------------------------------------------------------------
 yummo:
   # The style to apply (see _sass/yummo/themes)
-  style: corbs
+  style: weekly
   # The site wide logo
   # logo: assets/images/site/logo.svg
   # Where the site should grab images from (can be local, e.g. assets/images)
   images: https://storage.googleapis.com/corbs-foto/yolo
   # customize text for homepage link in post layout
-  home_link: "../"
+  home_link: "<<<"
   # customize how date is formatted
   date_format: "%Y-%m-%d"
   # Is site searchable?

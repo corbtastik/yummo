@@ -114,46 +114,6 @@ ol {
   padding-left: 2.5rem;
 }
 
-table {
-  max-width: 100%;
-  width: 100%;
-  table-layout: fixed;
-  border-spacing: 0;
-}
-
-th {
-  font-weight: bold;
-}
-
-thead {
-  font-family: $family-secondary;
-}
-
-thead tr:first-child th:first-child {
-  border-radius: 0.3em 0 0 0;
-}
-thead tr:first-child th:last-child {
-  border-radius: 0 0.3em 0 0;
-}
-tbody tr:last-child td:first-child {
-  border-radius: 0 0 0 0;
-}
-tbody tr:last-child td:last-child {
-  border-radius: 0 0 0 0;
-}
-
-th,
-tr,
-td {
-  vertical-align: middle;
-  text-align: left;
-  padding: 0.3em 0.4em 0.3em 0.4em;
-}
-
-td {
-  word-wrap: break-word;
-}
-
 figure {
   figcaption {
     padding: 0.5em;

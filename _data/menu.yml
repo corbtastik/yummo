@@ -11,6 +11,13 @@ entries:
       show_more: true
       show_more_text: See archive...
       show_more_url: /archive
+  - title: weeklies
+    post_list:
+      limit: 4
+      category: weekly
+      show_more: true
+      show_more_text: See weeklies...
+      show_more_url: /weeklies
   - title: yummo
     entries:
       - title: "Github: Yummo, A tasty wittle theme"
