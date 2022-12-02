@@ -4,11 +4,8 @@ title: "samples/image-grid"
 description: "Image Grid, ooh-la-la"
 date: 2022-09-03
 author: Corbs
-permalink: /samples/image-grid/
 category: samples
 tags:
-- css
-- images
 - image-grid
 - sample
 - yummo

@@ -5,7 +5,6 @@ description: "Collapsible elements"
 date: 2022-10-10
 ext_js: collapsibles
 author: Corbs
-permalink: /samples/collapsibles/
 category: samples
 tags:
 - collapsibles

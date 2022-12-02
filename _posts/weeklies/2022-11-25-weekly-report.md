@@ -1,39 +1,14 @@
-#!/bin/bash
-
-# start options
-title=${title:-weekly}
-date=${date:-$(date +%Y-%m-%d)}
-dir=${dir:-.}
-
-# parse options
-while [ $# -gt 0 ]; do
-   if [[ $1 == *"--"* ]]; then
-        param="${1/--/}"
-        declare $param="$2"
-   fi
-  shift
-done
-
-week=$(date -jf "%Y-%m-%d" ${date} +%U)
-
-# startup banner
-echo "= yummo creating new weekly =========================================="
-echo "  - title: ${title}"
-echo "  -  date: ${date}"
-echo "  -  week: ${week}"
-echo "  -  file: ${dir}/${date}-${title}.md"
-echo "======================================================================"
-
-cat << WEEKLY > ${dir}/${date}-${title}.md
 ---
 layout:      post
-title:       week-${week}
-description: Weekly for week ${week}
-date:        ${date}
+title:       week-47
+description: Mon 11/21 to Fri 11/25
+date:        2022-11-25
 category:    weekly
 tags:
 - weekly-report
 ---
+
+{% include toc.html header="h3" text="Week 47" %}
 
 #### Summary
 
@@ -100,4 +75,3 @@ tags:
 #### Kudos
 
 * Always important to recognize folks that had a positive impact on your week.
-WEEKLY

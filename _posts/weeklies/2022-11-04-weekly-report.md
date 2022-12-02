@@ -1,39 +1,14 @@
-#!/bin/bash
-
-# start options
-title=${title:-weekly}
-date=${date:-$(date +%Y-%m-%d)}
-dir=${dir:-.}
-
-# parse options
-while [ $# -gt 0 ]; do
-   if [[ $1 == *"--"* ]]; then
-        param="${1/--/}"
-        declare $param="$2"
-   fi
-  shift
-done
-
-week=$(date -jf "%Y-%m-%d" ${date} +%U)
-
-# startup banner
-echo "= yummo creating new weekly =========================================="
-echo "  - title: ${title}"
-echo "  -  date: ${date}"
-echo "  -  week: ${week}"
-echo "  -  file: ${dir}/${date}-${title}.md"
-echo "======================================================================"
-
-cat << WEEKLY > ${dir}/${date}-${title}.md
 ---
 layout:      post
-title:       week-${week}
-description: Weekly for week ${week}
-date:        ${date}
+title:       week-44
+description: Mon 10/31 to Fri 11/04
+date:        2022-11-04
 category:    weekly
 tags:
 - weekly-report
 ---
+
+{% include toc.html header="h3" text="Week 44" %}
 
 #### Summary
 
@@ -54,12 +29,12 @@ tags:
 #### Tasks and Milestones
 
 * Build upon the Summary by providing:
-  * Detailed information on tasks you intend to work this week.
-  * Capture significant milestones to achieve this week.
+    * Detailed information on tasks you intend to work this week.
+    * Capture significant milestones to achieve this week.
 
 * __Terms:__
-  * __Task:__ A piece of work to be done.
-  * __Milestone:__ An action or event marking a significant change or stage in development.
+    * __Task:__ A piece of work to be done.
+    * __Milestone:__ An action or event marking a significant change or stage in development.
 
 > __Recommendation:__ Add a table of the Tasks being worked this week.
 
@@ -82,7 +57,7 @@ tags:
 * This is the place to document and report on your "punch list".
 
 * __Terms:__
-  * __Action Item:__ A documented discrete unit of work required to complete a Task or reach a Milestone.
+    * __Action Item:__ A documented discrete unit of work required to complete a Task or reach a Milestone.
 
 > __Recommendation:__ Add a table of the Action Items for this week.
 
@@ -100,4 +75,3 @@ tags:
 #### Kudos
 
 * Always important to recognize folks that had a positive impact on your week.
-WEEKLY

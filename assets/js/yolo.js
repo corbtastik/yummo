@@ -20,7 +20,7 @@
             Console.println("YOLO ERR " + new Date().toUTCString() + ": " + text);
         }
         static enabled() {
-            return false;
+            return true;
         }
     }
 
@@ -161,6 +161,75 @@
     };
 
     // ------------------------------------------------------------------------
+    // Table of Contents class for adding toc to a Yolo post/page and sidebar
+    // ------------------------------------------------------------------------
+    class Toc {
+        static create() {
+            if(document.getElementById("toc")) {
+                const headers = Toc.getHeaders();
+                document.getElementById("toc").classList.add("nav-menu");
+                document.getElementById("toc").innerHTML = Toc.buildTree(headers);
+            }
+            if(document.getElementById("toc-sidebar")) {
+                const headers = Toc.getHeaders();
+                document.getElementById("toc-sidebar").classList.add("nav-menu");
+                document.getElementById("toc-sidebar").innerHTML = Toc.buildTree(headers);
+            }
+        }
+
+        static getHeaders() {
+            const hTags = ["h2", "h3", "h4", "h5", "h6"];
+            const elements = document.querySelectorAll(hTags.join());
+            const headers = [];
+
+            elements.forEach(element => {
+                if(!element.classList.contains("no-toc")) {
+                    const text = element.innerText;
+                    const id = text.toLowerCase().split(" ").join("-");
+                    element.setAttribute("id", id);
+                    headers.push({id, text, level: hTags.indexOf(element.tagName.toLowerCase())
+                    });
+                }
+            });
+
+            return headers;
+        }
+
+        static buildTree(headers) {
+            const list = [];
+            let nextLevelHeaders = [];
+            let lastLevel = -1;
+
+            if (headers.length === 0) {
+                return "";
+            }
+
+            const buildSubTree = () => {
+                if (nextLevelHeaders.length > 0) {
+                    list[list.length - 1] += Toc.buildTree(nextLevelHeaders);
+                }
+            };
+
+            headers.forEach(h => {
+                if (lastLevel !== -1 && lastLevel < h.level) {
+                    nextLevelHeaders.push(h);
+                    return;
+                }
+
+                buildSubTree();
+
+                lastLevel = h.level;
+                list.push(`<a href="#${h.id}">${h.text}</a>`);
+                nextLevelHeaders = [];
+            });
+
+            buildSubTree();
+
+            const listHTML = list.map(i => `<li>${i}</li>`).join("");
+            return `<ul>${listHTML}</ul>`;
+        }
+    }
+    // ------------------------------------------------------------------------
     // Yolo class for the site logic
     // ------------------------------------------------------------------------
     class Yolo {
@@ -175,23 +244,30 @@
             // Initialize copy code snippets
             yolo.copySnippet();
             // Initialize dark / light theme toggle
-            yolo.themeToggle();
+            yolo.toggleTheme();
             // Initialize sidebar
             yolo.initSidebar();
+            // Initialize toc on page/post and sidebar
+            yolo.initToc();
             return yolo;
         }
     }
 
     Yolo.prototype.initSidebar = function() {
         const sidebar = document.getElementById('sidebar');
+        const sidebarNav = document.getElementById('toc-sidebar');
         if(sidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
                 const sidebarWidth = sidebar.style.width;
                 if(sidebarWidth === "50%") {
-                    sidebar.style.width = "1rem";
+                    sidebar.style.width = "0.5rem";
+                    sidebar.classList.remove("open")
+                    sidebarNav.style.opacity = "0";
                 } else {
                     sidebar.style.width = "50%";
+                    sidebar.classList.add("open")
+                    sidebarNav.style.opacity = "1";
                 }
             }, false);
         } else {
@@ -277,7 +353,7 @@
         return this.imageGrids.get(name);
     };
 
-    Yolo.prototype.themeToggle = function() {
+    Yolo.prototype.toggleTheme = function() {
         const yoloSite = document.getElementById("yolo-site");
         const themeDot = document.getElementById("theme-dot");
 
@@ -323,6 +399,10 @@
             Console.log("Window load, transitioning to opacity 1");
             yoloSite.style.opacity = "1";
         });
+    }
+
+    Yolo.prototype.initToc = function() {
+        Toc.create();
     }
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.

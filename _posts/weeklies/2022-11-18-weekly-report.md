@@ -1,18 +1,18 @@
 ---
 layout:      post
-title:       weekly/48
-description: Week 48 report
-date:        2022-11-30
-permalink:   weekly/48
+title:       week-46
+description: Mon 11/14 to Fri 11/18
+date:        2022-11-18
 category:    weekly
 tags:
 - weekly-report
-- weekly-48
 ---
+
+{% include toc.html header="h3" text="Week 46" %}
 
 #### Summary
 
-* The Summary section should be brief statements about the work done thus far, and the focus going forward.
+* Brief statements about the work done thus far, and the focus going forward.
 
 #### Recap last week
 
@@ -29,12 +29,12 @@ tags:
 #### Tasks and Milestones
 
 * Build upon the Summary by providing:
-  * Detailed information on tasks you intend to work this week.
-  * Capture significant milestones to achieve this week.
+    * Detailed information on tasks you intend to work this week.
+    * Capture significant milestones to achieve this week.
 
 * __Terms:__
-  * __Task:__ A piece of work to be done.
-  * __Milestone:__ An action or event marking a significant change or stage in development.
+    * __Task:__ A piece of work to be done.
+    * __Milestone:__ An action or event marking a significant change or stage in development.
 
 > __Recommendation:__ Add a table of the Tasks being worked this week.
 
@@ -57,7 +57,7 @@ tags:
 * This is the place to document and report on your "punch list".
 
 * __Terms:__
-  * __Action Item:__ A documented discrete unit of work required to complete a Task or reach a Milestone.
+    * __Action Item:__ A documented discrete unit of work required to complete a Task or reach a Milestone.
 
 > __Recommendation:__ Add a table of the Action Items for this week.
 
@@ -71,3 +71,7 @@ tags:
 * Describe the issues currently in your way.
 * Identify risks associated with the work this week.
 * List the mitigation plan for any issues and risks.
+
+#### Kudos
+
+* Always important to recognize folks that had a positive impact on your week.

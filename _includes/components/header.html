@@ -8,11 +8,11 @@
 {% endif %}
     <div id="theme-dot" class="theme-dot">&#9681;</div>
 {% if page.layout == 'home' %}
-    <h1 class="tag"><a href="./">{{ site.tag_text }}</a></h1>
-    <h4 class="description">{{ site.description }}</h4>
+    <h1 class="tag no-toc"><a href="./">{{ site.tag_text }}</a></h1>
+    <h4 class="description no-toc">{{ site.description }}</h4>
 {% else %}
-    <h1 class="tag"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <h4 class="description">{{ page.description }}</h4>
+    <h1 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <h4 class="description no-toc">{{ page.description }}</h4>
 {% endif %}
     <p>
         <span>

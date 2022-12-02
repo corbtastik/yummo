@@ -20,9 +20,25 @@ favicon: "logo.png"
 # -----------------------------------------------------------------------------
 # Yummo site properties
 # -----------------------------------------------------------------------------
+defaults:
+  # samples
+  - scope:
+      path: "_posts/samples"
+      type: posts
+    values:
+      category: samples
+      permalink: samples/:title/
+  # weeklies
+  - scope:
+      path: "_posts/weeklies"
+      type: posts
+    values:
+      category: weekly
+      permalink: weeklies/:year/:week/
+
 yummo:
   # The style to apply (see _sass/yummo/themes)
-  style: weekly
+  style: corbs
   # The site wide logo
   # logo: assets/images/site/logo.svg
   # Where the site should grab images from (can be local, e.g. assets/images)

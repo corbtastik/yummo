@@ -4,8 +4,6 @@ title: "samples/code-snippets"
 description: "Syntax highlighting and snippet copy"
 date: 2022-09-08
 author: Corbs
-permalink: /samples/code-snippets/
-slug: code-snippets
 category: samples
 tags:
 - code
