@@ -6,30 +6,13 @@ date: 2022-09-08
 author: Corbs
 category: samples
 tags:
-- code
-- syntax-highlighting
-- sample
-- yummo
+  - code
+  - syntax-highlighting
+  - sample
+  - yummo
 ---
 
-### Snippet samples
-
-- [Bash](#bash)
-- [C](#c)
-- [C++](#c++)
-- [Dart](#dart)
-- [Go](#go)
-- [HTML](#html)
-- [JSON Array](#json-array)
-- [JSON Object](#json-object)
-- [Java](#java)
-- [JavaScript](#javascript)
-- [Kotlin](#kotlin)
-- [Markdown](#markdown)
-- [Python](#python)
-- [SCSS](#scss)
-- [SQL](#sql)
-- [YAML](#yaml)
+{% include toc.html header="h3" text="Snippet samples" %}
 
 > __Tip:__ Click header to copy a snippet.
 

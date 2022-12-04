@@ -5,7 +5,7 @@ description: Mon 10/31 to Fri 11/04
 date:        2022-11-04
 category:    weekly
 tags:
-- weekly-report
+  - weekly-report
 ---
 
 {% include toc.html header="h3" text="Week 44" %}

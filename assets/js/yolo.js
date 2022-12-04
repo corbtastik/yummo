@@ -229,6 +229,21 @@
             return `<ul>${listHTML}</ul>`;
         }
     }
+
+    class Search {
+        constructor(name) {
+            this.name = name;
+        }
+
+        static create(name) {
+            Console.log("Search.create for name=" + name);
+            return new Search(name);
+        }
+
+        static buildIndex() {
+
+        }
+    }
     // ------------------------------------------------------------------------
     // Yolo class for the site logic
     // ------------------------------------------------------------------------

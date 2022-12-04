@@ -6,10 +6,12 @@ date: 2022-09-02
 author: Corbs
 category: samples
 tags:
-- images
-- sample
-- yummo
+  - images
+  - sample
+  - yummo
 ---
+
+{% include toc.html header="h3" text="Table of Contents" %}
 
 > __Tip:__ Click to enlarge.
 

@@ -1,0 +1,31 @@
+
+<form action="/search/" method="GET">
+    <input required type="search" name="q" />
+    <button type="submit">Search</button>
+</form>
+
+<!--{% for post in site.posts %}-->
+<!--    "{{ post.url | slugify }}": {-->
+<!--        "title": "{{ post.title }}",-->
+<!--        "category": "{{ post.category }}",-->
+<!--        "tags": "{{ post.tags | jsonify }}",-->
+<!--        "content": {{ post.content | strip_html | strip_newlines | jsonify }},-->
+<!--    }{% unless forloop.last %},{% endunless %}-->
+<!--{% endfor %}-->
+
+<ol id="search-results"></ol>
+<script>
+    window.posts = {
+        {% for post in site.posts %}
+            "{{ post.url | slugify }}": {
+                "title": "{{ post.title }}",
+                "description": "{{ post.description | strip }}",
+                "date": "{{ post.date | strip }}",
+                "author": "{{ post.author }}",
+                "category": "{{ post.category }}",
+                "tags": {{ post.tags | jsonify }},
+                "content": {{ post.content | strip_newlines | strip_html | strip | jsonify }}
+            }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    };
+</script>

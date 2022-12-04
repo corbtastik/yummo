@@ -7,9 +7,9 @@ ext_js: collapsibles
 author: Corbs
 category: samples
 tags:
-- collapsibles
-- sample
-- yummo
+  - collapsibles
+  - sample
+  - yummo
 ---
 
 #### Collapsibles

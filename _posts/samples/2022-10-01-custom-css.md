@@ -7,10 +7,12 @@ ext_css: custom
 author: Corbs
 category: samples
 tags:
-- css
-- sample
-- yummo
+  - css
+  - sample
+  - yummo
 ---
+
+{% include toc.html header="h3" text="Table of Contents" %}
 
 You can insert custom CSS styling for a page or post by adding front matter.
 

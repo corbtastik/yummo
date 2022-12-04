@@ -15,46 +15,50 @@ input[type="text"]:hover {
   outline: none;
 }
 
-.yummo-input {
+.search-input {
   padding: 0.4em 0.5em;
   display: block;
-  border: none;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
   width: 100%;
-  border-radius: 3px;
 }
 
 .light-theme {
-  .yummo-input {
-    background-color: $light-secondary-color;
-    color: $light-primary-color;
+  .search-input {
+    background-color: $light-primary-color;
+    color: $light-secondary-color;
+    border-bottom-color: $light-accent-color;
   }
   ::-webkit-input-placeholder { /* Edge */
-    color: $light-primary-color;
+    color: $light-secondary-color;
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $light-primary-color;
+    color: $light-secondary-color;
   }
 
   ::placeholder {
-    color: $light-primary-color;
+    color: $light-secondary-color;
   }
 }
 
 .dark-theme {
-  .yummo-input {
-    background-color: $dark-secondary-color;
-    color: $dark-primary-color;
+  .search-input {
+    background-color: $dark-primary-color;
+    color: $dark-secondary-color;
+    border-bottom-color: $dark-accent-color;
   }
   ::-webkit-input-placeholder { /* Edge */
-    color: $dark-primary-color;
+    color: $dark-code-color;
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $dark-primary-color;
+    color: $dark-code-color;
   }
 
   ::placeholder {
-    color: $dark-primary-color;
+    color: $dark-secondary-color;
   }
 }

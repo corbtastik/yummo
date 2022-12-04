@@ -9,14 +9,14 @@ entries:
     post_list:
       limit: 10
       show_more: true
-      show_more_text: See archive...
+      show_more_text: All posts...
       show_more_url: /archive
   - title: weeklies
     post_list:
-      limit: 4
+      limit: 3
       category: weekly
       show_more: true
-      show_more_text: See weeklies...
+      show_more_text: All weeklies...
       show_more_url: /weeklies
   - title: yummo
     entries:

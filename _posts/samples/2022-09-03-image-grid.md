@@ -6,10 +6,12 @@ date: 2022-09-03
 author: Corbs
 category: samples
 tags:
-- image-grid
-- sample
-- yummo
+  - image-grid
+  - sample
+  - yummo
 ---
+
+{% include toc.html header="h3" text="Table of Contents" %}
 
 ### Image Grid
 

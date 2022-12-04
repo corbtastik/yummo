@@ -1,4 +1,8 @@
 {% if page.ext_js %}
 <script src="{{ site.baseurl }}/assets/ext/js/{{ page.ext_js }}.js"></script>
 {% endif %}
+{% if site.yummo.searchable %}
+<script src="{{ site.baseurl }}{{ '/assets/js/lunr/lunr.js' | relative_url }}"></script>
+<script src="{{ site.baseurl }}{{ '/assets/js/search.js' | relative_url }}"></script>
+{% endif %}
 <script src="{{ site.baseurl }}{{ '/assets/js/yolo.js' | relative_url }}"></script>
