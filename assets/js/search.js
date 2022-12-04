@@ -1,12 +1,25 @@
 let searchIndex = lunr(function () {
     this.ref("id");
-    this.field("title", {boost: 10});
+    this.field("title", { boost: 10 });
+    this.field("description");
+    this.field("date");
+    this.field("author");
+    this.field("category", { boost: 10 });
+    this.field("tags", { boost: 10 });
     this.field("content");
-    for (var key in window.posts) {
+    for (let key in window.posts) {
+        const cleanedContent = posts[key].content
+            .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\\"\[\]↑<>|]/g, " ")
+            .replace(/\s{2,}/g, " ").trim();
         this.add({
             "id": key,
             "title": posts[key].title,
-            "content": posts[key].content
+            "description": posts[key].description,
+            "date": posts[key].date,
+            "author": posts[key].author,
+            "category": posts[key].category,
+            "tags": posts[key].tags,
+            "content": cleanedContent
         });
     }
 });
@@ -23,7 +36,6 @@ function getQueryVariable(variable) {
 }
 
 let searchTerm = getQueryVariable("q");
-// creation of searchIndex from earlier example
 let results = searchIndex.search(searchTerm);
 let resultPosts = results.map(function (match) {
     return posts[match.ref];
