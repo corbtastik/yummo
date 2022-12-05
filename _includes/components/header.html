@@ -10,6 +10,13 @@
 {% if page.layout == 'home' %}
     <h1 class="tag no-toc"><a href="./">{{ site.tag_text }}</a></h1>
     <h4 class="description no-toc">{{ site.description }}</h4>
+{% elsif page.title == 'search' %}
+    <h1 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <h4 class="description no-toc">
+        {{ site.pages.size }} pages,
+        {{ site.posts.size }} posts,
+        {{ site.categories.size }} categories, {{ site.tags.size }} tags
+    </h4>
 {% else %}
     <h1 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h1>
     <h4 class="description no-toc">{{ page.description }}</h4>

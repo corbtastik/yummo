@@ -421,7 +421,6 @@
     }
     // ------------------------------------------------------------------------
     // Expose Yolo on the window object.
-    //   Call from HTML: onclick="Yolo.lightbox("lb-images").openModal();"
     // ------------------------------------------------------------------------
     window.Yolo = Yolo.create();
 })(window);

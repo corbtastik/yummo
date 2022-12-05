@@ -1,28 +1,26 @@
-input[type="text"] {
+@use "sass:color";
+
+input[type="search"] {
   box-sizing: border-box;
-  width: 100%;
-  margin: 0;
   overflow: visible;
 }
 
-input[type="text"]:focus {
-  //background-color: darken($dark-secondary-color, 20%);
+input[type="search"]:focus {
   outline: none;
 }
 
-input[type="text"]:hover {
-  //background-color: darken($dark-secondary-color, 30%);
+input[type="search"]:hover {
   outline: none;
 }
 
 .search-input {
   padding: 0.4em 0.5em;
-  display: block;
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
   border-bottom-width: 1px;
   width: 100%;
+  margin: 0;
 }
 
 .light-theme {
@@ -32,15 +30,15 @@ input[type="text"]:hover {
     border-bottom-color: $light-accent-color;
   }
   ::-webkit-input-placeholder { /* Edge */
-    color: $light-secondary-color;
+    color: lighten($light-secondary-color, 30%);
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $light-secondary-color;
+    color: lighten($light-secondary-color, 30%);
   }
 
   ::placeholder {
-    color: $light-secondary-color;
+    color: lighten($light-secondary-color, 30%);
   }
 }
 
@@ -51,14 +49,14 @@ input[type="text"]:hover {
     border-bottom-color: $dark-accent-color;
   }
   ::-webkit-input-placeholder { /* Edge */
-    color: $dark-code-color;
+    color: darken($dark-secondary-color, 30%);
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $dark-code-color;
+    color: darken($dark-secondary-color, 30%);
   }
 
   ::placeholder {
-    color: $dark-secondary-color;
+    color: darken($dark-secondary-color, 30%);
   }
 }
