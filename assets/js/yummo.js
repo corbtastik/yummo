@@ -1,6 +1,11 @@
 ;(function() {
 
-    let yummo = function (config) {
+    /**
+     * A convenience function for configuring and creating yummo module.
+     * @param config
+     * @returns {{}}
+     */
+    yummo = function (config) {
         return {};
     };
 
@@ -82,56 +87,6 @@
     }
 
     /**
-     * A yummo set.
-     *
-     * @constructor
-     */
-    yummo.Set = function (elements) {
-        this.elements = Object.create(null);
-
-        if (elements) {
-            this.length = elements.length;
-
-            for (let i = 0; i < this.length; i++) {
-                this.elements[elements[i]] = true;
-            }
-        } else {
-            this.length = 0;
-        }
-    }
-
-    /**
-     * An empty set that contains no elements.
-     *
-     * @static
-     * @readonly
-     * @type {yummo.Set}
-     */
-    yummo.Set.empty = {
-        intersect: function () {
-            return this;
-        },
-
-        union: function (other) {
-            return other;
-        },
-
-        contains: function () {
-            return false;
-        }
-    }
-
-    /**
-     * Returns true if this set contains the specified object.
-     *
-     * @param {object} object - Object whose presence in this set is to be tested.
-     * @returns {boolean} - True if this set contains the specified object.
-     */
-    yummo.Set.prototype.contains = function (object) {
-        return !!this.elements[object];
-    }
-
-    /**
      * A yummo ImageGrid.
      *
      * @param {string} name for the ImageGrid in dom.
@@ -181,6 +136,25 @@
         imageTarget.classList.toggle("no-display");
         imageTarget.style.display = "block";
     };
+
+    yummo.ImageGrid.prototype.closeImage = function() {
+        // TODO does this need to be imageId not this.name?
+        yummo.utils.log("ImageGrid.closeImage:" + this.name);
+        // Hide images and ig-target
+        const imageTarget = yummo.ImageGrid.domTarget(this.name);
+        const images = imageTarget.getElementsByTagName('img');
+        for(let i = 0; i < images.length; i++) {
+            const caption = document.getElementById(this.name + "-caption-" + i);
+            caption.style.display = "none";
+            images[i].style.display = "none";
+        }
+        imageTarget.style.display = "none";
+        imageTarget.classList.toggle("no-display");
+        // Show the grid
+        yummo.ImageGrid.dom(this.name).style.display = "block";
+    };
+
+
 
     /**
      * export the module via AMD, CommonJS or as a browser global
