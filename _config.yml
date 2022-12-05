@@ -35,7 +35,6 @@ defaults:
     values:
       category: weekly
       permalink: weeklies/:year/:week/
-
 yummo:
   # The style to apply (see _sass/yummo/themes)
   style: corbs
@@ -49,7 +48,6 @@ yummo:
   date_format: "%Y-%m-%d"
   # Is site searchable?
   searchable: false
-
 # Build settings
 version: v1.1
 markdown: kramdown

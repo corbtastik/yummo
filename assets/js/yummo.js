@@ -5,8 +5,21 @@
      * @param config
      * @returns {{}}
      */
-    yummo = function (config) {
-        return {};
+    let yummo = function (config) {
+        // Return image-grid instance if it exists
+        if(this.imageGrids.has(name)) {
+            return this.imageGrids.get(name);
+        }
+        // Protect against image-grid craziness
+        if(this.imageGrids.size > 20) {
+            yummo.utils.error("Yummo.imageGrid max instances " + this.imageGrids.size + " reached.");
+            throw "Yummo.imageGrid max instances " + this.imageGrids.size + " reached.";
+        }
+        // Create new image-grid instance
+        const imageGrid = yummo.ImageGrid(name);
+        yummo.utils.log("Yummo.imageGrid, created new instance named: " + name);
+        this.imageGrids.set(name, imageGrid);
+        return this.imageGrids.get(name);
     };
 
     /**
@@ -94,6 +107,7 @@
      */
     yummo.ImageGrid = function(name) {
         this.name = name;
+        return this;
     }
 
     /**
