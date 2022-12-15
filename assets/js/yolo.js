@@ -41,7 +41,7 @@
             return document.getElementById("ig-" + name);
         }
 
-        static domTarget(name) {
+        static  domTarget(name) {
             return document.getElementById("ig-target-" + name);
         }
     }
@@ -302,7 +302,7 @@
 
     Yolo.prototype.copySnippet = function() {
         const blocks = document.querySelectorAll(
-            '.code-header + .highlighter-rouge');
+            ".code-header + .highlighter-rouge");
         const elements = document.querySelectorAll(
             '.code-header');
         elements.forEach((element, index) => {
