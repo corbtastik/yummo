@@ -9,17 +9,15 @@
 > * Sass based theming with dark and light modes.
 > * Snazzy photo and code-snippet support.
 
+### Yummo demo
+
+* Yummo on Surge - [https://corbtastik-yummo.surge.sh](https://corbtastik-yummo.surge.sh)
+
 ### History
 
 I've used Jekyll for various technical ramblings, photo galleries and my personal site [corbs.io](https://corbs.io) for quite some time. I've never been really satisfied with the sites, mostly because I couldn't find a single theme that met all my needs.
 
-So I first crafted [Yolo](https://corbtastik.github.io/yolo/), _a loveable theme_ laser focused on single-page sites. [Yolo](https://corbtastik.github.io/yolo/) helped build a foundation for page content, but it's not a multi-page theme. The next step was bringing [Yolo](https://corbtastik.github.io/yolo/) together with a multi-page theme and that's [Yummo](https://corbtastik.github.io/yummo).
-
-[Yolo](https://corbtastik.github.io/yolo/) and [Yummo](https://corbtastik.github.io/yummo) are individual themes, [Yolo](https://corbtastik.github.io/yolo/) for single-page sites and [Yummo](https://corbtastik.github.io/yummo) for multi-page. However, they're built to _play nice_ with each other.
-
-* [Yummo](https://corbtastik.github.io/yummo) uses the same scss styling as [Yolo](https://corbtastik.github.io/yolo/).
-* You can "drop" [Yolo](https://corbtastik.github.io/yolo/) pages into [Yummo](https://corbtastik.github.io/yummo), just add front-matter.
-* Think of [Yummo](https://corbtastik.github.io/yummo) as "additive" to what [Yolo](https://corbtastik.github.io/yolo/) provides.
+So I first crafted [Yolo](https://corbtastik.github.io/yolo/), _a loveable theme_ laser focused on single-page sites. [Yolo](https://corbtastik.github.io/yolo/) helped build a foundation for page content, but it's not a multi-page theme. The next step was bringing [Yolo](https://corbtastik.github.io/yolo/) together with a multi-page theme and that's basically [Yummo](https://corbtastik.github.io/yummo).
 
 ### Thanks
 
@@ -44,13 +42,3 @@ Over the years I've used [Solo](http://chibicode.github.io/solo/) for single pag
 Before starting work on [Yummo](https://corbtastik.github.io/yummo) I looked for something close to what I wanted in a multi-page theme. [No Style Please](https://github.com/riggraz/no-style-please), by [Riccardo Graziosi](https://github.com/riggraz) checked some boxes, namely minimal dependencies and straight forward site organization. [Yummo](https://corbtastik.github.io/yummo) borrows site organization from [No Style Please](https://github.com/riggraz/no-style-please) but adds different layouts and a whole different style.
 
 > Kudos [Riccardo Graziosi](https://github.com/riggraz)!
-
-## Backlog
-
-1. Create Github pages site
-1. 404 page
-1. Table of Contents plugin
-1. Search function
-1. Build and Runtime Container
-1. Yummo logo
-1. Category and Tag page
