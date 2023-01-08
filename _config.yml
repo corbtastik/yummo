@@ -47,7 +47,7 @@ yummo:
   # customize how date is formatted
   date_format: "%Y-%m-%d"
   # Is site searchable?
-  searchable: false
+  searchable: true
 # Build settings
 version: v1.1
 markdown: kramdown
