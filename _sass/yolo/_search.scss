@@ -13,6 +13,10 @@ input[type="search"]:hover {
   outline: none;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 .search-input {
   padding: 0.4em 0.5em;
   border-top-width: 0;
@@ -32,13 +36,14 @@ input[type="search"]:hover {
   ::-webkit-input-placeholder { /* Edge */
     color: lighten($light-secondary-color, 30%);
   }
-
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: lighten($light-secondary-color, 30%);
   }
-
   ::placeholder {
     color: lighten($light-secondary-color, 30%);
+  }
+  ::-webkit-search-cancel-button {
+    background: red;
   }
 }
 
@@ -51,12 +56,13 @@ input[type="search"]:hover {
   ::-webkit-input-placeholder { /* Edge */
     color: darken($dark-secondary-color, 30%);
   }
-
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: darken($dark-secondary-color, 30%);
   }
-
   ::placeholder {
     color: darken($dark-secondary-color, 30%);
+  }
+  ::-webkit-search-cancel-button {
+    background: magenta;
   }
 }
