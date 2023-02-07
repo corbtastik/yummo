@@ -40,8 +40,8 @@ yummo:
   style: corbs
   # Align content, left, center or right (default is left)
   align: left
-  header:
-    logo: assets/images/site/yummo-logo-light.png
+#  header:
+#    logo: assets/images/site/yummo-logo-light.png
 #  sidebar:
 #    logo: assets/images/logo.png
   # Where the site should grab images from (can be local, e.g. assets/images)
