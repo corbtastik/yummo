@@ -38,8 +38,12 @@ defaults:
 yummo:
   # The style to apply (see _sass/yummo/themes)
   style: corbs
-  # The site wide logo
-  # logo: assets/images/site/logo.svg
+  # Align content, left, center or right (default is left)
+  align: left
+  header:
+    logo: assets/images/site/yummo-logo-light.png
+#  sidebar:
+#    logo: assets/images/logo.png
   # Where the site should grab images from (can be local, e.g. assets/images)
   images: https://storage.googleapis.com/corbs-foto/yolo
   # customize text for homepage link in post layout
@@ -47,8 +51,10 @@ yummo:
   # customize how date is formatted
   date_format: "%Y-%m-%d"
   # Is site searchable?
-  searchable: true
+  searchable: false
+# -----------------------------------------------------------------------------
 # Build settings
+# -----------------------------------------------------------------------------
 version: v1.1
 markdown: kramdown
 permalink: /:slug.html
@@ -61,4 +67,4 @@ exclude:
   - "docs/"
   - ".idea/"
 sass:
-  style: uncompressed
+  style: compressed

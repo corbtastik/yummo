@@ -3,9 +3,9 @@
 ---
 @charset "utf-8";
 
-@import "yolo/normalize";
 @import "yolo/variables";
 @import "yolo/themes/{{ site.yummo.style | default: 'corbs' }}";
+@import "yolo/normalize";
 @import "yolo/base";
 @import "yolo/tables";
 @import "yolo/responsiveness";
@@ -18,3 +18,9 @@
 @import "yolo/navigation";
 @import "yolo/search";
 @import "yolo/yolo";
+@import "yolo/dark";
+@import "yolo/light";
+
+{% if site.yummo.sidebar %}
+@import "yolo/sidebar";
+{% endif %}
