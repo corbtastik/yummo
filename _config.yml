@@ -66,5 +66,6 @@ exclude:
   - "src/"
   - "docs/"
   - ".idea/"
+  - ".generated"
 sass:
-  style: compressed
+  style: uncompressed

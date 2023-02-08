@@ -3,7 +3,10 @@ layout: post
 title: "samples/custom-css"
 description: "Add custom css to a post"
 date: 2022-10-01
-ext_css: custom
+ext_css:
+  - custom
+  - solo-dark
+  - solo-light
 author: Corbs
 category: samples
 tags:
@@ -14,28 +17,39 @@ tags:
 
 {% include toc.html header="h3" text="Table of Contents" %}
 
-You can insert custom CSS styling for a page or post by adding front matter.
+### Custom CSS
 
-For example this post uses:
+You can insert custom CSS styling for a page or post by adding front matter.  Add the names of any `.css` files to the `ext_css` front-matter variable and the corresponding stylesheet will be added into `<head>`.
+
+For example, the front-matter for this post adds `/assets/ext/css/custom.css`, `/assets/ext/css/solo-light.css`, and `/assets/ext/css/solo-dark.css` stylesheets to the page.
 
 ```yaml
-# name of css file in /assets/ext/css/ without .css ext
-ext_css: custom
+layout: post
+title: "samples/custom-css"
+description: "Add custom css to a post"
+ext_css:
+  - custom
+  - solo-dark
+  - solo-light 
 ```
 
-Which adds the following into `<head>`.
+Which results in the following `<link>` elements being added into `<head>`, __after__ the `main.css` stylesheet.
+
+> __Note:__ The effect of adding custom stylesheets after `main.css` means you can completely override site styling on a page-by-page basis.
+> > In this example the `solo-dark.css` and `solo-light.css` stylesheets override the theme selectors defined in `main.css`. While `custom.css` styles the flexbox examples.
 
 ```html
-<link rel="stylesheet" href="/assets/ext/css/custom.css"/>
+<!-- Default site stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Custom stylesheets added by `ext_css` front-matter -->
+<link rel="stylesheet" href="/assets/ext/css/custom.css">
+<link rel="stylesheet" href="/assets/ext/css/solo-dark.css">
+<link rel="stylesheet" href="/assets/ext/css/solo-light.css">
 ```
-
-> __Note__ Take care when adding custom css to ensure you don't clash with Yummo based styling.
-
-The styles in `custom.css` are applied to the flexbox examples below.
 
 ---
 
-#### Rubik's cube flexbox
+### Rubik's cube flexbox
 
 <div class="rubik-cube-row">
     <div class="flex-item red"></div>
@@ -57,7 +71,7 @@ The styles in `custom.css` are applied to the flexbox examples below.
 
 ---
 
-#### Flexbox samples
+### Flexbox samples
 
 * A flexbox with no wrapping and 5 items.
 

@@ -1,8 +1,6 @@
 entries:
   - title: about
     url: /about
-  - title: archive
-    url: /archive
   - title: tags
     url: /tags
   - title: posts

@@ -8,6 +8,15 @@ IMAGE_TAG=v1.1
 # -----------------------------------------------------------------------------
 # Jekyll targets
 # -----------------------------------------------------------------------------
+css-solo:
+	@mkdir -p .generated/themes/solo/_site
+	@yq '.yummo.style = "solo"' _config.yml > .generated/themes/solo/_config.yml
+	@jekyll build --config .generated/themes/solo/_config.yml --destination .generated/themes/solo/_site
+	@cat .generated/themes/solo/_site/assets/css/main.css | grep ".light-theme" > .generated/themes/solo/solo-light.css
+	@cat .generated/themes/solo/_site/assets/css/main.css | grep ".dark-theme" > .generated/themes/solo/solo-dark.css
+	@cp .generated/themes/solo/solo-light.css ./assets/ext/css/solo-light.css
+	@cp .generated/themes/solo/solo-dark.css ./assets/ext/css/solo-dark.css
+
 run:
 	@jekyll serve --port 4002
 # -----------------------------------------------------------------------------
