@@ -7,28 +7,32 @@ entries:
     post_list:
       limit: 10
       show_more: true
-      show_more_text: All posts...
+      show_more_text: all posts...
       show_more_url: /archive
   - title: weeklies
     post_list:
       limit: 3
       category: weekly
       show_more: true
-      show_more_text: All weeklies...
+      show_more_text: all weeklies...
       show_more_url: /weeklies
-  - title: yummo
+  - title: "yummo - a tasty wittle theme"
     entries:
-      - title: "Github: Yummo, A tasty wittle theme"
+      - title: "https://github.com/corbtastik/yummo"
         url: https://github.com/corbtastik/yummo
-  - title: yolo
+      - title: "demo on surge.sh"
+        url: https://corbtastik-yummo.surge.sh
+  - title: "yolo, loveable single page sites"
     entries:
-      - title: "Github: Yolo, Loveable single page sites"
+      - title: "https://github.com/corbtastik/yolo"
         url: https://github.com/corbtastik/yolo
-      - title: "Yolo demo"
+      - title: "demo on github pages"
         url: https://corbtastik.github.io/yolo
-  - title: corbs
+      - title: "demo on surge.sh"
+        url: https://corbtastik-yolo.surge.sh
+  - title: corbs.io
     entries:
-      - title: "Github: Cornucopia of Corbs"
+      - title: "github: cornucopia of corbs"
         url: https://github.com/corbtastik/corbs
-      - title: "Cornucopia of Corbs"
+      - title: "cornucopia of corbs"
         url: https://corbs.io

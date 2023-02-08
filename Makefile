@@ -8,17 +8,26 @@ IMAGE_TAG=v1.1
 # -----------------------------------------------------------------------------
 # Jekyll targets
 # -----------------------------------------------------------------------------
-css-solo:
-	@mkdir -p .generated/themes/solo/_site
-	@yq '.yummo.style = "solo"' _config.yml > .generated/themes/solo/_config.yml
-	@jekyll build --config .generated/themes/solo/_config.yml --destination .generated/themes/solo/_site
-	@cat .generated/themes/solo/_site/assets/css/main.css | grep ".light-theme" > .generated/themes/solo/solo-light.css
-	@cat .generated/themes/solo/_site/assets/css/main.css | grep ".dark-theme" > .generated/themes/solo/solo-dark.css
-	@cp .generated/themes/solo/solo-light.css ./assets/ext/css/solo-light.css
-	@cp .generated/themes/solo/solo-dark.css ./assets/ext/css/solo-dark.css
-
 run:
 	@jekyll serve --port 4002
+
+# -----------------------------------------------------------------------------
+# Targets to generate theme stylesheets and cp into /assets/ext/css for use.
+# -----------------------------------------------------------------------------
+# Template target for any $(THEME) - call from theme targets below.
+# -----------------------------------------------------------------------------
+css-theme:
+	@echo "Generating css file for theme: $(THEME)"
+	@mkdir -p .generated/themes/$(THEME)/_site
+	@yq '.yummo.style = "$(THEME)"' _config.yml > .generated/themes/$(THEME)/_config.yml
+	@jekyll build --config .generated/themes/$(THEME)/_config.yml --destination .generated/themes/$(THEME)/_site
+	@cat .generated/themes/$(THEME)/_site/assets/css/main.css | grep ".light-theme" > .generated/themes/$(THEME)/$(THEME)-light.css
+	@cat .generated/themes/$(THEME)/_site/assets/css/main.css | grep ".dark-theme" > .generated/themes/$(THEME)/$(THEME)-dark.css
+	@cp .generated/themes/$(THEME)/$(THEME)-light.css ./assets/ext/css/$(THEME)-light.css
+	@cp .generated/themes/$(THEME)/$(THEME)-dark.css ./assets/ext/css/$(THEME)-dark.css
+
+css-clean:
+	@rm -rf .generated/themes
 # -----------------------------------------------------------------------------
 # Publish to surge
 # -----------------------------------------------------------------------------
