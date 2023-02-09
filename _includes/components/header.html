@@ -39,6 +39,9 @@
         <a href="{{ '/' | relative_url }}"> {{ site.yummo.home_link }} </a>
     </p>
 {% endif %}
+{% if site.yummo.breadcrumbs %}
+    {% include components/breadcrumbs.html %}
+{% endif %}
 {% if site.yummo.searchable %}
     {% include components/search.html %}
 {% endif %}

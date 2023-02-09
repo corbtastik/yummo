@@ -59,6 +59,8 @@ yummo:
   date_format: "%Y-%m-%d"
   # Is site searchable?
   searchable: false
+  # Enable breadcrumbs
+  breadcrumbs: true
 # -----------------------------------------------------------------------------
 # Build settings
 # -----------------------------------------------------------------------------

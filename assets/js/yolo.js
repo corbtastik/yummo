@@ -41,7 +41,7 @@
             return document.getElementById("ig-" + name);
         }
 
-        static  domTarget(name) {
+        static domTarget(name) {
             return document.getElementById("ig-target-" + name);
         }
     }

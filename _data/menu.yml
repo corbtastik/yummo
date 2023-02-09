@@ -1,32 +1,45 @@
 entries:
-  - title: about
-    url: /about
-  - title: tags
-    url: /tags
-  - title: posts
+  - title: "about"
+    url: "/about"
+  - title: "tags"
+    url: "/tags"
+  - title: "posts"
     post_list:
       limit: 10
       show_more: true
-      show_more_text: all posts...
-      show_more_url: /archive
-  - title: themes
+      show_more_text: "all posts..."
+      show_more_url: "/archive"
+  - title: "weeklies: a simple status report layout"
     post_list:
-      limit: 5
-      category: themes
-  - title: weeklies
-    post_list:
-      limit: 3
-      category: weekly
+      limit: 4
+      category: "weekly"
       show_more: true
-      show_more_text: all weeklies...
-      show_more_url: /weeklies
-  - title: "yummo - a tasty wittle blog"
+      show_more_text: "all weeklies..."
+      show_more_url: "/weeklies"
+  - title: "yummo themes"
+    entries:
+      - title: "arcade"
+        description: "An 80s throwback theme"
+        url: "/themes/arcade"
+      - title: "corbs"
+        description: "My personal look and feel"
+        url: "/themes/corbs"
+      - title: "skeletor"
+        description: "One for that purple hooded villain"
+        url: "/themes/skeletor"
+      - title: "solo"
+        description: "A distraction free theme"
+        url: "/themes/solo"
+      - title: "weekly"
+        description: "A theme for your TPS reports"
+        url: "/themes/weekly"
+  - title: "yummo: a tasty wittle blog"
     entries:
       - title: "https://github.com/corbtastik/yummo"
         url: https://github.com/corbtastik/yummo
       - title: "demo on surge.sh"
         url: https://corbtastik-yummo.surge.sh
-  - title: "yolo, loveable single page sites"
+  - title: "yolo: loveable single page sites"
     entries:
       - title: "https://github.com/corbtastik/yolo"
         url: https://github.com/corbtastik/yolo
@@ -34,7 +47,7 @@ entries:
         url: https://corbtastik.github.io/yolo
       - title: "demo on surge.sh"
         url: https://corbtastik-yolo.surge.sh
-  - title: corbs.io
+  - title: "corbs.io"
     entries:
       - title: "github: cornucopia of corbs"
         url: https://github.com/corbtastik/corbs

@@ -193,6 +193,24 @@
     color: $dark-accent-color;
   }
 
+  .breadcrumbs {
+    ul {
+      background-color: inherit;
+    }
+
+    ul li+li:before {
+      color: $dark-accent-color;
+    }
+
+    ul li a {
+      color: $dark-link-color;
+    }
+
+    ul li a:hover {
+      color: $dark-accent-color;
+    }
+  }
+
   .highlight {
     background: $dark-code-background-color;
     color: $dark-code-color;
