@@ -28,6 +28,13 @@ defaults:
     values:
       category: samples
       permalink: samples/:title/
+  # themes
+  - scope:
+      path: "_posts/themes"
+      type: posts
+    values:
+      category: themes
+      permalink: themes/:title/
   # weeklies
   - scope:
       path: "_posts/weeklies"

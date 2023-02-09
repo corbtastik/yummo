@@ -5,8 +5,8 @@ description: "Add custom css to a post"
 date: 2022-10-01
 ext_css:
   - custom
-  - solo-dark
-  - solo-light
+  - skeletor-dark
+  - skeletor-light
 author: Corbs
 category: samples
 tags:
@@ -19,9 +19,13 @@ tags:
 
 ### Custom CSS
 
-You can insert custom CSS styling for a page or post by adding front matter.  Add the names of any `.css` files to the `ext_css` front-matter variable and the corresponding stylesheet will be added into `<head>`.
+You can insert custom CSS styling by adding the names of your `.css` files to the `ext-css` front-matter variable on a page or post.
 
-For example, the front-matter for this post adds `/assets/ext/css/custom.css`, `/assets/ext/css/solo-light.css`, and `/assets/ext/css/solo-dark.css` stylesheets to the page.
+For example, the front-matter for this post adds the following stylesheets to the page.
+
+* `/assets/ext/css/custom.css`
+* `/assets/ext/css/skeletor-light.css`
+* `/assets/ext/css/skeletor-dark.css`
 
 ```yaml
 layout: post
@@ -29,23 +33,24 @@ title: "samples/custom-css"
 description: "Add custom css to a post"
 ext_css:
   - custom
-  - solo-dark
-  - solo-light 
+  - skeletor-dark
+  - skeletor-light 
 ```
 
-Which results in the following `<link>` elements being added into `<head>`, __after__ the `main.css` stylesheet.
-
-> __Note:__ The effect of adding custom stylesheets after `main.css` means you can completely override site styling on a page-by-page basis.
-> > In this example the `solo-dark.css` and `solo-light.css` stylesheets override the theme selectors defined in `main.css`. While `custom.css` styles the flexbox examples.
+This results in the following `<link>` elements being added into `<head>`, __after__ the `main.css` stylesheet.
 
 ```html
 <!-- Default site stylesheet -->
 <link rel="stylesheet" href="/assets/css/main.css">
 <!-- Custom stylesheets added by `ext_css` front-matter -->
 <link rel="stylesheet" href="/assets/ext/css/custom.css">
-<link rel="stylesheet" href="/assets/ext/css/solo-dark.css">
-<link rel="stylesheet" href="/assets/ext/css/solo-light.css">
+<link rel="stylesheet" href="/assets/ext/css/skeletor-dark.css">
+<link rel="stylesheet" href="/assets/ext/css/skeletor-light.css">
 ```
+
+> __Note:__ The effect of adding custom stylesheets after `main.css` means you can completely override site styling on a page-by-page basis.
+> * In this example the `skeletor-dark.css` and `skeletor-light.css` stylesheets override the theme selectors defined in `main.css`.
+> * The `custom.css` stylesheet provides styles for the flexbox examples.
 
 ---
 
