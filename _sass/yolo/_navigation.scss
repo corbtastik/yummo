@@ -13,3 +13,56 @@
     }
   }
 }
+
+//.navbar {
+//  ul {
+//    padding: 1rem 0;
+//    list-style: none;
+//  }
+//
+//  /* Display list items side by side */
+//  ul li {
+//    display: inline;
+//    font-size: $size-6;
+//  }
+//
+//  /* Add a slash symbol (/) before/behind each list item */
+//  ul li+li:before {
+//    padding: 0.5rem;
+//    content: "/\00a0";
+//  }
+//
+//  /* Add a color to all links inside the list */
+//  ul li a {
+//    text-decoration: none;
+//  }
+//
+//  /* Add a color on mouse-over */
+//  ul li a:hover {
+//    text-decoration: underline;
+//  }
+//}
+
+.navbar {
+  ul {
+    vertical-align: baseline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li {
+      display: inline;
+      //float: left;
+    }
+
+    li a {
+      text-align: center;
+      vertical-align: baseline;
+      padding-top: 1rem;
+      padding-right: 0.5rem;
+      padding-left: 0;
+      padding-bottom: 1rem;
+      text-decoration: none;
+    }
+  }
+}

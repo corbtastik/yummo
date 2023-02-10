@@ -1,0 +1,39 @@
+<div id="yolo-navbar" class="navbar">
+    {% if page.layout == 'home' %}
+    <div class="columns is-vcentered">
+        <div class="column">
+            <span id="theme-dot" class="theme-dot">&#9681;</span>
+        </div>
+    </div>
+    {% else %}
+    {% if site.yummo.navbar %}
+    <div class="columns is-vcentered">
+        <div class="column">
+            <a href="/">home</a>
+        </div>
+        <div class="column">
+            <a href="/about">about</a>
+        </div>
+        <div class="column">
+            <a href="/tags">tags</a>
+        </div>
+        <div class="column">
+            <a href="/archive">posts</a>
+        </div>
+        <div class="column">
+            <span id="theme-dot" class="theme-dot">&#9681;</span>
+        </div>
+    </div>
+    {% else %}
+    <div class="columns is-vcentered">
+        <div class="column">
+            <span id="theme-dot" class="theme-dot">&#9681;</span>
+        </div>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if site.yummo.searchable %}
+    {% include components/search.html %}
+    {% endif %}
+</div>
+

@@ -1,22 +1,13 @@
 <div class="yolo-header">
+{% include components/navbar.html %}
 {% if page.layout == 'home' %}
     {% if site.yummo.header.logo %}
     <a href="./">
         <img class="logo" alt="site-logo" src="{{ site.yummo.header.logo }}" title="Site Logo"/>
     </a>
     {% endif %}
-{% endif %}
-    <div id="theme-dot" class="theme-dot">&#9681;</div>
-{% if page.layout == 'home' %}
     <h1 class="tag no-toc"><a href="./">{{ site.tag_text }}</a></h1>
     <h4 class="description no-toc">{{ site.description }}</h4>
-{% elsif page.title == 'search' %}
-    <h1 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <h4 class="description no-toc">
-        {{ site.pages.size }} pages,
-        {{ site.posts.size }} posts,
-        {{ site.categories.size }} categories, {{ site.tags.size }} tags
-    </h4>
 {% else %}
     <h1 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h1>
     <h4 class="description no-toc">{{ page.description }}</h4>
@@ -38,11 +29,5 @@
     <p>
         <a href="{{ '/' | relative_url }}"> {{ site.yummo.home_link }} </a>
     </p>
-{% endif %}
-{% if site.yummo.breadcrumbs %}
-    {% include components/breadcrumbs.html %}
-{% endif %}
-{% if site.yummo.searchable %}
-    {% include components/search.html %}
 {% endif %}
 </div>
