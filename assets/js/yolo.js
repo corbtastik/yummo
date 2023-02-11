@@ -377,6 +377,23 @@
             return;
         }
 
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const activeTheme = localStorage.getItem("active-theme");
+            Console.log("DOM fully loaded and parsed, active-theme: " + activeTheme);
+            if(activeTheme === "dark-theme") {
+                localStorage.setItem("active-theme", "dark-theme");
+                yoloSite.classList.add("dark-theme");
+            } else {
+                localStorage.setItem("active-theme", "light-theme");
+                yoloSite.classList.add("light-theme");
+            }
+        });
+
+        window.addEventListener("load", function() {
+            const activeTheme = localStorage.getItem("active-theme");
+            Console.log("Window load, active-theme: " + activeTheme);
+        });
+
         themeDot.addEventListener("click", function() {
             const activeTheme = localStorage.getItem("active-theme");
             if(activeTheme === "dark-theme") {
@@ -396,18 +413,6 @@
             } else {
                 Console.error("The active-theme is set to an invalid theme value: "
                     + activeTheme + ", setting to light-theme.");
-                localStorage.setItem("active-theme", "light-theme");
-                yoloSite.classList.add("light-theme");
-            }
-        });
-
-        window.addEventListener("load", function() {
-            const activeTheme = localStorage.getItem("active-theme");
-            Console.log("Window load, active-theme: " + activeTheme);
-            if(activeTheme === "dark-theme") {
-                localStorage.setItem("active-theme", "dark-theme");
-                yoloSite.classList.add("dark-theme");
-            } else {
                 localStorage.setItem("active-theme", "light-theme");
                 yoloSite.classList.add("light-theme");
             }
