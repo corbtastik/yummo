@@ -411,8 +411,6 @@
                 localStorage.setItem("active-theme", "light-theme");
                 yoloSite.classList.add("light-theme");
             }
-            Console.log("Window load, transitioning to opacity 1");
-            yoloSite.style.opacity = "1";
         });
     }
 
