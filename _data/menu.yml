@@ -16,23 +16,6 @@ entries:
       show_more: true
       show_more_text: "all weeklies..."
       show_more_url: "/weeklies"
-  - title: "yummo themes"
-    entries:
-      - title: "arcade"
-        description: "An 80s throwback theme"
-        url: "/themes/arcade"
-      - title: "corbs"
-        description: "My personal look and feel"
-        url: "/themes/corbs"
-      - title: "skeletor"
-        description: "One for that purple hooded villain"
-        url: "/themes/skeletor"
-      - title: "solo"
-        description: "A distraction free theme"
-        url: "/themes/solo"
-      - title: "weekly"
-        description: "A theme for your TPS reports"
-        url: "/themes/weekly"
   - title: "yummo: a tasty wittle blog"
     entries:
       - title: "https://github.com/corbtastik/yummo"
@@ -41,6 +24,8 @@ entries:
         url: https://corbtastik-yummo.surge.sh
   - title: "yolo: loveable single page sites"
     entries:
+      - title: "yolo on localhost"
+        url: http://localhost:4000
       - title: "https://github.com/corbtastik/yolo"
         url: https://github.com/corbtastik/yolo
       - title: "demo on github pages"

@@ -12,13 +12,62 @@ tags:
   - yummo
 ---
 
-{% include toc.html header="h3" text="Snippet samples" %}
+## Syntax Themes
+
+Yummo uses Jekyll's [default syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) capabilities provided by [rouge](https://github.com/rouge-ruby/rouge), and adds the ability to use custom `syntax-theme(s)` for light and dark modes.
+
+> __Note__: Every theme included with Yummo has a corresponding syntax theme.
+>   * __See__: `_sass/yummo/brand/theme` for themes.
+>   * __See__: `_sass/yummo/brand/syntax` for syntax themes.
+
+When you create a custom `syntax-theme` you specify colors for each syntax token variable, which maps to the appropriate rouge css selector.
+
+{% include components/arrow.html %}
+
+---
+
+### Custom Syntax Theme
+
+1. Creating a custom `syntax-theme` is done by adding a `scss` file into `_sass/yummo/brand/syntax` and setting values for each color property for both __light__ and __dark__ modes.
+2. To enable a specific `syntax-theme` add it to your `settings.yml` file, as shown below.
+
+{% include components/code.html label="Configure the syntax-theme" %}
+```yaml
+# -------------------------------------
+# Yummo site settings
+# -------------------------------------
+name: Yummo
+version: v1.2
+title: Yummo on my friend
+description: A tasty wittle theme
+brand:
+  # references _sass/yummo/brand/theme/_reveal.scss
+  theme: reveal
+  # references _sass/yummo/brand/syntax/_reveal.scss
+  syntax: reveal
+```
+
+{% include components/arrow.html %}
+
+---
+
+### Syntax Swatches
+
+The swatches below show the colors for the `syntax-theme` in use, each swatch has the syntax token and the corresponding css selector in parentheses.
+
+{% include demo/syntax-theme-swatches.html %}
+
+{% include components/arrow.html %}
+
+---
 
 > __Tip:__ Click header to copy a snippet.
 
+## Code Snippets
+
 ### Bash
 
-{% include code.html label="Bash snippet" %}
+{% include components/code.html label="Bash snippet" %}
 ```bash
 #!/bin/bash
 function say_howdy() {
@@ -34,13 +83,13 @@ fi
 say_howdy $1
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### C
 
-{% include code.html label="C snippet" %}
+{% include components/code.html label="C snippet" %}
 ```c
 #include <stdio.h>
 // Say Howdy
@@ -54,13 +103,13 @@ int main(int argc, char **argv) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### C++
 
-{% include code.html label="C++ snippet" %}
+{% include components/code.html label="C++ snippet" %}
 ```c++
 #include <iostream>
 using namespace std;
@@ -75,13 +124,13 @@ int main(int argc, char** argv) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### Dart
 
-{% include code.html label="Dart snippet" %}
+{% include components/code.html label="Dart snippet" %}
 ```dart
 import 'dart:io';
 // Say Howdy
@@ -96,13 +145,13 @@ void main(List<String> args) {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### Go
 
-{% include code.html label="Go snippet" %}
+{% include components/code.html label="Go snippet" %}
 ```go
 package main
 
@@ -122,13 +171,13 @@ func main () {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### HTML
 
-{% include code.html label="HTML snippet" %}
+{% include components/code.html label="HTML snippet" %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -137,57 +186,18 @@ func main () {
     <title>Howdy!</title>
 </head>
 <body>
-    <h1>Howdy from an HTML page!</h1>
+<h1>Howdy from an HTML page!</h1>
 </body>
 </html>
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
-### JSON Array
+### JSON
 
-{% include code.html label="JSON Array snippet" %}
-```json
-[{
-  "id": 1000,
-  "first_name": "Sponge",
-  "last_name": "Bob",
-  "email": "spongebob@krustykrab.com",
-  "phone": "555-555-5555",
-  "address": "124 Conch Street",
-  "city": "Bikini Bottom"
-}, {
-  "id": 1001,
-  "first_name": "Charlie",
-  "last_name": "Brown",
-  "email": "chuck@peanuts.com",
-  "phone": "612-111-7777",
-  "address": "1770 James Street",
-  "city": "Minneapolis",
-  "state": "Minnesota",
-  "zipcode": "55403"
-}, {
-  "id": 1002,
-  "first_name": "Garfield",
-  "last_name": "Arbuckle",
-  "email": "garfield@nick.com",
-  "phone": "765-867-9305",
-  "address": "711 Maple Street",
-  "city": "Muncie",
-  "state": "Indiana",
-  "zipcode": "47302"
-}]
-```
-
-[↑↑↑](#){: .back-to-top}
-
----
-
-### JSON Object
-
-{% include code.html label="JSON Object snippet" %}
+{% include components/code.html label="JSON snippet" %}
 ```json
 {
   "apiVersion": "v1",
@@ -201,10 +211,10 @@ func main () {
   },
   "spec": {
     "ports": [{
-        "port": 9000,
-        "targetPort": 9000,
-        "protocol": "TCP"
-      }],
+      "port": 9000,
+      "targetPort": 9000,
+      "protocol": "TCP"
+    }],
     "selector": {
       "app/name": "minio",
       "app/component": "backend"
@@ -214,13 +224,13 @@ func main () {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### Java
 
-{% include code.html label="Java snippet" %}
+{% include components/code.html label="Java snippet" %}
 ```java
 // Say Howdy
 public class Howdy {
@@ -234,34 +244,34 @@ public class Howdy {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### JavaScript
 
-{% include code.html label="JavaScript snippet" %}
+{% include components/code.html label="JavaScript snippet" %}
 ```javascript
 function sayHowdy(name) {
-    console.log("Howdy " + name + "!");
+  console.log("Howdy " + name + "!");
 }
 
 if(process.argv.length != 3) {
-    console.log("Usage: Howdy <NAME>");
-    process.exit(1);
+  console.log("Usage: Howdy <NAME>");
+  process.exit(1);
 }
 
 // Say Howdy
 sayHowdy(process.argv[2]);
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### Kotlin
 
-{% include code.html label="Kotlin snippet" %}
+{% include components/code.html label="Kotlin snippet" %}
 ```kotlin
 // Say Howdy
 fun main(args: Array<String>): Int {
@@ -274,13 +284,13 @@ fun main(args: Array<String>): Int {
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### Markdown
 
-{% include code.html label="Markdown snippet" %}
+{% include components/code.html label="Markdown snippet" %}
 ```markdown
 # Markdown
 
@@ -291,13 +301,13 @@ fun main(args: Array<String>): Int {
 * `document`!
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### Python
 
-{% include code.html label="Python snippet" %}
+{% include components/code.html label="Python snippet" %}
 ```python
 import sys
 
@@ -312,13 +322,13 @@ if len(sys.argv) != 2:
 sayHowdy(sys.argv[1])
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### SCSS
 
-{% include code.html label="SCSS snippet" %}
+{% include components/code.html label="SCSS snippet" %}
 ```scss
 .light-theme {
   color: $light-secondary-color;
@@ -336,13 +346,13 @@ sayHowdy(sys.argv[1])
 }
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### SQL
 
-{% include code.html label="SQL snippet" %}
+{% include components/code.html label="SQL snippet" %}
 ```sql
 -- Select orders for micky
 SELECT *
@@ -352,30 +362,27 @@ AND   price > 5000
 AND   price <= 10000
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
 
 ---
 
 ### YAML
 
-{% include code.html label="YAML snippet" %}
+{% include components/code.html label="YAML snippet" %}
 ```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: minio-server-lb
-  namespace: minio
-  labels:
-    app/name: minio
-spec:
-  ports:
-    - port: 9000
-      targetPort: 9000
-      protocol: TCP
-  selector:
-    app/name: minio
-    app/component: backend
-  type: LoadBalancer
+# ---------------------------------------------------------
+# Yolo site settings. see: _config.yml for jekyll settings
+# ---------------------------------------------------------
+name: Yolo
+version: v1.3
+title: Yolo on my friend
+description: Loveable single pages
+theme:
+  name: solo
+  syntax: monokai
+align: left
+sidebar:
+  logo: assets/images/logo.png
 ```
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}

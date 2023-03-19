@@ -12,6 +12,9 @@
     {{ site.title }}
     {%- endif -%}
   </title>
+  <!-- Pre-body JavaScript files -->
+  <script src="{{ site.baseurl }}{{ '/assets/js/theme.js' | relative_url }}"></script>
+  <script src="{{ site.baseurl }}{{ '/assets/js/snippets.js' | relative_url }}"></script>
   <!-- Site styling resources including fonts -->
   {% include styles.html %}
 </head>

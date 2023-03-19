@@ -1,33 +1,40 @@
 <div class="yolo-header">
-{% include components/navbar.html %}
-{% if page.layout == 'home' %}
-    {% if site.yummo.header.logo %}
-    <a href="./">
-        <img class="logo" alt="site-logo" src="{{ site.yummo.header.logo }}" title="Site Logo"/>
-    </a>
+    <div class="yolo-theme-toggle">
+        <span id="theme-toggle" class="material-icons md-36">light_mode</span>
+    </div>
+    <div class="yolo-site-info">
+    {% if page.layout == 'home' %}
+        {% if site.data.settings.header.logo %}
+        <a href="./">
+            <img class="logo" alt="site-logo" src="{{ site.data.settings.header.logo }}" title="Site Logo"/>
+        </a>
+        {% endif %}
+        <h1 class="tag no-toc"><a href="./">{{ site.data.settings.name }}</a></h1>
+        <h4 class="description no-toc">{{ site.data.settings.description }}</h4>
+    {% else %}
+        <h2 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+        <h4 class="description no-toc">{{ page.description }}</h4>
     {% endif %}
-    <h1 class="tag no-toc"><a href="./">{{ site.tag_text }}</a></h1>
-    <h4 class="description no-toc">{{ site.description }}</h4>
-{% else %}
-    <h1 class="tag no-toc"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <h4 class="description no-toc">{{ page.description }}</h4>
-{% endif %}
-    <p>
-        <span>
-            {% for tag in page.tags %}
-            <a href="/tags/#{{ tag | slugify }}" class="pill">#{{ tag }}</a>
+        <p>
+            <span>
+            {% for link in page.links %}
+            {% assign linkref = link | split: "," %}
+                <a href="/tags/#{{ linkref[1] | slugify }}" class="yolo-pill">{{ linkref[0] }}</a>
             {% endfor %}
-        </span>
-    </p>
-{% if page.layout != 'home' %}
-    <p>
-        <span>
-            <span class="tag-date">{{ page.date | date: site.yummo.date_format }}</span>
-            {% if page.author %} {{ page.author | prepend: "by " }} {% endif %}
-        </span>
-    </p>
-    <p>
-        <a href="{{ '/' | relative_url }}"> {{ site.yummo.home_link }} </a>
-    </p>
-{% endif %}
+            </span>
+        </p>
+    {% if page.layout != 'home' %}
+        <p>
+            <span>
+                <span class="tag-date">{{ page.date | date: site.data.settings.date_format }}</span>
+                {% if page.author %} {{ page.author | prepend: "by " }} {% endif %}
+            </span>
+        </p>
+        <p>
+            <a href="{{ '/' | relative_url }}" class="yolo-back-arrow">
+                <span class="material-icons md-36">keyboard_double_arrow_left</span>
+            </a>
+        </p>
+    {% endif %}
+    </div>
 </div>

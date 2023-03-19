@@ -1,0 +1,19 @@
+# -----------------------------------------------------------------------------
+# Yummo site settings. see: _config.yml for jekyll settings
+# -----------------------------------------------------------------------------
+name: Yummo
+version: v1.2
+title: Yummo on my friend
+description: A tasty wittle theme
+brand:
+  theme: corbs
+  syntax: corbs
+align: left
+sidebar:
+  logo: /assets/images/logo.png
+#header:
+#  logo: assets/images/logo.png
+# Is site searchable?
+searchable: false
+# customize how date is formatted
+date_format: "%Y-%m-%d"

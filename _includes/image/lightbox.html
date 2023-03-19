@@ -1,12 +1,10 @@
 <!-- The lb flexbox -->
 {% assign lb_data = include.lb-data | default: "lb-images" %}
-{% assign lb_columns = include.lb-columns | default: 4 %}
 {% assign lb_images = site.data[lb_data] %}
 {% assign lb_num_images = site.data[lb_data].size %}
-{% assign lb_images_per_column = lb_num_images | divided_by: lb_columns %}
+{% assign lb_images_per_column = lb_num_images | divided_by: 4 %}
 <div class="columns is-mobile">
-    {% assign num_columns = lb_columns | minus: 1 %}
-    {% for i in (0..num_columns) %}
+    {% for i in (0..3) %}
     <div class="column">
         {% assign num_slides = lb_images_per_column | minus: 1 %}
         {% for j in (0..num_slides) %}
@@ -37,7 +35,7 @@
             <a class="lb-nav lb-next" onclick="Yolo.lightbox('{{ lb_data }}').plusSlides(1);">&#10095;</a>
         </div>
         <!-- Caption text -->
-        <div class="caption">
+        <div class="yolo-caption">
             <p id="lb-caption-{{ lb_data }}"></p>
         </div>
     </div>

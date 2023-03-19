@@ -11,22 +11,22 @@ tags:
   - yummo
 ---
 
-{% include toc.html header="h3" text="Table of Contents" %}
-
-### Image Grid
-
-Show your awesome pics in a Yummo Image Grid, ooh-la-la.
+The Image Grid is similar to the [Lightbox](/samples/lightbox/), except it shows images inline, instead of in a modal.
 
 > __Tip:__ Click an image to enlarge, click again to minimize.
 
 * Add image data into `_data/ig-images.yml`.
 * Include `image/grid.html` on your page.
 
-#### Default data file
+{% include components/arrow.html %}
+
+---
+
+## Default data file
 
 The `_data/ig-images.yml` file is the default data file, just replace with your data to display images.
 
-{% include code.html label="Images from: _data/ig-images.yml" %}
+{% include components/code.html label="Images from: _data/ig-images.yml" %}
 {% raw %}
 ```html
 {% include "image/grid.html" %}
@@ -35,7 +35,11 @@ The `_data/ig-images.yml` file is the default data file, just replace with your 
 
 {% include image/grid.html %}
 
-#### Custom data file
+{% include components/arrow.html %}
+
+---
+
+## Custom data file
 
 A custom data file can be added to create an Image Grid.
 
@@ -43,7 +47,7 @@ A custom data file can be added to create an Image Grid.
 * Use the data file name (w/o `.yml` ext) as the value to `ig-data`.
 * Customize the number of columns by setting `ig-columns`.
 
-{% include code.html label="Images from: _data/ig-pets.yml" %}
+{% include components/code.html label="Images from: _data/ig-pets.yml" %}
 {% raw %}
 ```html
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
@@ -52,4 +56,4 @@ A custom data file can be added to create an Image Grid.
 
 {% include image/grid.html ig-data="ig-pets" ig-columns="2" %}
 
-[↑↑↑](#){: .back-to-top}
+{% include components/arrow.html %}
