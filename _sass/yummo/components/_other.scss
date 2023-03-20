@@ -3,6 +3,29 @@
 // ----------------------------------------------------------------------------
 @import "../base/variables";
 
+.yolo-post-list {
+  ul {
+    //list-style-type: none;
+    margin: 0;
+    padding-left: 0.5rem;
+    li {
+      margin: 0;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+    //li:before {
+    //  content: "+ ";
+    //}
+  }
+}
+
 .yolo-caption {
   text-align: center;
   padding: 1rem;
