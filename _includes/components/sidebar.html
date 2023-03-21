@@ -10,7 +10,7 @@
     </div>
     {% endif %}
     {% if page.layout == 'home' %}
-    <div class="yolo-menu">
+    <div id="home-sidebar" class="yolo-sidebar-menu">
         {%- include components/menu_item.html collection=site.data.menu.sidebar.entries -%}
     </div>
     {% else %}

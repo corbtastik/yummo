@@ -167,12 +167,12 @@
         static create() {
             if(document.getElementById("toc")) {
                 const headers = Toc.getHeaders();
-                document.getElementById("toc").classList.add("yolo-menu");
+                document.getElementById("toc").classList.add("yolo-sidebar-menu");
                 document.getElementById("toc").innerHTML = Toc.buildTree(headers);
             }
             if(document.getElementById("toc-sidebar")) {
                 const headers = Toc.getHeaders();
-                document.getElementById("toc-sidebar").classList.add("yolo-menu");
+                document.getElementById("toc-sidebar").classList.add("yolo-sidebar-menu");
                 document.getElementById("toc-sidebar").innerHTML = Toc.buildTree(headers);
             }
         }
@@ -268,8 +268,15 @@
 
     Yolo.prototype.initSidebar = function() {
         const sidebar = document.getElementById('sidebar');
-        const sidebarNav = document.getElementById('toc-sidebar');
-        if(sidebar !== null) {
+        if(sidebar === null) {
+            Console.log("Sidebar is disabled, eventListener NOT added.");
+            return;
+        }
+
+        // The toc-sidebar is for user posts and pages and will not
+        // be in the DOM when page is a "mainstay" such as "home".
+        const tocSidebar = document.getElementById('toc-sidebar');
+        if(tocSidebar !== null) {
             Console.log("Sidebar is enabled, adding event listener.");
             sidebar.addEventListener('click', function() {
                 if (window.matchMedia('screen and (max-width: 768px)').matches) {
@@ -279,18 +286,23 @@
                     if(sidebar.classList.contains("open")) {
                         sidebar.style.width = "0.5rem";
                         sidebar.classList.remove("open")
-                        sidebarNav.style.opacity = "0";
+                        tocSidebar.style.opacity = "0";
                     } else {
                         sidebar.style.width = "100%";
                         sidebar.classList.add("open")
-                        sidebarNav.style.opacity = "1";
+                        tocSidebar.style.opacity = "1";
                     }
                 } else {
                     Console.log("Sidebar is open, media query NOT active.")
                 }
             }, false);
-        } else {
-            Console.log("Sidebar is disabled.");
+        }
+
+        const homeSidebar = document.getElementById('home-sidebar');
+        if(homeSidebar !== null) {
+            homeSidebar.addEventListener('click', function() {
+                Console.log("homeSidebar clicked");
+            }, false);
         }
     };
 

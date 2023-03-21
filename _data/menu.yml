@@ -21,18 +21,18 @@ posts:
 # -----------------------------------------------------------------------------
 pins:
   entries:
-    - title: "Yummo"
+    - title: "github.com/corbtastik/yummo"
       url: https://github.com/corbtastik/yummo
-      description: "A tasty wittle blog"
-    - title: "Yummo Demo"
+      description: "A tasty wittle theme"
+    - title: "corbtastik-yummo.surge.sh"
       url: https://corbtastik-yummo.surge.sh
-      description: "Yummo on surge.sh"
-    - title: "Yolo"
+      description: "Yummo demo on surge.sh"
+    - title: "github.com/corbtastik/yolo"
       url: https://github.com/corbtastik/yolo
       description: "Loveable Single Pages"
-    - title: "Yolo Demo"
+    - title: "corbtastik-yolo.surge.sh"
       url: https://corbtastik-yolo.surge.sh
-      description: "Yolo on surge.sh"
+      description: "Yolo demo on surge.sh"
     - title: "corbs.io"
       url: https://corbs.io
       description: "Cornucopia of Corbs"
@@ -41,13 +41,13 @@ pins:
 # -----------------------------------------------------------------------------
 sidebar:
   entries:
-    - title: "home"
+    - title: "Home"
       url: "/"
-    - title: "about"
+    - title: "About"
       url: "/about"
-    - title: "tags"
+    - title: "Tags"
       url: "/tags"
-    - title: "archive"
+    - title: "Archive"
       url: "/archive"
-    - title: "weeklies"
+    - title: "Weeklies"
       url: "/weeklies"

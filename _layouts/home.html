@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
-{%- include components/pins_item.html collection=site.data.menu.pins.entries -%}
+{%- include components/menu_item.html collection=site.data.menu.pins.entries -%}
+{%- include components/posts_list.html collection=site.data.menu.posts.entries -%}
 {%- include components/menu_item.html collection=site.data.menu.posts.entries -%}
 {{ content }}

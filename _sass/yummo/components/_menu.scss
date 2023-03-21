@@ -1,74 +1,46 @@
 // Toggled by yolo.js
-.yolo-menu {
+.yolo-sidebar-menu {
   line-height: 1.7;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  ul {
-    line-height: 1.7;
-    list-style-type: none;
-    margin: 0;
-    padding-left: 1rem;
-    li {
-      margin: 0;
-      a {
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-        &:focus {
-          text-decoration: underline;
-        }
-      }
-    }
-    li:before {
-      content: "+ ";
-      font-weight: bold;
-    }
-  }
-}
-
-.yolo-overview {
-  //padding-right: 0.5rem;
-  //padding-left: 0.5rem;
+  //transition: 0.5s;
   ul {
     list-style-type: none;
     margin: 0;
-    padding-left: 1rem;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: auto;
     li {
-      margin: 0;
       a {
+        display: block;
+        padding: 0.25rem 0.5rem 0.25rem 2rem;
         text-decoration: none;
         &:hover {
-          text-decoration: underline;
-        }
-        &:focus {
-          text-decoration: underline;
+          font-weight: bold;
         }
       }
-    }
-    li:before {
-      content: "+ ";
-      font-weight: bold;
+      a.active {
+        font-weight: bold;
+      }
     }
   }
 }
 
 .yolo-pin-container {
-  border-radius: 0.25em;
   padding: 0;
-  position: relative;
+  border-radius: 0.3em;
+  vertical-align: middle;
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  &.is-center-text {
-    text-align: center;
-  }
   .yolo-pin-title {
     padding: 0.25em 0.25em 0.25em 0.5em;
-    border-top-left-radius: 0.25em;
-    border-top-right-radius: 0.25em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
   }
   .yolo-pin-description {
     padding: 0.25em 0.25em 0.25em 0.5em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
   }
 }

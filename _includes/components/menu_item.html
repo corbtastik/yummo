@@ -3,7 +3,7 @@
       <li>
           <span>
             {%- if item.url -%}
-              <a href="{{ item.url }}">{{ item.title | downcase }}</a>
+              <a href="{{ item.url }}">{{ item.title }}</a>
             {%- else -%}
               {{ item.title }}
             {%- endif -%}
