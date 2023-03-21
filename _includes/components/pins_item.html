@@ -1,0 +1,32 @@
+{% assign pins_columns = include.columns | default: 2 %}
+{% assign pins = include.collection %}
+{% assign pins_size = pins.size %}
+{% assign pins_per_column = pins_size | divided_by: pins_columns %}
+<div class="columns">
+    {% assign num_columns = pins_columns | minus: 1 %}
+    {% for i in (0..num_columns) %}
+    <div class="column">
+        {% assign num_pins = pins_per_column | minus: 1 %}
+        {% for j in (0..num_pins) %}
+        {% assign idx = i | times: pins_per_column | plus: j %}
+        {% assign pin_item = pins[idx] %}
+        <div class="yolo-pin-container">
+            {%- if pin_item.url -%}
+            <div class="yolo-pin-title">
+                <a href="{{ pin_item.url }}">{{ pin_item.title | downcase }}</a>
+            </div>
+            {%- else -%}
+            <div class="yolo-pin-title">
+                {{ pin_item.title }}
+            </div>
+            {%- endif -%}
+            {%- if pin_item.description -%}
+            <div class="yolo-pin-description">
+                {{ pin_item.description }}
+            </div>
+            {%- endif -%}
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>

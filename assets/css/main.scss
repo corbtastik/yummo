@@ -13,6 +13,3 @@
 @import "yummo/utilities/all";
 @import "yummo/core/all";
 @import "yummo/components/all";
-{% if site.data.settings.sidebar %}
-@import "yummo/components/sidebar";
-{% endif %}

@@ -9,10 +9,7 @@ brand:
   theme: corbs
   syntax: corbs
 align: left
-sidebar:
-  logo: /assets/images/logo.png
-#header:
-#  logo: assets/images/logo.png
+logo: /assets/images/logo.png
 # Is site searchable?
 searchable: false
 # customize how date is formatted

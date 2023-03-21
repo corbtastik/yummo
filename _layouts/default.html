@@ -2,10 +2,8 @@
 <html lang="en" class="yolo-themed">
 {%- include head.html -%}
 <body id="yolo-site">
-  {% if site.data.settings.sidebar %}
   {% include components/sidebar.html %}
-  {% endif %}
-  <div id="yolo-container" class="container {{ site.data.settings.align | default: 'left' }}">
+  <div id="yolo-container" class="container left">
     <header>
       {% include components/header.html %}
     </header>

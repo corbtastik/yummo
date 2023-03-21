@@ -1,40 +1,53 @@
-entries:
-  - title: "about"
-    url: "/about"
-  - title: "tags"
-    url: "/tags"
-  - title: "posts"
-    post_list:
-      limit: 10
-      show_more: true
-      show_more_text: "archive..."
-      show_more_url: "/archive"
-  - title: "weeklies: a simple status report layout"
-    post_list:
-      limit: 4
-      category: "weekly"
-      show_more: true
-      show_more_text: "all weeklies..."
-      show_more_url: "/weeklies"
-  - title: "yummo: a tasty wittle blog"
-    entries:
-      - title: "https://github.com/corbtastik/yummo"
-        url: https://github.com/corbtastik/yummo
-      - title: "demo on surge.sh"
-        url: https://corbtastik-yummo.surge.sh
-  - title: "yolo: loveable single page sites"
-    entries:
-      - title: "yolo on localhost"
-        url: http://localhost:4000
-      - title: "https://github.com/corbtastik/yolo"
-        url: https://github.com/corbtastik/yolo
-      - title: "demo on github pages"
-        url: https://corbtastik.github.io/yolo
-      - title: "demo on surge.sh"
-        url: https://corbtastik-yolo.surge.sh
-  - title: "corbs.io"
-    entries:
-      - title: "github: cornucopia of corbs"
-        url: https://github.com/corbtastik/corbs
-      - title: "cornucopia of corbs"
-        url: https://corbs.io
+# -----------------------------------------------------------------------------
+# Overview entries on main/home page.
+# -----------------------------------------------------------------------------
+posts:
+  entries:
+    - title: "posts"
+      post_list:
+        limit: 25
+        show_more: true
+        show_more_text: "archive..."
+        show_more_url: "/archive"
+    - title: "weeklies"
+      post_list:
+        limit: 4
+        category: "weekly"
+        show_more: true
+        show_more_text: "all weeklies..."
+        show_more_url: "/weeklies"
+# -----------------------------------------------------------------------------
+# Pins on main/home page.
+# -----------------------------------------------------------------------------
+pins:
+  entries:
+    - title: "Yummo"
+      url: https://github.com/corbtastik/yummo
+      description: "A tasty wittle blog"
+    - title: "Yummo Demo"
+      url: https://corbtastik-yummo.surge.sh
+      description: "Yummo on surge.sh"
+    - title: "Yolo"
+      url: https://github.com/corbtastik/yolo
+      description: "Loveable Single Pages"
+    - title: "Yolo Demo"
+      url: https://corbtastik-yolo.surge.sh
+      description: "Yolo on surge.sh"
+    - title: "corbs.io"
+      url: https://corbs.io
+      description: "Cornucopia of Corbs"
+# -----------------------------------------------------------------------------
+# Sidebar entries when post or page does not define contextual entries.
+# -----------------------------------------------------------------------------
+sidebar:
+  entries:
+    - title: "home"
+      url: "/"
+    - title: "about"
+      url: "/about"
+    - title: "tags"
+      url: "/tags"
+    - title: "archive"
+      url: "/archive"
+    - title: "weeklies"
+      url: "/weeklies"

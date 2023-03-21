@@ -1,0 +1,74 @@
+// Toggled by yolo.js
+.yolo-menu {
+  line-height: 1.7;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  ul {
+    line-height: 1.7;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 1rem;
+    li {
+      margin: 0;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+    li:before {
+      content: "+ ";
+      font-weight: bold;
+    }
+  }
+}
+
+.yolo-overview {
+  //padding-right: 0.5rem;
+  //padding-left: 0.5rem;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 1rem;
+    li {
+      margin: 0;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+    li:before {
+      content: "+ ";
+      font-weight: bold;
+    }
+  }
+}
+
+.yolo-pin-container {
+  border-radius: 0.25em;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  &.is-center-text {
+    text-align: center;
+  }
+  .yolo-pin-title {
+    padding: 0.25em 0.25em 0.25em 0.5em;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+  }
+  .yolo-pin-description {
+    padding: 0.25em 0.25em 0.25em 0.5em;
+  }
+}

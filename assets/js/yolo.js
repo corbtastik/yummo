@@ -167,12 +167,12 @@
         static create() {
             if(document.getElementById("toc")) {
                 const headers = Toc.getHeaders();
-                document.getElementById("toc").classList.add("nav-menu");
+                document.getElementById("toc").classList.add("yolo-menu");
                 document.getElementById("toc").innerHTML = Toc.buildTree(headers);
             }
             if(document.getElementById("toc-sidebar")) {
                 const headers = Toc.getHeaders();
-                document.getElementById("toc-sidebar").classList.add("nav-menu");
+                document.getElementById("toc-sidebar").classList.add("yolo-menu");
                 document.getElementById("toc-sidebar").innerHTML = Toc.buildTree(headers);
             }
         }

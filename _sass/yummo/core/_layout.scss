@@ -35,8 +35,8 @@
 // ----------------------------------------------------------------------------
 .container {
   max-width: 48rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-left:  auto;
   margin-right: auto;
 }
@@ -51,6 +51,8 @@
   padding: .25rem .5rem;
   position: relative;
   text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   &.is-center-text {
     text-align: center;
   }
