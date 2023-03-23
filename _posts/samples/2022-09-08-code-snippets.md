@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/code-snippets"
-description: "Syntax highlighting and snippet copy"
+description: "Yummo code highlighting and snippet copy"
 date: 2022-09-08
 author: Corbs
 category: samples

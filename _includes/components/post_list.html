@@ -11,22 +11,20 @@
 {%- endif -%}
 
 {%- if posts.size > 0 -%}
-<section class="yolo-post-list">
-  <ul>
+<ul>
     {% for post in posts limit: include.limit %}
     <li>
-      <span>
-          <span class="entry-date">{{ post.date | date: site.data.settings.date_format }}</span>
-          <a href="{{ post.url | relative_url }}" title="{{ post.description }}">{{ post.title | downcase }}</a>
-<!--          <span class="entry-description">{{ post.description }}</span>-->
-      </span>
+        <span>
+            <span class="entry-date">{{ post.date | date: site.data.settings.date_format }}</span>
+            <a href="{{ post.url | relative_url }}" title="{{ post.description }}">{{ post.title | downcase }}</a>
+        </span>
+        <span class="entry-description"><em>{{ post.description }}</em></span>
     </li>
     {% endfor %}
     {% if include.show_more and limit_exceeded %}
     <li>
-      <a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a>
+        <a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a>
     </li>
     {% endif %}
-  </ul>
-</section>
+</ul>
 {%- endif -%}

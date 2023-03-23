@@ -17,10 +17,9 @@
     {% endif %}
         <p>
             <span>
-            {% for link in page.links %}
-            {% assign linkref = link | split: "," %}
-                <a href="/tags/#{{ linkref[1] | slugify }}" class="yolo-pill">{{ linkref[0] }}</a>
-            {% endfor %}
+                {% for tag in page.tags %}
+                <a href="/tags/#{{ tag | slugify }}" class="yolo-pill">#{{ tag }}</a>
+                {% endfor %}
             </span>
         </p>
     {% if page.layout != 'home' %}

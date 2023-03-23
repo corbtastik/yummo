@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "samples/image-grid"
-description: "Image Grid, ooh-la-la"
+description: "Yummo Image Grid, ooh-la-la"
 date: 2022-09-03
 author: Corbs
 category: samples

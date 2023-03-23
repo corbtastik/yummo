@@ -1,21 +1,5 @@
 ---
 layout: default
 ---
-{%- assign posts = site.categories["weekly"] | group_by_exp:"post", "post.date | date: '%Y %b'" -%}
-{% for yearMonth in posts %}
-<h4>{{ yearMonth.name }}</h4>
-<ul>
-    {% for post in yearMonth.items %}
-    <li>
-        <span>
-          <span class="entry-date">{{ post.date | date: site.data.settings.date_format }}</span>
-          <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
-          <span class="entry-description">{{ post.description }}</span>
-        </span>
-    </li>
-    {% endfor %}
-</ul>
-<a href="#" class="yolo-to-top">
-    <span class="material-icons md-36">keyboard_double_arrow_up</span>
-</a>
-{% endfor %}
+{%- include components/archive_list.html category="weekly" -%}
+{{ content }}
