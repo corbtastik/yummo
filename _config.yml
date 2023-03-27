@@ -65,5 +65,11 @@ exclude:
   - "docs/"
   - ".idea/"
   - ".generated"
+# -----------------------------------------------------------------------------
+# sass_dir: Folder that contains sass/scss files to be processed
+# style: compressed or expanded css generation
+# -----------------------------------------------------------------------------
 sass:
-  style: uncompressed
+  sass_dir: _sass
+  style: expanded
+  sourcemap: always
