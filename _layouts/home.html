@@ -8,6 +8,7 @@ layout: default
   show_more_text=item.post_list.show_more_text
   show_more_url=item.post_list.show_more_url
 -%}
+{%- include components/home_menu.html collection=site.data.menu.posts.entries -%}
 <hr>
 <div id="home-menu">
     {%- include components/menu_item.html collection=site.data.menu.posts.entries -%}
