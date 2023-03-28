@@ -1,27 +1,78 @@
 // Menu on home page
-//.yolo-menu {
-//  ul {
-//    list-style-type: none;
-//    margin: 0;
-//    padding: 0;
-//    width: 100%;
-//    position: relative;
-//    height: 100%;
-//    overflow: auto;
-//    li {
-//      a {
-//        padding: 0.25rem 0.5rem 0.25rem 2rem;
-//        text-decoration: none;
-//        &:hover {
-//          font-weight: bold;
-//        }
-//      }
-//      a.active {
-//        font-weight: bold;
-//      }
-//    }
-//  }
-//}
+.yolo-menu-item {
+  background: var(--secondary-container-color);
+  color: var(--on-secondary-container-color);
+  &:hover {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    cursor: pointer;
+  }
+}
+.home-list {
+  section {
+    margin: 1rem auto;
+  }
+  .columns {
+    margin: 0;
+    .column {
+      padding: 0.5rem 0.7rem 0.5rem 0.75rem;
+    }
+  }
+  .pills {
+    width: 100%;
+    float: right;
+    margin-top: 0.21rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    display: block;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    img {
+      float: right;
+      height: 3rem;
+      width: 3rem;
+      margin-left: 0.25rem;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    .pill {
+      float: right;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      border-radius: 3rem;
+      background-color: var(--secondary-color);
+      color: var(--on-secondary-color);
+      font-family: var(--font-family-monospace);
+      margin: 0.25rem 0 0.25rem 0.5rem;
+      &:hover {
+        background-color: var(--tertiary-color);
+        color: var(--on-tertiary-color);
+      }
+    }
+  }
+  .yolo-date {
+    color: var(--tertiary-color);
+    min-width: 7rem;
+    width: 7rem;
+  }
+  .yolo-title {
+    font-size: 0.95rem;
+  }
+  .yolo-description {
+    display: block;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+}
 
 // Menu on the sidebar, toggled by yolo.js
 .yolo-sidebar-menu {
