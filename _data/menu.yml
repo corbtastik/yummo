@@ -2,8 +2,8 @@
 # Setting for the menu component
 # -----------------------------------------------------------------------------
 settings:
-  show_tags: false
-  show_feature_image: false
+  show_tags: true
+  show_feature_image: true
 # -----------------------------------------------------------------------------
 # Overview entries on main/home page.
 # -----------------------------------------------------------------------------
