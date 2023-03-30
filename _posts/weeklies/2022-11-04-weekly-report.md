@@ -9,8 +9,6 @@ tags:
   - weekly-report
 ---
 
-{% include toc.html header="h3" text="Week 44" %}
-
 #### Summary
 
 * Brief statements about the work done thus far, and the focus going forward.
