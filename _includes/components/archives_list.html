@@ -9,7 +9,7 @@
     <section>
         <ul>
             {% for post in yearMonth.items %}
-            <li class="yolo-menu-item">
+            <li class="yolo-menu-item" onclick='location.href="{{ post.url }}"'>
                 <div class="columns">
                     <div class="column">
                         {%- if site.data.menu.settings.show_feature_image and post.feature_image -%}
