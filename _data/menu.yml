@@ -11,17 +11,19 @@ posts:
   entries:
     - title: "posts"
       post_list:
-        limit: 5
+        limit: 7
         show_more: true
         show_more_text: "archive..."
         show_more_url: "/archive"
-    - title: "weeklies"
-      post_list:
-        limit: 2
-        category: "weekly"
-        show_more: true
-        show_more_text: "all weeklies..."
-        show_more_url: "/weeklies"
+        exclude_categories:
+          - "weekly"
+#    - title: "weeklies"
+#      post_list:
+#        limit: 2
+#        category: "weekly"
+#        show_more: true
+#        show_more_text: "all weeklies..."
+#        show_more_url: "/weeklies"
 # -----------------------------------------------------------------------------
 # Pins on main/home page.
 # -----------------------------------------------------------------------------
