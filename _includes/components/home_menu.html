@@ -1,6 +1,7 @@
 <div class="home-list">
 <ul>
 {%- for item in include.collection -%}
+    {%- if site.data.menu.settings.show_entry_header -%}
     <li class="yolo-menu-header">
     {%- if item.url -%}
         {%- if item.description -%}
@@ -16,6 +17,7 @@
         {%- endif -%}
     {%- endif -%}
     </li>
+    {%- endif -%}
     {%- if item.post_list -%}
         {%-
             include components/posts_list.html

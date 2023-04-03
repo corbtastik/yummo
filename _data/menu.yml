@@ -4,6 +4,7 @@
 settings:
   show_tags: true
   show_feature_image: true
+  show_entry_header: false
 # -----------------------------------------------------------------------------
 # Overview entries on main/home page.
 # -----------------------------------------------------------------------------
