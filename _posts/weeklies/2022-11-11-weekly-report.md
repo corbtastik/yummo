@@ -4,6 +4,7 @@ title:       week-45
 description: Mon 11/07 to Fri 11/11
 date:        2022-11-11
 category:    weekly
+feature_image: /assets/images/me.png
 tags:
   - weekly-report
 ---

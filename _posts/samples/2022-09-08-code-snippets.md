@@ -5,6 +5,7 @@ description: "Yummo code highlighting and snippet copy"
 date: 2022-09-08
 author: Corbs
 category: samples
+feature_image: /assets/images/samples/snippets-logo.jpg
 tags:
   - code
   - syntax-highlighting

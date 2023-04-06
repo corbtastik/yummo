@@ -5,6 +5,7 @@ description: "Yummo styled images"
 date: 2022-09-02
 author: Corbs
 category: samples
+feature_image: /assets/images/samples/styled-images-logo.png
 tags:
   - images
   - sample

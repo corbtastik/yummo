@@ -4,6 +4,7 @@ title:       week-46
 description: Mon 11/14 to Fri 11/18
 date:        2022-11-18
 category:    weekly
+feature_image: /assets/images/me.png
 tags:
   - weekly-report
 ---

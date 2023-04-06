@@ -5,6 +5,7 @@ description: "Yummo Image Grid, ooh-la-la"
 date: 2022-09-03
 author: Corbs
 category: samples
+feature_image: /assets/images/samples/image-grid-logo.png
 tags:
   - image-grid
   - sample
