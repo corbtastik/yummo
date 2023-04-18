@@ -36,4 +36,9 @@
         </p>
     {% endif %}
     </div>
+    {% if site.data.settings.searchable %}
+    <div style="clear: both" class="search-container">
+    {% include components/search.html %}
+    </div>
+    {% endif %}
 </div>

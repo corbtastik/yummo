@@ -1,24 +1,19 @@
 # -----------------------------------------------------------------------------
-# Yummo base properties
+# Jekyll site settings, see _data/settings.yml for Yummo settings
 # -----------------------------------------------------------------------------
-# A snazzy title for your site
-title: Yummo, a tasty wittle theme
-# The site tag
-tag_text: Yummo
-# The overall description of your Yummo site
-description: A tasty wittle theme
-# Yummo site author
-author: Corbs
-# Yummo site author's email
-email: corbs@retro.io
-# The sub-path to hang your Yummo site from, e.g. /blog
+# baseurl: The sub-path your site is hosted from, for example: /blog
+# -----------------------------------------------------------------------------
 baseurl: ""
-# The base hostname (w/ protocol) of your Yummo site, e.g. http://corbs.io
+# -----------------------------------------------------------------------------
+# url: The protocol and hostname for your site, for example: https://corbs.io
+# -----------------------------------------------------------------------------
 url: ""
+# -----------------------------------------------------------------------------
 # The site favicon to use
+# -----------------------------------------------------------------------------
 favicon: "logo.png"
 # -----------------------------------------------------------------------------
-# Yummo site properties
+# Site post rules
 # -----------------------------------------------------------------------------
 defaults:
   # samples
@@ -35,21 +30,6 @@ defaults:
     values:
       category: weekly
       permalink: weeklies/:year/:week/
-yummo:
-  # The style to apply (see _sass/yummo/themes)
-  style: corbs
-  # Align content, left, center or right (default is left)
-  align: left
-#  header:
-#    logo: assets/images/site/yummo-logo-light.png
-#  sidebar:
-#    logo: assets/images/logo.png
-  # Where the site should grab images from (can be local, e.g. assets/images)
-  images: https://storage.googleapis.com/corbs-foto/yolo
-  # customize how date is formatted
-  date_format: "%Y-%m-%d"
-  # Enable navbar
-  navbar: true
 # -----------------------------------------------------------------------------
 # Build settings
 # -----------------------------------------------------------------------------
