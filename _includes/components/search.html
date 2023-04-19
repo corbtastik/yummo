@@ -1,7 +1,20 @@
-<form id="search-form" action="/search/" method="GET">
-    <div>
-        <label>
-            <input class="search-input" placeholder="Search..." required type="search" name="q" autocomplete="off" />
-        </label>
-    </div>
-</form>
+<!--<form id="search-form" action="/search/" method="GET">-->
+<!--    <div>-->
+<!--        <label>-->
+<!--            <input class="search-input" placeholder="Search..." required type="search" name="q" autocomplete="off" />-->
+<!--        </label>-->
+<!--    </div>-->
+<!--</form>-->
+<!--<div style="clear: both" class="search-container">-->
+<!--    <form name="search">-->
+<!--        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">-->
+<!--    </form>-->
+<!--    <span class="material-icons">search</span>-->
+<!--</div>-->
+<div style="clear: both" class="search-container">
+    <form onsubmit="event.preventDefault();" role="search">
+        <label for="search">Search for stuff</label>
+        <input id="search" type="search" placeholder="Search..." autofocus required />
+        <button type="submit">Go</button>
+    </form>
+</div>
