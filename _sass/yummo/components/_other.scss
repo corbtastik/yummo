@@ -22,7 +22,8 @@
 // Yolo page header
 .yolo-header {
   width: 100%;
-  height: 7rem;
+  height: auto;
+  overflow: visible;
   .logo {
     border-radius: 50%;
     margin-bottom: 1rem;
