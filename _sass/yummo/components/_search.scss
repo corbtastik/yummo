@@ -35,6 +35,7 @@
 .search-box {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -45,6 +46,8 @@
 
 .search-icon {
   margin-left: 0.5rem;
+  //padding-top: 0.5rem;
+  //padding-bottom: 0.5rem;
 }
 
 input[type=text] {
