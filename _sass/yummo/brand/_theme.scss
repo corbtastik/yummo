@@ -324,4 +324,28 @@
     background-color: var(--primary-container-color);
     color: var(--on-primary-container-color);
   }
+
+  .search-box {
+    form {
+      ::placeholder {
+        color: var(--on-primary-color);
+      }
+      ::placeholder:hover {
+        color: var(--secondary-container-color);
+      }
+
+      input[type=text] {
+        background: var(--secondary-container-color);
+        color: var(--on-secondary-container-color);
+        border: 1px solid var(--secondary-container-color);
+      }
+    }
+
+    .search-icon {
+      color: var(--secondary-color);
+      &:hover {
+        color: var(--tertiary-color);
+      }
+    }
+  }
 }
