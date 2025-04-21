@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lunr.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+</head>
+<body>
+    <input type="text" id="search-input" placeholder="Search...">
+    <ul id="results-list"></ul>
+
+    <script>
+        const documents = [
+            { id: "1", title: "Document 1", body: "This is the first document." },
+            { id: "2", title: "Document 2", body: "This is the second document about something else." },
+            { id: "3", title: "Document 3", body: "And here's a third document with different content." }
+        ];
+
+        const idx = lunr(function () {
+            this.ref('id')
+            this.field('title')
+            this.field('body')
+
+            documents.forEach(function (doc) {
+                this.add(doc)
+            }, this)
+        });
+
+        const searchInput = document.getElementById('search-input');
+        const resultsList = document.getElementById('results-list');
+
+        searchInput.addEventListener('input', function () {
+            const query = this.value;
+            const results = idx.search(query);
+
+            resultsList.innerHTML = ''; // Clear previous results
+
+            results.forEach(function (result) {
+                const doc = documents.find(d => d.id === result.ref);
+                if (doc) {
+                    const li = document.createElement('li');
+                    li.textContent = doc.title;
+                    resultsList.appendChild(li);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
