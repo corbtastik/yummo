@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // typography stylesheet
 // ----------------------------------------------------------------------------
+@use "sass:list";
 @import "../base/variables";
 @import "responsiveness";
 
@@ -8,7 +9,7 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
 
 @mixin typography-size($target:'') {
   @each $size in $sizes {
-    $i: index($sizes, $size);
+    $i: list.index($sizes, $size);
     .is-size-#{$i}#{if($target == '', '', '-' + $target)} {
       font-size: $size !important;
     }

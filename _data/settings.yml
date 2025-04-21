@@ -8,8 +8,8 @@ description: A tasty wittle theme
 author: Corbs
 email: corbs@retro.io
 brand:
-  theme: mini
-  syntax: mini
+  theme: corbs
+  syntax: corbs
 align: left
 logo: /assets/images/logo.png
 # Is site searchable?
