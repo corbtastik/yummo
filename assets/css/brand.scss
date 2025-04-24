@@ -35,48 +35,40 @@
 :root[light] {
   // font-families
   @each $name, $value in meta.module-variables("brand-theme") {
-    @if string.slice($name, 1, 12) == "font-family-" {
-      --#{$name}: #{$value};
-    }
+	@if string.slice($name, 1, 12) == "font-family-" {
+	  --#{$name}: #{$value};
+	}
   }
   // brand-theme
   @each $name, $value in meta.module-variables("brand-theme") {
-    @if string.slice($name, 1, 6) == "light-" {
-      --#{string.slice($name, 7)}: #{$value};
-    }
+	@if string.slice($name, 1, 6) == "light-" {
+	  --#{string.slice($name, 7)}: #{$value};
+	}
   }
   // brand-syntax
   @each $name, $value in meta.module-variables("brand-syntax") {
-    @if string.slice($name, 1, 6) == "light-" {
-      --#{string.slice($name, 7)}: #{$value};
-    }
+	@if string.slice($name, 1, 6) == "light-" {
+	  --#{string.slice($name, 7)}: #{$value};
+	}
   }
 }
 :root[dark] {
   // font-families
   @each $name, $value in meta.module-variables("brand-theme") {
-    @if string.slice($name, 1, 12) == "font-family-" {
-      --#{$name}: #{$value};
-    }
+	@if string.slice($name, 1, 12) == "font-family-" {
+	  --#{$name}: #{$value};
+	}
   }
   // brand-theme
   @each $name, $value in meta.module-variables("brand-theme") {
-    @if string.slice($name, 1, 5) == "dark-" {
-      --#{string.slice($name, 6)}: #{$value};
-    }
+	@if string.slice($name, 1, 5) == "dark-" {
+	  --#{string.slice($name, 6)}: #{$value};
+	}
   }
   // brand-syntax
   @each $name, $value in meta.module-variables("brand-syntax") {
-    @if string.slice($name, 1, 5) == "dark-" {
-      --#{string.slice($name, 6)}: #{$value};
-    }
+	@if string.slice($name, 1, 5) == "dark-" {
+	  --#{string.slice($name, 6)}: #{$value};
+	}
   }
 }
-// ----------------------------------------------------------------------------
-// Import brand SASS variables after brand.theme and brand.syntax CSS vars are
-// generated as ":root" globals above. This is needed to place the SASS
-// variables in-scope for the rest of the SASS theme files.
-// ----------------------------------------------------------------------------
-@import "yummo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}";
-@import "yummo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}";
-@import "yummo/brand/all";

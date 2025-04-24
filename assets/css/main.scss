@@ -9,6 +9,9 @@
 // 3. core
 // 4. components
 // ----------------------------------------------------------------------------
+@import "yummo/brand/theme/{{ site.data.settings.brand.theme | default: 'yolo' }}";
+@import "yummo/brand/syntax/{{ site.data.settings.brand.syntax | default: 'yolo' }}";
+@import "yummo/brand/all";
 @import "yummo/base/all";
 @import "yummo/utilities/all";
 @import "yummo/core/all";

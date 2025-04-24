@@ -12,7 +12,7 @@ posts:
   entries:
     - title: "posts"
       post_list:
-        limit: 7
+        limit: 50
         show_more: true
         show_more_text: "archive..."
         show_more_url: "/archive"
