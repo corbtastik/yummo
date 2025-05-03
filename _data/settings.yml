@@ -13,9 +13,6 @@ brand:
 align: left
 logo: /assets/images/logo.png
 # Is site searchable?
-searchable: true
-search:
-  enabled: true
-  deep: false
+searchable: false
 # customize how date is formatted
 date_format: "%Y-%m-%d"

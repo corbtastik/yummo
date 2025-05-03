@@ -3,38 +3,26 @@
 <script src="{{ site.baseurl }}/assets/ext/js/{{ js_name }}.js"></script>
 {% endfor %}
 {% endif %}
-{% if site.data.settings.search.enabled %}
-<script>
-    {% if site.data.settings.search.deep %}
-    window.posts = {
-        {% for post in site.posts %}
-            "{{ post.url | slugify }}": {
-                "title": "{{ post.title }}",
-                "description": "{{ post.description | strip }}",
-                "date": "{{ post.date | date: \"%Y-%m-%d\" }}",
-                "author": "{{ post.author }}",
-                "category": "{{ post.category }}",
-                "tags": {{ post.tags | jsonify }},
-                "content": {{ post.content | strip_html | strip | jsonify }}
-            }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    };
-    {% else %}
-    window.posts = {
-        {% for post in site.posts %}
-            "{{ post.url | slugify }}": {
-                "title": "{{ post.title }}",
-                "description": "{{ post.description | strip }}",
-                "date": "{{ post.date | date: \"%Y-%m-%d\" }}",
-                "author": "{{ post.author }}",
-                "category": "{{ post.category }}",
-                "tags": {{ post.tags | jsonify }}
-            }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    };
-    {% endif %}
-</script>
+{% if site.data.settings.searchable %}
 <script src="{{ site.baseurl }}{{ '/assets/js/lunr/lunr.js' | relative_url }}"></script>
+<script>
+    window.posts = [
+        {% for post in site.posts %}
+            {
+                "id": "{{ post.url | slugify }}",
+                "url": "{{ post.url }}",
+                "title": "{{ post.title }}",
+                "description": "{{ post.description }}",
+                "date": "{{ post.date | date: %Y-%m-%d }}",
+                "author": "{{ post.author }}",
+                "category": "{{ post.category }}",
+                "feature_image": "{{ post.feature_image }}",
+                "tags": {{ post.tags | jsonify }}
+            }
+            {% unless forloop.last %},{% endunless %}
+        {% endfor %}        
+    ];
+</script>
 <script src="{{ site.baseurl }}{{ '/assets/js/search.js' | relative_url }}"></script>
 {% endif %}
 <script src="{{ site.baseurl }}{{ '/assets/js/yolo.js' | relative_url }}"></script>
