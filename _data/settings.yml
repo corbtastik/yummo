@@ -8,10 +8,10 @@ description: A tasty wittle theme
 author: Corbs
 email: corbs@retro.io
 brand:
-  theme: corbs
-  syntax: corbs
+  theme: yolo
+  syntax: yolo
 align: left
-logo: /assets/images/logo.png
+logo: /assets/images/logo.jpg
 # Is site searchable?
 searchable: false
 # customize how date is formatted

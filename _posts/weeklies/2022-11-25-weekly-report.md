@@ -4,7 +4,6 @@ title:       week-47
 description: Mon 11/21 to Fri 11/25
 date:        2022-11-25
 category:    weekly
-feature_image: /assets/images/me.png
 tags:
   - weekly-report
 ---

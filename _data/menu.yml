@@ -2,8 +2,8 @@
 # Setting for the menu component
 # -----------------------------------------------------------------------------
 settings:
-  show_tags: true
-  show_feature_image: true
+  show_tags: false
+  show_feature_image: false
   show_entry_header: false
 # -----------------------------------------------------------------------------
 # Overview entries on main/home page.
@@ -12,7 +12,7 @@ posts:
   entries:
     - title: "posts"
       post_list:
-        limit: 10
+        limit: 50
         show_more: true
         show_more_text: "archive..."
         show_more_url: "/archive"

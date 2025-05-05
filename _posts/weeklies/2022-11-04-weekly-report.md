@@ -4,7 +4,6 @@ title:         week-44
 description:   Mon 10/31 to Fri 11/04
 date:          2022-11-04
 category:      weekly
-feature_image: /assets/images/me.png
 tags:
   - weekly-report
 ---

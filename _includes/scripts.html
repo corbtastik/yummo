@@ -1,3 +1,6 @@
+<!-- Pre-body JavaScript files -->
+<script src="{{ site.baseurl }}{{ '/assets/js/theme.js' | relative_url }}"></script>
+<script src="{{ site.baseurl }}{{ '/assets/js/snippets.js' | relative_url }}"></script>
 {% if page.ext_js.size > 0 %}
 {% for js_name in page.ext_js %}
 <script src="{{ site.baseurl }}/assets/ext/js/{{ js_name }}.js"></script>
